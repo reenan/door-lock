@@ -1,8 +1,8 @@
-export const CREATE_STORE = 'CREATE_STORE'
+export const REGISTER_STORE = 'REGISTER_STORE'
 
-export function createStore () {
+export function registerStore() {
   return {
-    type: CREATE_STORE,
+    type: REGISTER_STORE,
     storeName: 'Teste',
   }
 }

@@ -1,0 +1,40 @@
+@font-face {
+  font-family: "Icons";
+  src:
+  url("../../resources/icon-font/fa-brands-400.ttf") format("truetype"),
+  url("../../resources/icon-font/fa-brands-400.eot") format("eot"),
+  url("../../resources/icon-font/fa-brands-400.woff") format("woff"),
+  url("../../resources/icon-font/fa-brands-400.woff2") format("woff2"),
+  url("../../resources/icon-font/fa-brands-400.svg") format("svg"),
+}
+
+@font-face {
+  font-family: "Icons";
+  src:
+  url("../../resources/icon-font/fa-regular-400.ttf") format("truetype"),
+  url("../../resources/icon-font/fa-regular-400.eot") format("eot"),
+  url("../../resources/icon-font/fa-regular-400.woff") format("woff"),
+  url("../../resources/icon-font/fa-regular-400.woff2") format("woff2"),
+  url("../../resources/icon-font/fa-regular-400.svg") format("svg"),
+}
+
+@font-face {
+  font-family: "Icons";
+  src:
+  url("../../resources/icon-font/fa-solid-900.ttf") format("truetype"),
+  url("../../resources/icon-font/fa-solid-900.eot") format("eot"),
+  url("../../resources/icon-font/fa-solid-900.woff") format("woff"),
+  url("../../resources/icon-font/fa-solid-900.woff2") format("woff2"),
+  url("../../resources/icon-font/fa-solid-900.svg") format("svg"),
+}
+
+.icon {
+  font-family: 'Icons', sans-serif;
+
+  /* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
+  readers do not read off random characters that represent icons */
+  &.lock:before { content: "\f023"; }
+  &.lock-open:before { content: "\f3c1"; }
+  &.angle-right:before { content: "\f105"; }
+
+}

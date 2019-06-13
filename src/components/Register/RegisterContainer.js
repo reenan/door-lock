@@ -3,23 +3,57 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { Redirect } from 'react-router-dom'
 
-import { createStore } from '../../actions'
-import './Register.scss'
+import { registerStore } from '../../actions'
+import Register from './Register'
 
 class RegisterContainer extends Component {
 
-  createStore = () => {
-    this.props.dispatch(createStore())
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      registerModalIsOpen: false,
+      storeName: '',
+    }
   }
+
+  registerStore = () => {
+    this.props.dispatch(registerStore())
+  }
+
+  openRegisterModal = () => {
+    this.setState({
+      registerModalIsOpen: true
+    })
+  }
+
+  closeRegisterModal = () => {
+    this.setState({
+      registerModalIsOpen: false
+    })
+  }
+
+  handleStoreNameChange = (e) => {
+    this.setState({
+      storeName: e.target.value
+    })
+  }
+
   render() {
-    const { store } = this.props;
+    const { registerModalIsOpen, storeName } = this.state
+    const { store } = this.props
 
     return (
       store.name ?
         <Redirect to='/store' /> :
-        <div>
-          <p onClick={this.createStore}>RegisterContainer</p>
-        </div>
+        <Register
+          registerModalIsOpen={registerModalIsOpen}
+          storeName={storeName}
+          openRegisterModal={this.openRegisterModal}
+          closeRegisterModal={this.closeRegisterModal}
+          handleStoreNameChange={this.handleStoreNameChange}
+        />
+
     )
   }
 }

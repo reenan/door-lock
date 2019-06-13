@@ -1,5 +1,5 @@
 import {
-  CREATE_STORE,
+  REGISTER_STORE,
 } from '../actions'
 
 const initialState = {
@@ -8,7 +8,7 @@ const initialState = {
 
 function reducer (state = initialState, action) {
   switch (action.type) {
-    case CREATE_STORE:
+    case REGISTER_STORE:
       return {
         ...state,
         store: {

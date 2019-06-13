@@ -13,7 +13,7 @@ class StoreContainer extends Component {
       !store.name ?
         <Redirect to='/' /> :
         <div>
-          <p onClick={this.createStore}>RegisterContainer</p>
+          <p onClick={this.registerStore}>RegisterContainer</p>
         </div>
     )
   }
@@ -21,7 +21,7 @@ class StoreContainer extends Component {
 
 StoreContainer.propTypes = {
   dispatch: PropTypes.func.isRequired,
-  store: PropTypes.object.isRequired
+  store: PropTypes.object.isRequired,
 }
 
 const stateToProps = ({ store }) => ({

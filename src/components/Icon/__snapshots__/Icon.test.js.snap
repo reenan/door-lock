@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders without crashing 1`] = `
+<span
+  className="icon Mock "
+  style={Object {}}
+/>
+`;
+
+exports[`renders without crashing with size 1`] = `
+<span
+  className="icon Mock "
+  style={
+    Object {
+      "fontSize": "11px",
+    }
+  }
+/>
+`;

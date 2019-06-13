@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders without crashing 1`] = `
+<div
+  className="input "
+>
+  <input
+    defaultValue={null}
+    maxLength={null}
+    onChange={[Function]}
+    required={false}
+    type="text"
+  />
+  <label />
+</div>
+`;
+
+exports[`renders without crashing with value 1`] = `
+<div
+  className="input "
+>
+  <input
+    defaultValue="Mock"
+    maxLength={null}
+    onChange={[Function]}
+    required={false}
+    type="text"
+  />
+  <label />
+</div>
+`;

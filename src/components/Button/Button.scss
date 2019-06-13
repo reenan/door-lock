@@ -1,0 +1,32 @@
+@import '../../resources/_mixins.scss';
+
+.button {
+  @include vertical-align(middle);
+  @include transition(background-color 400ms, color 400ms);
+  cursor: pointer;
+  color: #25cb68;
+  font-size: 14px;
+  text-transform: uppercase;
+  padding: 10px 15px;
+
+  span {
+    @include vertical-align(middle);
+
+    + span {
+      margin-left: 15px;
+    }
+  }
+
+  .icon {
+    font-size: 22px;
+  }
+
+  &:hover {
+    color: darken(#25cb68, 10);
+  }
+
+  &.disabled {
+    color: gray;
+    pointer-events: none;
+  }
+}
