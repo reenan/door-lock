@@ -1,11 +1,11 @@
 import React from 'react'
-import RegisterContainer from './RegisterContainer'
+import StoreContainer from './StoreContainer'
 
 import { shallow } from 'enzyme'
 
 it('renders without crashing', () => {
   const component = shallow(
-    <RegisterContainer.WrappedComponent
+    <StoreContainer.WrappedComponent
       dispatch={() => {}}
       store={{}}
     />

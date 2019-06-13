@@ -3,20 +3,15 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { Redirect } from 'react-router-dom'
 
-import { createStore } from '../../actions'
-import './Register.scss'
+import './Store.scss'
 
-class RegisterContainer extends Component {
-
-  createStore = () => {
-    this.props.dispatch(createStore())
-  }
+class StoreContainer extends Component {
   render() {
     const { store } = this.props;
 
     return (
-      store.name ?
-        <Redirect to='/store' /> :
+      !store.name ?
+        <Redirect to='/' /> :
         <div>
           <p onClick={this.createStore}>RegisterContainer</p>
         </div>
@@ -24,7 +19,7 @@ class RegisterContainer extends Component {
   }
 }
 
-RegisterContainer.propTypes = {
+StoreContainer.propTypes = {
   dispatch: PropTypes.func.isRequired,
   store: PropTypes.object.isRequired
 }
@@ -33,4 +28,4 @@ const stateToProps = ({ store }) => ({
   store
 })
 
-export default connect(stateToProps)(RegisterContainer)
+export default connect(stateToProps)(StoreContainer)

@@ -1,17 +1,19 @@
 import {
-  SAMPLE,
+  CREATE_STORE,
 } from '../actions'
 
 const initialState = {
-  data: 'Initial'
+  store: {}
 }
 
 function reducer (state = initialState, action) {
   switch (action.type) {
-    case SAMPLE:
+    case CREATE_STORE:
       return {
         ...state,
-        data: action.data
+        store: {
+          name: action.storeName,
+        },
       }
     default:
       return state

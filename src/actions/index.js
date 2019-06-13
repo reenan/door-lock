@@ -1,8 +1,8 @@
-export const SAMPLE = 'SAMPLE'
+export const CREATE_STORE = 'CREATE_STORE'
 
-export function sample (data) {
+export function createStore () {
   return {
-    type: SAMPLE,
-    data: data,
+    type: CREATE_STORE,
+    storeName: 'Teste',
   }
 }
