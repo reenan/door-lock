@@ -26,4 +26,3 @@ it('renders without crashing with text and icon', () => {
 
   expect(component).toMatchSnapshot()
 })
-
