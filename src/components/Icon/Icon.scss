@@ -36,5 +36,7 @@
   &.lock:before { content: "\f023"; }
   &.lock-open:before { content: "\f3c1"; }
   &.angle-right:before { content: "\f105"; }
+  &.check:before { content: "\f00c"; }
+  &.close:before { content: "\f00d"; }
 
 }

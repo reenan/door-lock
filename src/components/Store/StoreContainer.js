@@ -3,18 +3,38 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { Redirect } from 'react-router-dom'
 
-import './Store.scss'
+import Store from './Store'
 
 class StoreContainer extends Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      selectedEmployee: null
+    }
+  }
+
+  selectEmployee = (employeeID) => {
+    this.setState({
+      selectedEmployee: employeeID
+    })
+  }
+
   render() {
+    const { selectedEmployee } = this.state
     const { store } = this.props;
+    const { name, employees, roles } = store
 
     return (
       !store.name ?
         <Redirect to='/' /> :
-        <div>
-          <p onClick={this.registerStore}>RegisterContainer</p>
-        </div>
+        <Store
+          name={name}
+          employees={employees}
+          roles={roles}
+          selectedEmployee={selectedEmployee}
+          selectEmployee={this.selectEmployee}
+        />
     )
   }
 }

@@ -32,7 +32,7 @@ class RegisterContainer extends Component {
       // TODO: Implement proper handling in case of status !== 201
       if (response.status === 201) {
         // Mount store using mocked data
-        const store = { storeName, roles: ROLES, employees: EMPLOYEES, firstTime: true }
+        const store = { name: storeName, roles: ROLES, employees: EMPLOYEES, firstTime: true }
 
         // Persist store via redux
         this.props.dispatch(registerStore(store))

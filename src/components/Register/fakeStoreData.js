@@ -12,11 +12,16 @@ const roles = {
   [clientID]: { name: 'Client', permissions: { frontDoor: false, storageRoom: false } },
 }
 
-const employees = [
-  { name: 'Jane', role: managerID },
-  { name: 'John', role: buyerID },
-  { name: 'Richard', role: cashierID },
-  { name: 'Anna', role: clientID },
-]
+const JaneID = uuid4()
+const JohnID = uuid4()
+const RichardID = uuid4()
+const AnnaID = uuid4()
+
+const employees = {
+  [JaneID]: { name: 'Jane', role: managerID },
+  [JohnID]: { name: 'John', role: buyerID },
+  [RichardID]: { name: 'Richard', role: cashierID },
+  [AnnaID]: { name: 'Anna', role: clientID },
+}
 
 export { roles, employees }
