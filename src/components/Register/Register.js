@@ -9,6 +9,7 @@ export default ({
   openRegisterModal,
   closeRegisterModal,
   handleStoreNameChange,
+  registerStore,
 }) => (
   <div className='register'>
     <div className='hero' />
@@ -41,7 +42,7 @@ export default ({
       <Input value={storeName} onChange={handleStoreNameChange}
         label="What is your store's name?" required />
 
-        <Button icon='angle-right' text='Register'
+        <Button icon='angle-right' text='Register' onClick={registerStore}
           className={storeName.length > 0 ? '' : 'disabled'} />
 
     </Modal>

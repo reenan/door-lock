@@ -3,6 +3,8 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { Redirect } from 'react-router-dom'
 
+import { roles as ROLES, employees as EMPLOYEES } from './fakeStoreData'
+
 import { registerStore } from '../../actions'
 import Register from './Register'
 
@@ -18,7 +20,30 @@ class RegisterContainer extends Component {
   }
 
   registerStore = () => {
-    this.props.dispatch(registerStore())
+    const { storeName } = this.state
+
+    // Fake request to an API
+    fetch(`${process.env.REACT_APP_API_BASE_URL}/store`, {
+      method: 'POST',
+      data: {
+        storeName
+      }
+    }).then(response => {
+      // TODO: Implement proper handling in case of status !== 201
+      if (response.status === 201) {
+        // Mount store using mocked data
+        const store = { storeName, roles: ROLES, employees: EMPLOYEES, firstTime: true }
+
+        // Persist store via redux
+        this.props.dispatch(registerStore(store))
+
+        // Redirect to store page
+        this.props.history.push('/store')
+      }
+    }).catch(err => {
+      // TODO: Implement proper handling for catch
+      console.error(err)
+    });
   }
 
   openRegisterModal = () => {
@@ -52,8 +77,8 @@ class RegisterContainer extends Component {
           openRegisterModal={this.openRegisterModal}
           closeRegisterModal={this.closeRegisterModal}
           handleStoreNameChange={this.handleStoreNameChange}
+          registerStore={this.registerStore}
         />
-
     )
   }
 }

@@ -11,9 +11,7 @@ function reducer (state = initialState, action) {
     case REGISTER_STORE:
       return {
         ...state,
-        store: {
-          name: action.storeName,
-        },
+        store: action.store,
       }
     default:
       return state

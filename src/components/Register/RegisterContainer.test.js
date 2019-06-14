@@ -3,6 +3,10 @@ import RegisterContainer from './RegisterContainer'
 
 import { shallow } from 'enzyme'
 
+afterEach(() => {    
+  jest.clearAllMocks()
+})
+
 it('renders without crashing', () => {
   const component = shallow(
     <RegisterContainer.WrappedComponent
@@ -59,16 +63,64 @@ it('should be able to update storeName state', () => {
   expect(component.state('storeName')).toBe('Mock')
 })
 
-it('should call dispatch function on store registration', () => {
+it('should call dispatch and history.push function on store registration', (done) => {
   const mockDispatch = jest.fn()
+  const mockPush = jest.fn()
 
   const component = shallow(
     <RegisterContainer.WrappedComponent
       dispatch={mockDispatch}
       store={{}}
+      history={{
+        push: mockPush
+      }}
     />
   )
 
+  const mockFetchPromise = Promise.resolve({
+    status: 201,
+  });
+  
+  jest.spyOn(global, 'fetch').mockImplementation(() => mockFetchPromise)
+
   component.instance().registerStore()
-  expect(mockDispatch).toHaveBeenCalled()
+
+  // Wait a little before checking if stubed functions
+  // were called after promise resolve
+  setTimeout(() => {
+    expect(mockDispatch).toHaveBeenCalled()
+    expect(mockPush).toHaveBeenCalled()
+    done()
+  }, 100)
+})
+
+it('should not call dispatch and history.push function on bad store registration', (done) => {
+  const mockDispatch = jest.fn()
+  const mockPush = jest.fn()
+
+  const component = shallow(
+    <RegisterContainer.WrappedComponent
+      dispatch={mockDispatch}
+      store={{}}
+      history={{
+        push: mockPush
+      }}
+    />
+  )
+
+  const mockFetchPromise = Promise.resolve({
+    status: 500,
+  })
+
+  jest.spyOn(global, 'fetch').mockImplementation(() => mockFetchPromise)
+
+  component.instance().registerStore()
+
+  // Wait a little before checking if stubed functions
+  // were called after promise resolve
+  setTimeout(() => {
+    expect(mockDispatch).not.toHaveBeenCalled()
+    expect(mockPush).not.toHaveBeenCalled()
+    done()
+  }, 100)
 })
