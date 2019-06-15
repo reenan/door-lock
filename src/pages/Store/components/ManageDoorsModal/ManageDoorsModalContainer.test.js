@@ -1,11 +1,11 @@
 import React from 'react'
-import ManageDoorsModal from './ManageDoorsModal'
+import ManageDoorsModalContainer from './ManageDoorsModalContainer'
 
 import renderer from 'react-test-renderer'
 
 it('renders without crashing', () => {
   const component = renderer.create(
-    <ManageDoorsModal
+    <ManageDoorsModalContainer
       isOpen={false}
       close={() => {}}
       save={() => {}}
@@ -19,7 +19,7 @@ it('renders without crashing', () => {
 
 it('should be able to add new door', () => {
   const component = renderer.create(
-    <ManageDoorsModal
+    <ManageDoorsModalContainer
       isOpen={false}
       close={() => {}}
       save={() => {}}
@@ -36,7 +36,7 @@ it('should be able to add new door', () => {
 
 it('should be able to change a doors name', () => {
   const component = renderer.create(
-    <ManageDoorsModal
+    <ManageDoorsModalContainer
       isOpen={false}
       close={() => {}}
       save={() => {}}
@@ -53,7 +53,7 @@ it('should be able to change a doors name', () => {
 
 it('should be able to delete a door', () => {
   const component = renderer.create(
-    <ManageDoorsModal
+    <ManageDoorsModalContainer
       isOpen={false}
       close={() => {}}
       save={() => {}}
@@ -70,7 +70,7 @@ it('should be able to delete a door', () => {
 
 it('should be able to reset list with discard changes', () => {
   const component = renderer.create(
-    <ManageDoorsModal
+    <ManageDoorsModalContainer
       isOpen={false}
       close={() => {}}
       save={() => {}}
@@ -98,7 +98,7 @@ it('should call prop save and close on saveChanges', () => {
   })
 
   const component = renderer.create(
-    <ManageDoorsModal
+    <ManageDoorsModalContainer
       isOpen={false}
       close={closeMock}
       save={saveMock}

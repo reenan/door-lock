@@ -1,45 +1,60 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders without crashing 1`] = `
-<div
-  className="selected-employee-permissions"
-/>
+<div>
+  <p>
+    You have selected undefined (No role defined), and these are his/hers permissions:
+  </p>
+  <div
+    className="selected-employee-permissions"
+  />
+</div>
 `;
 
 exports[`renders without crashing with values 1`] = `
-<div
-  className="selected-employee-permissions"
->
+<div>
+  <p>
+    You have selected undefined (undefined), and these are his/hers permissions:
+  </p>
   <div
-    className="door-permissions"
+    className="selected-employee-permissions"
   >
-    <span
-      className="warn red"
+    <div
+      className="door-permissions"
     >
-      Not allowed to open: 
-    </span>
-    <span>
-      Mock
-    </span>
+      <span
+        className="warn red"
+      >
+        Not allowed to open: 
+      </span>
+      <span>
+        Mock
+      </span>
+    </div>
   </div>
 </div>
 `;
 
 exports[`renders without crashing with values and permission 1`] = `
-<div
-  className="selected-employee-permissions"
->
+<div>
+  <p>
+    You have selected undefined (undefined), and these are his/hers permissions:
+  </p>
   <div
-    className="door-permissions"
+    className="selected-employee-permissions"
   >
-    <span
-      className="warn green"
+    <div
+      className="door-permissions"
     >
-      Allowed to open: 
-    </span>
-    <span>
-      Mock
-    </span>
+      <span
+        className="warn green"
+      >
+        Allowed to open: 
+      </span>
+      <span>
+        Mock
+      </span>
+    </div>
   </div>
 </div>
 `;

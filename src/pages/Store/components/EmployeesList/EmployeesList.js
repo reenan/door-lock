@@ -2,9 +2,10 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { Icon } from 'semantic-ui-react'
 
+import './EmployeesList.scss'
 class EmployeesList extends Component {
   render() {
-    const { 
+    const {
       employees,
       employeesKeys,
       selectedEmployee,
@@ -16,21 +17,38 @@ class EmployeesList extends Component {
       <div className='employees'>
         {
           employeesKeys.map((employeeID) => (
-            <div key={employeeID} className={employeeID === selectedEmployee ? 'selected' : ''}
-              onClick={selectEmployee.bind(null, employeeID)}>
-              <p>
-                <Icon
-                  className={`custom-icon ${employeeID === selectedEmployee ? 
-                    'check-circle' : 'circle'}`} />
-                {employees[employeeID].name} ({roles[employees[employeeID].role].name})
-              </p>
-            </div>
+            <Employee
+              key={employeeID}
+              employeeID={employeeID}
+              selected={employeeID === selectedEmployee}
+              employees={employees}
+              roles={roles}
+              selectEmployee={selectEmployee}
+            />
           ))
         }
       </div>
     )
   }
 }
+
+const Employee = ({ employeeID, selected, selectEmployee, employees, roles }) => (
+  <div key={employeeID} className={ selected ? 'selected' : ''}
+    onClick={selectEmployee.bind(null, employeeID)}>
+    <p>
+      <Icon className={`custom-icon ${selected ? 'check-circle' : 'circle'}`} />
+      <span>{employees[employeeID].name}</span>
+      
+      <span>
+        ({
+          employees[employeeID].role ?
+          roles[employees[employeeID].role].name : 'No role defined'
+        })
+      </span>
+
+    </p>
+  </div>
+)
 
 EmployeesList.propTypes = {
   employeesKeys: PropTypes.array.isRequired,

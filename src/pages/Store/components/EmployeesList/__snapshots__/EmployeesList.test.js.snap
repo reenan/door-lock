@@ -20,10 +20,14 @@ exports[`renders without crashing with employees 1`] = `
         className="icon custom-icon circle"
         onClick={[Function]}
       />
-      Mock
-       (
-      Mock
-      )
+      <span>
+        Mock
+      </span>
+      <span>
+        (
+        Mock
+        )
+      </span>
     </p>
   </div>
 </div>
@@ -43,10 +47,14 @@ exports[`renders without crashing with employees and selected employee 1`] = `
         className="icon custom-icon check-circle"
         onClick={[Function]}
       />
-      Mock
-       (
-      Mock
-      )
+      <span>
+        Mock
+      </span>
+      <span>
+        (
+        Mock
+        )
+      </span>
     </p>
   </div>
 </div>

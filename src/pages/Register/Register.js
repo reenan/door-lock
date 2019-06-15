@@ -42,7 +42,7 @@ export default ({
 
       <Step.Group className='step-group' stackable='tablet'>
         <Step>
-          <Icon name='angle double right' />
+          <Icon name='star' />
           <Step.Content>
             <Step.Title>Register your store</Step.Title>
             <Step.Description>

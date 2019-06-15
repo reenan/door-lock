@@ -3,7 +3,9 @@ import React from 'react'
 import {
   EmployeesList,
   SelectedEmployeePermissions,
-  ManageDoorsModal,
+  ManageDoorsModalContainer,
+  ManageRolesModalContainer,
+  ManageEmployeesModalContainer,
 } from './components'
 
 import {
@@ -30,6 +32,16 @@ export default ({
   openManageDoorsModal,
   closeManageDoorsModal,
   isOpenManageDoorsModal,
+
+  saveRoleList,
+  openManageRolesModal,
+  closeManageRolesModal,
+  isOpenManageRolesModal,
+
+  isOpenManageEmployeesModal,
+  saveEmployeeList,
+  openManageEmployeesModal,
+  closeManageEmployeesModal,
 }) => {
   const employeesKeys = Object.keys(employees)
   const doorsKeys = Object.keys(doors)
@@ -56,12 +68,22 @@ export default ({
               <Icon className='custom-icon door-closed' />
               Doors
             </Button>  
-            <Button size='large' labelPosition='left' content='Roles' icon='lock' />
-            <Button size='large' labelPosition='left' content='Employees' icon='users' />
+
+            <Button size='large' labelPosition='left' content='Roles' icon='lock'
+              onClick={openManageRolesModal} />
+
+            <Button size='large' labelPosition='left' content='Employees' icon='users'
+              onClick={openManageEmployeesModal} />
           </div>
           
-          <ManageDoorsModal loading={loading} isOpen={isOpenManageDoorsModal} save={saveDoorList}
-            close={closeManageDoorsModal} doors={doors} />
+          <ManageDoorsModalContainer loading={loading} isOpen={isOpenManageDoorsModal}
+            save={saveDoorList} close={closeManageDoorsModal} doors={doors} />
+
+          <ManageRolesModalContainer loading={loading} isOpen={isOpenManageRolesModal}
+            save={saveRoleList} close={closeManageRolesModal} roles={roles} doors={doors} />
+
+          <ManageEmployeesModalContainer loading={loading} isOpen={isOpenManageEmployeesModal}
+            save={saveEmployeeList} close={closeManageEmployeesModal} roles={roles} employees={employees} />
 
           <Divider section />
 
@@ -73,20 +95,8 @@ export default ({
           <EmployeesList employees={employees} employeesKeys={employeesKeys}
             selectedEmployee={selectedEmployee} selectEmployee={selectEmployee} roles={roles} />
           
-
-          <p className='small'>
-            { 
-              selectedEmployee && employees[selectedEmployee] ?
-                `You have selected ${employees[selectedEmployee].name} (${roles[employees[selectedEmployee].role].name}), and these are his/hers permissions:` :
-                'Please, select an employee to continue.'
-            }
-          </p>
-          
-          {
-            selectedEmployee && employees[selectedEmployee] ?
-              <SelectedEmployeePermissions selectedEmployee={employees[selectedEmployee]}
-                roles={roles} doors={doors} doorsKeys={doorsKeys} /> : null
-          }
+          <SelectedEmployeePermissions selectedEmployee={employees[selectedEmployee]}
+            roles={roles} doors={doors} doorsKeys={doorsKeys} />
 
         </Container>
       </Segment>

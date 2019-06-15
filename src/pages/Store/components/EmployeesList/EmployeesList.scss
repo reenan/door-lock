@@ -1,0 +1,28 @@
+@import '../../../../resources/_mixins.scss';
+
+.employees {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 15px;
+  margin: 30px 0;
+
+  > div {
+    @include transition(color .4s,border-color .4s,opacity .4s);
+    cursor: pointer;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    padding: 15px;
+    opacity: .7;
+    background-color: #0000001a;
+
+    p > span + span {
+      margin-left: 5px;
+    }
+
+    &:hover, &.selected {
+      opacity: 1;
+      color: #25cb68;
+      border-color: #25cb68;
+    }
+  }
+}
