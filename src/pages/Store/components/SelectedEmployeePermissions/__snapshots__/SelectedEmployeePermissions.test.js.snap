@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders without crashing 1`] = `
+<div
+  className="selected-employee-permissions"
+/>
+`;
+
+exports[`renders without crashing with values 1`] = `
+<div
+  className="selected-employee-permissions"
+>
+  <div
+    className="door-permissions"
+  >
+    <span
+      className="warn red"
+    >
+      Not allowed to open: 
+    </span>
+    <span>
+      Mock
+    </span>
+  </div>
+</div>
+`;
+
+exports[`renders without crashing with values and permission 1`] = `
+<div
+  className="selected-employee-permissions"
+>
+  <div
+    className="door-permissions"
+  >
+    <span
+      className="warn green"
+    >
+      Allowed to open: 
+    </span>
+    <span>
+      Mock
+    </span>
+  </div>
+</div>
+`;

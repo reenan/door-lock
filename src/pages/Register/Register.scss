@@ -1,0 +1,29 @@
+.register {
+  height: 100%;
+  
+  .ui.vertical.segment {
+    padding: 3em 0;
+  }
+  
+  .ui.stackable.steps.step-group {
+    margin: 30px 0;
+    
+    .step {
+      max-width: 300px;
+      padding-bottom: 2em;
+      
+      > .icon {
+        margin: 15px 0;
+      }
+    }
+  }
+  
+  .ui.inverted.header {
+    &.call {
+      font-size: 1.6em;
+      font-style: italic;
+      margin-top: 0.5em;
+      margin-bottom: 1.5em;
+    }
+  }
+}

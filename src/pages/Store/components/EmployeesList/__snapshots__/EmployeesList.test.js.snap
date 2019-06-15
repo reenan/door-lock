@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders without crashing 1`] = `
+<div
+  className="employees"
+/>
+`;
+
+exports[`renders without crashing with employees 1`] = `
+<div
+  className="employees"
+>
+  <div
+    className=""
+    onClick={[Function]}
+  >
+    <p>
+      <i
+        aria-hidden="true"
+        className="icon custom-icon circle"
+        onClick={[Function]}
+      />
+      Mock
+       (
+      Mock
+      )
+    </p>
+  </div>
+</div>
+`;
+
+exports[`renders without crashing with employees and selected employee 1`] = `
+<div
+  className="employees"
+>
+  <div
+    className="selected"
+    onClick={[Function]}
+  >
+    <p>
+      <i
+        aria-hidden="true"
+        className="icon custom-icon check-circle"
+        onClick={[Function]}
+      />
+      Mock
+       (
+      Mock
+      )
+    </p>
+  </div>
+</div>
+`;

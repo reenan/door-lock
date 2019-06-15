@@ -1,7 +1,7 @@
 import React from 'react'
 import { Route, Switch, Redirect } from 'react-router-dom'
 
-import { RegisterContainer, StoreContainer } from './components'
+import { RegisterContainer, StoreContainer } from './pages'
 
 export default () => (
 	<Switch>

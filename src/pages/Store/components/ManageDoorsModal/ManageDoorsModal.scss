@@ -1,0 +1,21 @@
+.manage-doors-modal {
+  .ui.list.door-list {
+    margin-bottom: 0px;
+
+    div.door-wrapper {
+      > div {
+        display: grid;
+        grid-template-columns: 8fr 1fr;
+        gap: 15px;
+      }
+
+      & + div.door-wrapper {
+        margin-top: 15px;
+      }
+    }
+
+    > .item > .right.floated {
+      margin-top: 15px;
+    }
+  }
+}
