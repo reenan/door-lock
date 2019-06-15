@@ -1,5 +1,4 @@
 ## Door Lock
-___
 
 #### Running
 ```
