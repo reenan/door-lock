@@ -20,7 +20,7 @@ class RegisterContainer extends Component {
 
   registerStore = () => {
     const { storeName } = this.state
-    
+
     this.props.dispatch(registerStore(storeName)).then(() => {
       this.props.history.push('/store')
     })

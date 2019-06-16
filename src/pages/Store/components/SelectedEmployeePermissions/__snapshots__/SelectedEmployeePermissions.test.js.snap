@@ -2,34 +2,39 @@
 
 exports[`renders without crashing 1`] = `
 <div>
-  <p>
-    You have selected undefined (No role defined), and these are his/hers permissions:
-  </p>
   <div
-    className="selected-employee-permissions"
-  />
+    className="ui warning message"
+  >
+    <div
+      className="header"
+    >
+      Please, register at least one door before continuing.
+    </div>
+  </div>
 </div>
 `;
 
 exports[`renders without crashing with values 1`] = `
 <div>
-  <p>
-    You have selected undefined (undefined), and these are his/hers permissions:
-  </p>
-  <div
-    className="selected-employee-permissions"
-  >
+  <div>
+    <p>
+      You have selected undefined (undefined), and these are his/hers permissions:
+    </p>
     <div
       className="door-permissions"
     >
-      <span
-        className="warn red"
-      >
-        Not allowed to open: 
-      </span>
-      <span>
-        Mock
-      </span>
+      <div>
+        <p>
+          <span
+            className="warn red"
+          >
+            Not allowed to open: 
+          </span>
+          <span>
+            Mock
+          </span>
+        </p>
+      </div>
     </div>
   </div>
 </div>
@@ -37,23 +42,25 @@ exports[`renders without crashing with values 1`] = `
 
 exports[`renders without crashing with values and permission 1`] = `
 <div>
-  <p>
-    You have selected undefined (undefined), and these are his/hers permissions:
-  </p>
-  <div
-    className="selected-employee-permissions"
-  >
+  <div>
+    <p>
+      You have selected undefined (undefined), and these are his/hers permissions:
+    </p>
     <div
       className="door-permissions"
     >
-      <span
-        className="warn green"
-      >
-        Allowed to open: 
-      </span>
-      <span>
-        Mock
-      </span>
+      <div>
+        <p>
+          <span
+            className="warn green"
+          >
+            Allowed to open: 
+          </span>
+          <span>
+            Mock
+          </span>
+        </p>
+      </div>
     </div>
   </div>
 </div>

@@ -11,6 +11,6 @@ it('renders without crashing', () => {
     />
   )
 
-  expect(component).toMatchSnapshot();
+  expect(component).toMatchSnapshot()
 
 })

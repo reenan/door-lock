@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders without crashing 1`] = `
+<_default
+  close={[Function]}
+  isOpen={false}
+  loading={false}
+  unregister={[Function]}
+>
+  <Modal
+    centered={true}
+    closeOnDimmerClick={true}
+    closeOnDocumentClick={false}
+    dimmer={true}
+    eventPool="Modal"
+    onClose={[Function]}
+    open={false}
+    size="small"
+  >
+    <Portal
+      closeOnDocumentClick={false}
+      closeOnEscape={true}
+      eventPool="Modal"
+      mountNode={<body />}
+      onClose={[Function]}
+      onMount={[Function]}
+      onOpen={[Function]}
+      onUnmount={[Function]}
+      open={false}
+      openOnTriggerClick={true}
+    />
+  </Modal>
+</_default>
+`;

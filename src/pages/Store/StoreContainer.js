@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { Redirect } from 'react-router-dom'
 
-import { updateStore } from '../../actions'
+import { updateStore, unregisterStore } from '../../actions'
 
 import Store from './Store'
 
@@ -15,7 +15,8 @@ class StoreContainer extends Component {
       selectedEmployee: null,
       isOpenManageDoorsModal: false,
       isOpenManageRolesModal: false,
-      isOpenManageEmployeesModal: true,
+      isOpenManageEmployeesModal: false,
+      isOpenUnregistrationModal: false,
     }
   }
 
@@ -60,15 +61,6 @@ class StoreContainer extends Component {
     let updatedStore = Object.assign({}, this.props.store)
     updatedStore.roles = roles
 
-    let updatedRolesKeys = Object.keys(updatedStore.roles)
-    
-    // Remove deleted roles from employees
-    for (let employeeID in updatedStore.employees) {
-      if (updatedRolesKeys.indexOf(updatedStore.employees[employeeID].role) === -1) {
-        updatedStore.employees[employeeID].role = null
-      }
-    }
-
     return this.props.dispatch(updateStore(updatedStore))
   }
 
@@ -91,16 +83,61 @@ class StoreContainer extends Component {
     return this.props.dispatch(updateStore(updatedStore))
   }
 
+  openUnregistrationModal = () => {
+    this.setState({
+      isOpenUnregistrationModal: true
+    })
+  }
+
+  closeUnregistrationModal = () => {
+    this.setState({
+      isOpenUnregistrationModal: false
+    })
+  }
+
+  unregisterStore = () => {
+    this.props.dispatch(unregisterStore(this.props.store))
+  }
+
   render() {
     const {
       selectedEmployee,
       isOpenManageDoorsModal,
       isOpenManageRolesModal,
       isOpenManageEmployeesModal,
+      isOpenUnregistrationModal,
     } = this.state
-    
+
     const { store, isFetching } = this.props
     const { name, doors, employees, roles } = store
+
+    const doorModalProps = {
+      isOpen: isOpenManageDoorsModal,
+      save: this.saveDoorList,
+      open: this.openManageDoorsModal,
+      close: this.closeManageDoorsModal,
+    }
+
+    const roleModalProps = {
+      isOpen: isOpenManageRolesModal,
+      save: this.saveRoleList,
+      open: this.openManageRolesModal,
+      close: this.closeManageRolesModal,
+    }
+
+    const employeeModalProps = {
+      isOpen: isOpenManageEmployeesModal,
+      save: this.saveEmployeeList,
+      open: this.openManageEmployeesModal,
+      close: this.closeManageEmployeesModal,
+    }
+
+    const unregisterModalProps = {
+      isOpen: isOpenUnregistrationModal,
+      unregister: this.unregisterStore,
+      open: this.openUnregistrationModal,
+      close: this.closeUnregistrationModal,
+    }
 
     return (
       !store.name ?
@@ -112,23 +149,12 @@ class StoreContainer extends Component {
           doors={doors}
           loading={isFetching}
           selectedEmployee={selectedEmployee}
-          
-          isOpenManageDoorsModal={isOpenManageDoorsModal}
-          saveDoorList={this.saveDoorList}
-          openManageDoorsModal={this.openManageDoorsModal}
-          closeManageDoorsModal={this.closeManageDoorsModal}
-
-          isOpenManageRolesModal={isOpenManageRolesModal}
-          saveRoleList={this.saveRoleList}
-          openManageRolesModal={this.openManageRolesModal}
-          closeManageRolesModal={this.closeManageRolesModal}
-
-          isOpenManageEmployeesModal={isOpenManageEmployeesModal}
-          saveEmployeeList={this.saveEmployeeList}
-          openManageEmployeesModal={this.openManageEmployeesModal}
-          closeManageEmployeesModal={this.closeManageEmployeesModal}
-
           selectEmployee={this.selectEmployee}
+
+          unregisterModalProps={unregisterModalProps}
+          doorModalProps={doorModalProps}
+          roleModalProps={roleModalProps}
+          employeeModalProps={employeeModalProps}
         />
     )
   }

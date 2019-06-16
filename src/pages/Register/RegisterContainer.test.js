@@ -12,7 +12,7 @@ const mockStore = configureStore(middlewares)
 
 import { shallow } from 'enzyme'
 
-afterEach(() => {    
+afterEach(() => {
   jest.clearAllMocks()
 })
 

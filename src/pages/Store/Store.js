@@ -3,9 +3,10 @@ import React from 'react'
 import {
   EmployeesList,
   SelectedEmployeePermissions,
-  ManageDoorsModalContainer,
-  ManageRolesModalContainer,
-  ManageEmployeesModalContainer,
+  ManageDoorsModal,
+  ManageRolesModal,
+  ManageEmployeesModal,
+  UnregisterModal,
 } from './components'
 
 import {
@@ -15,6 +16,7 @@ import {
   Segment,
   Divider,
   Icon,
+  Message,
 } from 'semantic-ui-react'
 
 import './Store.scss'
@@ -24,24 +26,14 @@ export default ({
   employees,
   roles,
   doors,
+  loading,
   selectedEmployee,
   selectEmployee,
-  loading,
 
-  saveDoorList,
-  openManageDoorsModal,
-  closeManageDoorsModal,
-  isOpenManageDoorsModal,
-
-  saveRoleList,
-  openManageRolesModal,
-  closeManageRolesModal,
-  isOpenManageRolesModal,
-
-  isOpenManageEmployeesModal,
-  saveEmployeeList,
-  openManageEmployeesModal,
-  closeManageEmployeesModal,
+  unregisterModalProps,
+  doorModalProps,
+  roleModalProps,
+  employeeModalProps,
 }) => {
   const employeesKeys = Object.keys(employees)
   const doorsKeys = Object.keys(doors)
@@ -49,8 +41,8 @@ export default ({
   return (
     <div className='store'>
       <Segment inverted vertical>
-      
-        <Container className='wrap-store' text>
+
+        <Container className='wrap-store'>
           <Header as='h1' size='huge' inverted>
             Hello, {name}
           </Header>
@@ -59,44 +51,62 @@ export default ({
             Welcome to your secure doors environment
           </Header>
 
-          <Header inverted sub>
+          <Header inverted size='tiny'>
             Customize your store using the buttons below:
           </Header>
 
           <div className='customize-buttons'>
-            <Button size='large' icon labelPosition='left' onClick={openManageDoorsModal}>
+            <Button size='large' icon labelPosition='left' onClick={doorModalProps.open}>
               <Icon className='custom-icon door-closed' />
               Doors
-            </Button>  
+            </Button>
 
             <Button size='large' labelPosition='left' content='Roles' icon='lock'
-              onClick={openManageRolesModal} />
+              onClick={roleModalProps.open} />
 
             <Button size='large' labelPosition='left' content='Employees' icon='users'
-              onClick={openManageEmployeesModal} />
+              onClick={employeeModalProps.open} />
           </div>
-          
-          <ManageDoorsModalContainer loading={loading} isOpen={isOpenManageDoorsModal}
-            save={saveDoorList} close={closeManageDoorsModal} doors={doors} />
 
-          <ManageRolesModalContainer loading={loading} isOpen={isOpenManageRolesModal}
-            save={saveRoleList} close={closeManageRolesModal} roles={roles} doors={doors} />
+          <Header inverted size='tiny'>
+            If you want, you can unregister your store by
+            <span onClick={unregisterModalProps.open} className='unregister warn red'> clicking here</span>.
+          </Header>
 
-          <ManageEmployeesModalContainer loading={loading} isOpen={isOpenManageEmployeesModal}
-            save={saveEmployeeList} close={closeManageEmployeesModal} roles={roles} employees={employees} />
+          <UnregisterModal isOpen={unregisterModalProps.isOpen} close={unregisterModalProps.close}
+            unregister={unregisterModalProps.unregister} loading={loading}
+          />
+
+          <ManageDoorsModal isOpen={doorModalProps.isOpen} items={doors}
+            loading={loading} save={doorModalProps.save} close={doorModalProps.close} />
+
+          <ManageRolesModal isOpen={roleModalProps.isOpen} items={roles}
+            loading={loading} save={roleModalProps.save} close={roleModalProps.close}
+            nestedItems={doors} />
+
+          <ManageEmployeesModal isOpen={employeeModalProps.isOpen} items={employees}
+            loading={loading} save={employeeModalProps.save} close={employeeModalProps.close}
+            nestedItems={roles} />
 
           <Divider section />
 
-          <Header inverted size='medium'>
-            Select which employee you would like to use to try on the doors
-          </Header>
+          {
+            employeesKeys.length > 0 ?
+              <div>
+                <Header inverted size='medium'>
+                  Select which employee you would like to use to try on the doors
+                </Header>
 
-          
-          <EmployeesList employees={employees} employeesKeys={employeesKeys}
-            selectedEmployee={selectedEmployee} selectEmployee={selectEmployee} roles={roles} />
-          
-          <SelectedEmployeePermissions selectedEmployee={employees[selectedEmployee]}
-            roles={roles} doors={doors} doorsKeys={doorsKeys} />
+                <EmployeesList employees={employees} employeesKeys={employeesKeys}
+                  selectedEmployee={selectedEmployee} selectEmployee={selectEmployee} roles={roles} />
+
+                <SelectedEmployeePermissions selectedEmployee={employees[selectedEmployee]}
+                  roles={roles} doors={doors} doorsKeys={doorsKeys} />
+              </div> :
+              <Message warning>
+                <Message.Header>Please, register at least one employee before continuing.</Message.Header>
+              </Message>
+          }
 
         </Container>
       </Segment>

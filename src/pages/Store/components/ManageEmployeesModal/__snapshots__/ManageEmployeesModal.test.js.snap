@@ -16,18 +16,18 @@ exports[`renders without crashing 1`] = `
     itemStructure={
       Object {
         "name": "",
-        "permissions": Object {},
+        "role": "",
       }
     }
     items={Object {}}
     loading={false}
     modalData={
       Object {
-        "addText": "Add new role",
-        "description": "Here you can manage your roles and their permissions, ensuring
-        only authorised people will able to open your roles with one click.",
-        "info": "PS: Roles with empty names will be ignored.",
-        "title": "Manage your roles",
+        "addText": "Add new employee",
+        "description": "Here you can manage your employees and their roles, ensuring
+        that no one will be getting into places they are not supposed to.",
+        "info": "PS: Employees with empty names will be ignored.",
+        "title": "Manage your employees",
       }
     }
     nestedItems={Object {}}
@@ -46,11 +46,11 @@ exports[`renders without crashing 1`] = `
       loading={false}
       modalData={
         Object {
-          "addText": "Add new role",
-          "description": "Here you can manage your roles and their permissions, ensuring
-        only authorised people will able to open your roles with one click.",
-          "info": "PS: Roles with empty names will be ignored.",
-          "title": "Manage your roles",
+          "addText": "Add new employee",
+          "description": "Here you can manage your employees and their roles, ensuring
+        that no one will be getting into places they are not supposed to.",
+          "info": "PS: Employees with empty names will be ignored.",
+          "title": "Manage your employees",
         }
       }
       nestedItems={Object {}}
@@ -91,25 +91,23 @@ exports[`renders without crashing 1`] = `
 </_default>
 `;
 
-exports[`renders without crashing when open with permissions 1`] = `
+exports[`renders without crashing when open with role 1`] = `
 <_default
   close={[Function]}
   isOpen={true}
   items={
     Object {
       "mock": Object {
-        "name": "Role",
-        "permissions": Object {
-          "mockDoor": true,
-        },
+        "name": "Employee",
+        "role": "mockRole",
       },
     }
   }
   loading={false}
   nestedItems={
     Object {
-      "mockDoor": Object {
-        "name": "Door",
+      "mockRole": Object {
+        "name": "Role",
       },
     }
   }
@@ -122,33 +120,31 @@ exports[`renders without crashing when open with permissions 1`] = `
     itemStructure={
       Object {
         "name": "",
-        "permissions": Object {},
+        "role": "",
       }
     }
     items={
       Object {
         "mock": Object {
-          "name": "Role",
-          "permissions": Object {
-            "mockDoor": true,
-          },
+          "name": "Employee",
+          "role": "mockRole",
         },
       }
     }
     loading={false}
     modalData={
       Object {
-        "addText": "Add new role",
-        "description": "Here you can manage your roles and their permissions, ensuring
-        only authorised people will able to open your roles with one click.",
-        "info": "PS: Roles with empty names will be ignored.",
-        "title": "Manage your roles",
+        "addText": "Add new employee",
+        "description": "Here you can manage your employees and their roles, ensuring
+        that no one will be getting into places they are not supposed to.",
+        "info": "PS: Employees with empty names will be ignored.",
+        "title": "Manage your employees",
       }
     }
     nestedItems={
       Object {
-        "mockDoor": Object {
-          "name": "Door",
+        "mockRole": Object {
+          "name": "Role",
         },
       }
     }
@@ -167,23 +163,23 @@ exports[`renders without crashing when open with permissions 1`] = `
       loading={false}
       modalData={
         Object {
-          "addText": "Add new role",
-          "description": "Here you can manage your roles and their permissions, ensuring
-        only authorised people will able to open your roles with one click.",
-          "info": "PS: Roles with empty names will be ignored.",
-          "title": "Manage your roles",
+          "addText": "Add new employee",
+          "description": "Here you can manage your employees and their roles, ensuring
+        that no one will be getting into places they are not supposed to.",
+          "info": "PS: Employees with empty names will be ignored.",
+          "title": "Manage your employees",
         }
       }
       nestedItems={
         Object {
-          "mockDoor": Object {
-            "name": "Door",
+          "mockRole": Object {
+            "name": "Role",
           },
         }
       }
       nestedItemsKeys={
         Array [
-          "mockDoor",
+          "mockRole",
         ]
       }
       removeItem={[Function]}
@@ -192,10 +188,8 @@ exports[`renders without crashing when open with permissions 1`] = `
       virtualItems={
         Object {
           "mock": Object {
-            "name": "Role",
-            "permissions": Object {
-              "mockDoor": true,
-            },
+            "name": "Employee",
+            "role": "mockRole",
           },
         }
       }
@@ -235,17 +229,17 @@ exports[`renders without crashing when open with permissions 1`] = `
                   <div
                     class="header"
                   >
-                    Manage your roles
+                    Manage your employees
                   </div>
                   <div
                     class="content"
                   >
                     <p>
-                      Here you can manage your roles and their permissions, ensuring
-        only authorised people will able to open your roles with one click.
+                      Here you can manage your employees and their roles, ensuring
+        that no one will be getting into places they are not supposed to.
                     </p>
                     <p>
-                      PS: Roles with empty names will be ignored.
+                      PS: Employees with empty names will be ignored.
                     </p>
                     <div
                       class="ui middle aligned list item-list"
@@ -257,51 +251,57 @@ exports[`renders without crashing when open with permissions 1`] = `
                         <div
                           class="item-wrapper"
                         >
-                          <div>
+                          <div
+                            class="employee-list-item"
+                          >
                             <div
                               class="item"
                               role="listitem"
                             >
-                              <div
-                                class="ui input"
-                              >
-                                <input
-                                  name="name"
-                                  placeholder="Role name"
-                                  type="text"
-                                  value="Role"
-                                />
-                              </div>
-                              <div
-                                class="list roles-permission-door-list"
-                              >
+                              <div>
                                 <div
-                                  class="item"
-                                  role="listitem"
+                                  class="ui input"
                                 >
-                                  <div>
-                                    <p>
-                                      <span
-                                        class="warn green"
-                                      >
-                                        Allowed to open: 
-                                      </span>
-                                      <span>
-                                        Door
-                                      </span>
-                                    </p>
+                                  <input
+                                    name="name"
+                                    placeholder="Employee name"
+                                    type="text"
+                                    value="Employee"
+                                  />
+                                </div>
+                                <div
+                                  aria-expanded="false"
+                                  class="ui selection dropdown"
+                                  role="listbox"
+                                  tabindex="0"
+                                >
+                                  <div
+                                    aria-atomic="true"
+                                    aria-live="polite"
+                                    class="text"
+                                    role="alert"
+                                  >
+                                    Role
+                                  </div>
+                                  <i
+                                    aria-hidden="true"
+                                    class="dropdown icon"
+                                  />
+                                  <div
+                                    class="menu transition"
+                                  >
                                     <div
-                                      class="ui checked fitted toggle checkbox"
+                                      aria-checked="true"
+                                      aria-selected="true"
+                                      class="active selected item"
+                                      role="option"
+                                      style="pointer-events: all;"
                                     >
-                                      <input
-                                        checked=""
-                                        class="hidden"
-                                        readonly=""
-                                        tabindex="0"
-                                        type="checkbox"
-                                        value=""
-                                      />
-                                      <label />
+                                      <span
+                                        class="text"
+                                      >
+                                        Role
+                                      </span>
                                     </div>
                                   </div>
                                 </div>
@@ -335,7 +335,7 @@ exports[`renders without crashing when open with permissions 1`] = `
                               aria-hidden="true"
                               class="plus icon"
                             />
-                            Add new role
+                            Add new employee
                           </button>
                         </div>
                       </div>
@@ -390,17 +390,17 @@ exports[`renders without crashing when open with permissions 1`] = `
                     <div
                       class="header"
                     >
-                      Manage your roles
+                      Manage your employees
                     </div>
                     <div
                       class="content"
                     >
                       <p>
-                        Here you can manage your roles and their permissions, ensuring
-        only authorised people will able to open your roles with one click.
+                        Here you can manage your employees and their roles, ensuring
+        that no one will be getting into places they are not supposed to.
                       </p>
                       <p>
-                        PS: Roles with empty names will be ignored.
+                        PS: Employees with empty names will be ignored.
                       </p>
                       <div
                         class="ui middle aligned list item-list"
@@ -412,51 +412,57 @@ exports[`renders without crashing when open with permissions 1`] = `
                           <div
                             class="item-wrapper"
                           >
-                            <div>
+                            <div
+                              class="employee-list-item"
+                            >
                               <div
                                 class="item"
                                 role="listitem"
                               >
-                                <div
-                                  class="ui input"
-                                >
-                                  <input
-                                    name="name"
-                                    placeholder="Role name"
-                                    type="text"
-                                    value="Role"
-                                  />
-                                </div>
-                                <div
-                                  class="list roles-permission-door-list"
-                                >
+                                <div>
                                   <div
-                                    class="item"
-                                    role="listitem"
+                                    class="ui input"
                                   >
-                                    <div>
-                                      <p>
-                                        <span
-                                          class="warn green"
-                                        >
-                                          Allowed to open: 
-                                        </span>
-                                        <span>
-                                          Door
-                                        </span>
-                                      </p>
+                                    <input
+                                      name="name"
+                                      placeholder="Employee name"
+                                      type="text"
+                                      value="Employee"
+                                    />
+                                  </div>
+                                  <div
+                                    aria-expanded="false"
+                                    class="ui selection dropdown"
+                                    role="listbox"
+                                    tabindex="0"
+                                  >
+                                    <div
+                                      aria-atomic="true"
+                                      aria-live="polite"
+                                      class="text"
+                                      role="alert"
+                                    >
+                                      Role
+                                    </div>
+                                    <i
+                                      aria-hidden="true"
+                                      class="dropdown icon"
+                                    />
+                                    <div
+                                      class="menu transition"
+                                    >
                                       <div
-                                        class="ui checked fitted toggle checkbox"
+                                        aria-checked="true"
+                                        aria-selected="true"
+                                        class="active selected item"
+                                        role="option"
+                                        style="pointer-events: all;"
                                       >
-                                        <input
-                                          checked=""
-                                          class="hidden"
-                                          readonly=""
-                                          tabindex="0"
-                                          type="checkbox"
-                                          value=""
-                                        />
-                                        <label />
+                                        <span
+                                          class="text"
+                                        >
+                                          Role
+                                        </span>
                                       </div>
                                     </div>
                                   </div>
@@ -490,7 +496,7 @@ exports[`renders without crashing when open with permissions 1`] = `
                                 aria-hidden="true"
                                 class="plus icon"
                               />
-                              Add new role
+                              Add new employee
                             </button>
                           </div>
                         </div>
@@ -539,17 +545,17 @@ exports[`renders without crashing when open with permissions 1`] = `
                     <div
                       class="header"
                     >
-                      Manage your roles
+                      Manage your employees
                     </div>
                     <div
                       class="content"
                     >
                       <p>
-                        Here you can manage your roles and their permissions, ensuring
-        only authorised people will able to open your roles with one click.
+                        Here you can manage your employees and their roles, ensuring
+        that no one will be getting into places they are not supposed to.
                       </p>
                       <p>
-                        PS: Roles with empty names will be ignored.
+                        PS: Employees with empty names will be ignored.
                       </p>
                       <div
                         class="ui middle aligned list item-list"
@@ -561,51 +567,57 @@ exports[`renders without crashing when open with permissions 1`] = `
                           <div
                             class="item-wrapper"
                           >
-                            <div>
+                            <div
+                              class="employee-list-item"
+                            >
                               <div
                                 class="item"
                                 role="listitem"
                               >
-                                <div
-                                  class="ui input"
-                                >
-                                  <input
-                                    name="name"
-                                    placeholder="Role name"
-                                    type="text"
-                                    value="Role"
-                                  />
-                                </div>
-                                <div
-                                  class="list roles-permission-door-list"
-                                >
+                                <div>
                                   <div
-                                    class="item"
-                                    role="listitem"
+                                    class="ui input"
                                   >
-                                    <div>
-                                      <p>
-                                        <span
-                                          class="warn green"
-                                        >
-                                          Allowed to open: 
-                                        </span>
-                                        <span>
-                                          Door
-                                        </span>
-                                      </p>
+                                    <input
+                                      name="name"
+                                      placeholder="Employee name"
+                                      type="text"
+                                      value="Employee"
+                                    />
+                                  </div>
+                                  <div
+                                    aria-expanded="false"
+                                    class="ui selection dropdown"
+                                    role="listbox"
+                                    tabindex="0"
+                                  >
+                                    <div
+                                      aria-atomic="true"
+                                      aria-live="polite"
+                                      class="text"
+                                      role="alert"
+                                    >
+                                      Role
+                                    </div>
+                                    <i
+                                      aria-hidden="true"
+                                      class="dropdown icon"
+                                    />
+                                    <div
+                                      class="menu transition"
+                                    >
                                       <div
-                                        class="ui checked fitted toggle checkbox"
+                                        aria-checked="true"
+                                        aria-selected="true"
+                                        class="active selected item"
+                                        role="option"
+                                        style="pointer-events: all;"
                                       >
-                                        <input
-                                          checked=""
-                                          class="hidden"
-                                          readonly=""
-                                          tabindex="0"
-                                          type="checkbox"
-                                          value=""
-                                        />
-                                        <label />
+                                        <span
+                                          class="text"
+                                        >
+                                          Role
+                                        </span>
                                       </div>
                                     </div>
                                   </div>
@@ -639,7 +651,7 @@ exports[`renders without crashing when open with permissions 1`] = `
                                 aria-hidden="true"
                                 class="plus icon"
                               />
-                              Add new role
+                              Add new employee
                             </button>
                           </div>
                         </div>
@@ -692,17 +704,17 @@ exports[`renders without crashing when open with permissions 1`] = `
                       <div
                         class="header"
                       >
-                        Manage your roles
+                        Manage your employees
                       </div>
                       <div
                         class="content"
                       >
                         <p>
-                          Here you can manage your roles and their permissions, ensuring
-        only authorised people will able to open your roles with one click.
+                          Here you can manage your employees and their roles, ensuring
+        that no one will be getting into places they are not supposed to.
                         </p>
                         <p>
-                          PS: Roles with empty names will be ignored.
+                          PS: Employees with empty names will be ignored.
                         </p>
                         <div
                           class="ui middle aligned list item-list"
@@ -714,51 +726,57 @@ exports[`renders without crashing when open with permissions 1`] = `
                             <div
                               class="item-wrapper"
                             >
-                              <div>
+                              <div
+                                class="employee-list-item"
+                              >
                                 <div
                                   class="item"
                                   role="listitem"
                                 >
-                                  <div
-                                    class="ui input"
-                                  >
-                                    <input
-                                      name="name"
-                                      placeholder="Role name"
-                                      type="text"
-                                      value="Role"
-                                    />
-                                  </div>
-                                  <div
-                                    class="list roles-permission-door-list"
-                                  >
+                                  <div>
                                     <div
-                                      class="item"
-                                      role="listitem"
+                                      class="ui input"
                                     >
-                                      <div>
-                                        <p>
-                                          <span
-                                            class="warn green"
-                                          >
-                                            Allowed to open: 
-                                          </span>
-                                          <span>
-                                            Door
-                                          </span>
-                                        </p>
+                                      <input
+                                        name="name"
+                                        placeholder="Employee name"
+                                        type="text"
+                                        value="Employee"
+                                      />
+                                    </div>
+                                    <div
+                                      aria-expanded="false"
+                                      class="ui selection dropdown"
+                                      role="listbox"
+                                      tabindex="0"
+                                    >
+                                      <div
+                                        aria-atomic="true"
+                                        aria-live="polite"
+                                        class="text"
+                                        role="alert"
+                                      >
+                                        Role
+                                      </div>
+                                      <i
+                                        aria-hidden="true"
+                                        class="dropdown icon"
+                                      />
+                                      <div
+                                        class="menu transition"
+                                      >
                                         <div
-                                          class="ui checked fitted toggle checkbox"
+                                          aria-checked="true"
+                                          aria-selected="true"
+                                          class="active selected item"
+                                          role="option"
+                                          style="pointer-events: all;"
                                         >
-                                          <input
-                                            checked=""
-                                            class="hidden"
-                                            readonly=""
-                                            tabindex="0"
-                                            type="checkbox"
-                                            value=""
-                                          />
-                                          <label />
+                                          <span
+                                            class="text"
+                                          >
+                                            Role
+                                          </span>
                                         </div>
                                       </div>
                                     </div>
@@ -792,7 +810,7 @@ exports[`renders without crashing when open with permissions 1`] = `
                                   aria-hidden="true"
                                   class="plus icon"
                                 />
-                                Add new role
+                                Add new employee
                               </button>
                             </div>
                           </div>
@@ -846,17 +864,17 @@ exports[`renders without crashing when open with permissions 1`] = `
                             <div
                               class="header"
                             >
-                              Manage your roles
+                              Manage your employees
                             </div>
                             <div
                               class="content"
                             >
                               <p>
-                                Here you can manage your roles and their permissions, ensuring
-        only authorised people will able to open your roles with one click.
+                                Here you can manage your employees and their roles, ensuring
+        that no one will be getting into places they are not supposed to.
                               </p>
                               <p>
-                                PS: Roles with empty names will be ignored.
+                                PS: Employees with empty names will be ignored.
                               </p>
                               <div
                                 class="ui middle aligned list item-list"
@@ -868,51 +886,57 @@ exports[`renders without crashing when open with permissions 1`] = `
                                   <div
                                     class="item-wrapper"
                                   >
-                                    <div>
+                                    <div
+                                      class="employee-list-item"
+                                    >
                                       <div
                                         class="item"
                                         role="listitem"
                                       >
-                                        <div
-                                          class="ui input"
-                                        >
-                                          <input
-                                            name="name"
-                                            placeholder="Role name"
-                                            type="text"
-                                            value="Role"
-                                          />
-                                        </div>
-                                        <div
-                                          class="list roles-permission-door-list"
-                                        >
+                                        <div>
                                           <div
-                                            class="item"
-                                            role="listitem"
+                                            class="ui input"
                                           >
-                                            <div>
-                                              <p>
-                                                <span
-                                                  class="warn green"
-                                                >
-                                                  Allowed to open: 
-                                                </span>
-                                                <span>
-                                                  Door
-                                                </span>
-                                              </p>
+                                            <input
+                                              name="name"
+                                              placeholder="Employee name"
+                                              type="text"
+                                              value="Employee"
+                                            />
+                                          </div>
+                                          <div
+                                            aria-expanded="false"
+                                            class="ui selection dropdown"
+                                            role="listbox"
+                                            tabindex="0"
+                                          >
+                                            <div
+                                              aria-atomic="true"
+                                              aria-live="polite"
+                                              class="text"
+                                              role="alert"
+                                            >
+                                              Role
+                                            </div>
+                                            <i
+                                              aria-hidden="true"
+                                              class="dropdown icon"
+                                            />
+                                            <div
+                                              class="menu transition"
+                                            >
                                               <div
-                                                class="ui checked fitted toggle checkbox"
+                                                aria-checked="true"
+                                                aria-selected="true"
+                                                class="active selected item"
+                                                role="option"
+                                                style="pointer-events: all;"
                                               >
-                                                <input
-                                                  checked=""
-                                                  class="hidden"
-                                                  readonly=""
-                                                  tabindex="0"
-                                                  type="checkbox"
-                                                  value=""
-                                                />
-                                                <label />
+                                                <span
+                                                  class="text"
+                                                >
+                                                  Role
+                                                </span>
                                               </div>
                                             </div>
                                           </div>
@@ -946,7 +970,7 @@ exports[`renders without crashing when open with permissions 1`] = `
                                         aria-hidden="true"
                                         class="plus icon"
                                       />
-                                      Add new role
+                                      Add new employee
                                     </button>
                                   </div>
                                 </div>
@@ -990,17 +1014,17 @@ exports[`renders without crashing when open with permissions 1`] = `
                               <div
                                 class="header"
                               >
-                                Manage your roles
+                                Manage your employees
                               </div>
                               <div
                                 class="content"
                               >
                                 <p>
-                                  Here you can manage your roles and their permissions, ensuring
-        only authorised people will able to open your roles with one click.
+                                  Here you can manage your employees and their roles, ensuring
+        that no one will be getting into places they are not supposed to.
                                 </p>
                                 <p>
-                                  PS: Roles with empty names will be ignored.
+                                  PS: Employees with empty names will be ignored.
                                 </p>
                                 <div
                                   class="ui middle aligned list item-list"
@@ -1012,51 +1036,57 @@ exports[`renders without crashing when open with permissions 1`] = `
                                     <div
                                       class="item-wrapper"
                                     >
-                                      <div>
+                                      <div
+                                        class="employee-list-item"
+                                      >
                                         <div
                                           class="item"
                                           role="listitem"
                                         >
-                                          <div
-                                            class="ui input"
-                                          >
-                                            <input
-                                              name="name"
-                                              placeholder="Role name"
-                                              type="text"
-                                              value="Role"
-                                            />
-                                          </div>
-                                          <div
-                                            class="list roles-permission-door-list"
-                                          >
+                                          <div>
                                             <div
-                                              class="item"
-                                              role="listitem"
+                                              class="ui input"
                                             >
-                                              <div>
-                                                <p>
-                                                  <span
-                                                    class="warn green"
-                                                  >
-                                                    Allowed to open: 
-                                                  </span>
-                                                  <span>
-                                                    Door
-                                                  </span>
-                                                </p>
+                                              <input
+                                                name="name"
+                                                placeholder="Employee name"
+                                                type="text"
+                                                value="Employee"
+                                              />
+                                            </div>
+                                            <div
+                                              aria-expanded="false"
+                                              class="ui selection dropdown"
+                                              role="listbox"
+                                              tabindex="0"
+                                            >
+                                              <div
+                                                aria-atomic="true"
+                                                aria-live="polite"
+                                                class="text"
+                                                role="alert"
+                                              >
+                                                Role
+                                              </div>
+                                              <i
+                                                aria-hidden="true"
+                                                class="dropdown icon"
+                                              />
+                                              <div
+                                                class="menu transition"
+                                              >
                                                 <div
-                                                  class="ui checked fitted toggle checkbox"
+                                                  aria-checked="true"
+                                                  aria-selected="true"
+                                                  class="active selected item"
+                                                  role="option"
+                                                  style="pointer-events: all;"
                                                 >
-                                                  <input
-                                                    checked=""
-                                                    class="hidden"
-                                                    readonly=""
-                                                    tabindex="0"
-                                                    type="checkbox"
-                                                    value=""
-                                                  />
-                                                  <label />
+                                                  <span
+                                                    class="text"
+                                                  >
+                                                    Role
+                                                  </span>
                                                 </div>
                                               </div>
                                             </div>
@@ -1090,7 +1120,7 @@ exports[`renders without crashing when open with permissions 1`] = `
                                           aria-hidden="true"
                                           class="plus icon"
                                         />
-                                        Add new role
+                                        Add new employee
                                       </button>
                                     </div>
                                   </div>
@@ -1140,7 +1170,7 @@ exports[`renders without crashing when open with permissions 1`] = `
                             <div
                               className="header"
                             >
-                              Manage your roles
+                              Manage your employees
                             </div>
                           </ModalHeader>
                           <ModalContent>
@@ -1148,11 +1178,11 @@ exports[`renders without crashing when open with permissions 1`] = `
                               className="content"
                             >
                               <p>
-                                Here you can manage your roles and their permissions, ensuring
-        only authorised people will able to open your roles with one click.
+                                Here you can manage your employees and their roles, ensuring
+        that no one will be getting into places they are not supposed to.
                               </p>
                               <p>
-                                PS: Roles with empty names will be ignored.
+                                PS: Employees with empty names will be ignored.
                               </p>
                               <TransitionGroup
                                 animation="fade"
@@ -1192,161 +1222,268 @@ exports[`renders without crashing when open with permissions 1`] = `
                                         <div
                                           className="item-wrapper"
                                         >
-                                          <ManagementModalRoleItem
+                                          <ManagementModalEmployeeItem
                                             handleCheckboxToggle={[Function]}
                                             handleDropdownChange={[Function]}
                                             handleTextInputChange={[Function]}
                                             id="mock"
                                             item={
                                               Object {
-                                                "name": "Role",
-                                                "permissions": Object {
-                                                  "mockDoor": true,
-                                                },
+                                                "name": "Employee",
+                                                "role": "mockRole",
                                               }
                                             }
                                             nestedItems={
                                               Object {
-                                                "mockDoor": Object {
-                                                  "name": "Door",
+                                                "mockRole": Object {
+                                                  "name": "Role",
                                                 },
                                               }
                                             }
                                             nestedItemsKeys={
                                               Array [
-                                                "mockDoor",
+                                                "mockRole",
                                               ]
                                             }
                                           >
-                                            <div>
+                                            <div
+                                              className="employee-list-item"
+                                            >
                                               <ListItem>
                                                 <div
                                                   className="item"
                                                   onClick={[Function]}
                                                   role="listitem"
                                                 >
-                                                  <Input
-                                                    name="name"
-                                                    onChange={[Function]}
-                                                    placeholder="Role name"
-                                                    type="text"
-                                                    value="Role"
-                                                  >
-                                                    <div
-                                                      className="ui input"
+                                                  <div>
+                                                    <Input
+                                                      name="name"
+                                                      onChange={[Function]}
+                                                      placeholder="Employee name"
+                                                      type="text"
+                                                      value="Employee"
                                                     >
-                                                      <input
-                                                        name="name"
-                                                        onChange={[Function]}
-                                                        placeholder="Role name"
-                                                        type="text"
-                                                        value="Role"
-                                                      />
-                                                    </div>
-                                                  </Input>
-                                                  <ListList
-                                                    className="roles-permission-door-list"
-                                                  >
-                                                    <div
-                                                      className="list roles-permission-door-list"
-                                                    >
-                                                      <ListItem
-                                                        key="mockDoor"
-                                                        onClick={[Function]}
+                                                      <div
+                                                        className="ui input"
                                                       >
-                                                        <div
-                                                          className="item"
-                                                          onClick={[Function]}
-                                                          role="listitem"
-                                                        >
-                                                          <div>
-                                                            <p>
-                                                              <span
-                                                                className="warn green"
+                                                        <input
+                                                          name="name"
+                                                          onChange={[Function]}
+                                                          placeholder="Employee name"
+                                                          type="text"
+                                                          value="Employee"
+                                                        />
+                                                      </div>
+                                                    </Input>
+                                                    <Select
+                                                      onChange={[Function]}
+                                                      options={
+                                                        Array [
+                                                          Object {
+                                                            "key": "mockRole",
+                                                            "text": "Role",
+                                                            "value": "mockRole",
+                                                          },
+                                                        ]
+                                                      }
+                                                      placeholder="Select a role"
+                                                      selectOnBlur={false}
+                                                      text="Role"
+                                                      value="mockRole"
+                                                    >
+                                                      <Dropdown
+                                                        additionLabel="Add "
+                                                        additionPosition="top"
+                                                        closeOnBlur={true}
+                                                        closeOnEscape={true}
+                                                        deburr={false}
+                                                        icon="dropdown"
+                                                        minCharacters={1}
+                                                        noResultsMessage="No results found."
+                                                        onChange={[Function]}
+                                                        openOnFocus={true}
+                                                        options={
+                                                          Array [
+                                                            Object {
+                                                              "key": "mockRole",
+                                                              "text": "Role",
+                                                              "value": "mockRole",
+                                                            },
+                                                          ]
+                                                        }
+                                                        placeholder="Select a role"
+                                                        renderLabel={[Function]}
+                                                        searchInput="text"
+                                                        selectOnBlur={false}
+                                                        selectOnNavigation={true}
+                                                        selection={true}
+                                                        text="Role"
+                                                        value="mockRole"
+                                                        wrapSelection={true}
+                                                      >
+                                                        <Ref
+                                                          innerRef={
+                                                            Object {
+                                                              "current": <div
+                                                                aria-expanded="false"
+                                                                class="ui selection dropdown"
+                                                                role="listbox"
+                                                                tabindex="0"
                                                               >
-                                                                Allowed to open: 
-                                                              </span>
-                                                              <span>
-                                                                Door
-                                                              </span>
-                                                            </p>
-                                                            <Checkbox
-                                                              checked={true}
-                                                              toggle={true}
-                                                              type="checkbox"
+                                                                <div
+                                                                  aria-atomic="true"
+                                                                  aria-live="polite"
+                                                                  class="text"
+                                                                  role="alert"
+                                                                >
+                                                                  Role
+                                                                </div>
+                                                                <i
+                                                                  aria-hidden="true"
+                                                                  class="dropdown icon"
+                                                                />
+                                                                <div
+                                                                  class="menu transition"
+                                                                >
+                                                                  <div
+                                                                    aria-checked="true"
+                                                                    aria-selected="true"
+                                                                    class="active selected item"
+                                                                    role="option"
+                                                                    style="pointer-events: all;"
+                                                                  >
+                                                                    <span
+                                                                      class="text"
+                                                                    >
+                                                                      Role
+                                                                    </span>
+                                                                  </div>
+                                                                </div>
+                                                              </div>,
+                                                            }
+                                                          }
+                                                        >
+                                                          <RefFindNode
+                                                            innerRef={
+                                                              Object {
+                                                                "current": <div
+                                                                  aria-expanded="false"
+                                                                  class="ui selection dropdown"
+                                                                  role="listbox"
+                                                                  tabindex="0"
+                                                                >
+                                                                  <div
+                                                                    aria-atomic="true"
+                                                                    aria-live="polite"
+                                                                    class="text"
+                                                                    role="alert"
+                                                                  >
+                                                                    Role
+                                                                  </div>
+                                                                  <i
+                                                                    aria-hidden="true"
+                                                                    class="dropdown icon"
+                                                                  />
+                                                                  <div
+                                                                    class="menu transition"
+                                                                  >
+                                                                    <div
+                                                                      aria-checked="true"
+                                                                      aria-selected="true"
+                                                                      class="active selected item"
+                                                                      role="option"
+                                                                      style="pointer-events: all;"
+                                                                    >
+                                                                      <span
+                                                                        class="text"
+                                                                      >
+                                                                        Role
+                                                                      </span>
+                                                                    </div>
+                                                                  </div>
+                                                                </div>,
+                                                              }
+                                                            }
+                                                          >
+                                                            <div
+                                                              aria-expanded={false}
+                                                              className="ui selection dropdown"
+                                                              onBlur={[Function]}
+                                                              onChange={[Function]}
+                                                              onClick={[Function]}
+                                                              onFocus={[Function]}
+                                                              onMouseDown={[Function]}
+                                                              role="listbox"
+                                                              tabIndex={0}
                                                             >
                                                               <div
-                                                                className="ui checked fitted toggle checkbox"
-                                                                onChange={[Function]}
-                                                                onClick={[Function]}
-                                                                onMouseDown={[Function]}
-                                                                onMouseUp={[Function]}
+                                                                aria-atomic={true}
+                                                                aria-live="polite"
+                                                                className="text"
+                                                                role="alert"
                                                               >
-                                                                <Ref
-                                                                  innerRef={
-                                                                    Object {
-                                                                      "current": <input
-                                                                        checked=""
-                                                                        class="hidden"
-                                                                        readonly=""
-                                                                        tabindex="0"
-                                                                        type="checkbox"
-                                                                        value=""
-                                                                      />,
-                                                                    }
-                                                                  }
-                                                                >
-                                                                  <RefFindNode
-                                                                    innerRef={
-                                                                      Object {
-                                                                        "current": <input
-                                                                          checked=""
-                                                                          class="hidden"
-                                                                          readonly=""
-                                                                          tabindex="0"
-                                                                          type="checkbox"
-                                                                          value=""
-                                                                        />,
-                                                                      }
-                                                                    }
-                                                                  >
-                                                                    <input
-                                                                      checked={true}
-                                                                      className="hidden"
-                                                                      readOnly={true}
-                                                                      tabIndex={0}
-                                                                      type="checkbox"
-                                                                    />
-                                                                  </RefFindNode>
-                                                                </Ref>
-                                                                <Ref
-                                                                  innerRef={
-                                                                    Object {
-                                                                      "current": <label />,
-                                                                    }
-                                                                  }
-                                                                >
-                                                                  <RefFindNode
-                                                                    innerRef={
-                                                                      Object {
-                                                                        "current": <label />,
-                                                                      }
-                                                                    }
-                                                                  >
-                                                                    <label />
-                                                                  </RefFindNode>
-                                                                </Ref>
+                                                                Role
                                                               </div>
-                                                            </Checkbox>
-                                                          </div>
-                                                        </div>
-                                                      </ListItem>
-                                                    </div>
-                                                  </ListList>
+                                                              <Icon
+                                                                as="i"
+                                                                className=""
+                                                                name="dropdown"
+                                                                onClick={[Function]}
+                                                              >
+                                                                <i
+                                                                  aria-hidden="true"
+                                                                  className="dropdown icon"
+                                                                  onClick={[Function]}
+                                                                />
+                                                              </Icon>
+                                                              <DropdownMenu>
+                                                                <div
+                                                                  className="menu transition"
+                                                                >
+                                                                  <DropdownItem
+                                                                    active={true}
+                                                                    key="mockRole"
+                                                                    onClick={[Function]}
+                                                                    selected={true}
+                                                                    style={
+                                                                      Object {
+                                                                        "pointerEvents": "all",
+                                                                      }
+                                                                    }
+                                                                    text="Role"
+                                                                    value="mockRole"
+                                                                  >
+                                                                    <div
+                                                                      aria-checked={true}
+                                                                      aria-selected={true}
+                                                                      className="active selected item"
+                                                                      onClick={[Function]}
+                                                                      role="option"
+                                                                      style={
+                                                                        Object {
+                                                                          "pointerEvents": "all",
+                                                                        }
+                                                                      }
+                                                                    >
+                                                                      <span
+                                                                        className="text"
+                                                                      >
+                                                                        Role
+                                                                      </span>
+                                                                    </div>
+                                                                  </DropdownItem>
+                                                                </div>
+                                                              </DropdownMenu>
+                                                            </div>
+                                                          </RefFindNode>
+                                                        </Ref>
+                                                      </Dropdown>
+                                                    </Select>
+                                                  </div>
                                                 </div>
                                               </ListItem>
                                             </div>
-                                          </ManagementModalRoleItem>
+                                          </ManagementModalEmployeeItem>
                                           <Button
                                             as="button"
                                             icon="remove"
@@ -1444,7 +1581,7 @@ exports[`renders without crashing when open with permissions 1`] = `
                                             >
                                               <Button
                                                 as="button"
-                                                content="Add new role"
+                                                content="Add new employee"
                                                 icon="plus"
                                                 onClick={[Function]}
                                               >
@@ -1458,7 +1595,7 @@ exports[`renders without crashing when open with permissions 1`] = `
                                                           aria-hidden="true"
                                                           class="plus icon"
                                                         />
-                                                        Add new role
+                                                        Add new employee
                                                       </button>,
                                                     }
                                                   }
@@ -1473,7 +1610,7 @@ exports[`renders without crashing when open with permissions 1`] = `
                                                             aria-hidden="true"
                                                             class="plus icon"
                                                           />
-                                                          Add new role
+                                                          Add new employee
                                                         </button>,
                                                       }
                                                     }
@@ -1492,7 +1629,7 @@ exports[`renders without crashing when open with permissions 1`] = `
                                                           onClick={[Function]}
                                                         />
                                                       </Icon>
-                                                      Add new role
+                                                      Add new employee
                                                     </button>
                                                   </RefFindNode>
                                                 </Ref>
@@ -1668,17 +1805,17 @@ exports[`renders without crashing when open with permissions 1`] = `
                     <div
                       class="header"
                     >
-                      Manage your roles
+                      Manage your employees
                     </div>
                     <div
                       class="content"
                     >
                       <p>
-                        Here you can manage your roles and their permissions, ensuring
-        only authorised people will able to open your roles with one click.
+                        Here you can manage your employees and their roles, ensuring
+        that no one will be getting into places they are not supposed to.
                       </p>
                       <p>
-                        PS: Roles with empty names will be ignored.
+                        PS: Employees with empty names will be ignored.
                       </p>
                       <div
                         class="ui middle aligned list item-list"
@@ -1690,51 +1827,57 @@ exports[`renders without crashing when open with permissions 1`] = `
                           <div
                             class="item-wrapper"
                           >
-                            <div>
+                            <div
+                              class="employee-list-item"
+                            >
                               <div
                                 class="item"
                                 role="listitem"
                               >
-                                <div
-                                  class="ui input"
-                                >
-                                  <input
-                                    name="name"
-                                    placeholder="Role name"
-                                    type="text"
-                                    value="Role"
-                                  />
-                                </div>
-                                <div
-                                  class="list roles-permission-door-list"
-                                >
+                                <div>
                                   <div
-                                    class="item"
-                                    role="listitem"
+                                    class="ui input"
                                   >
-                                    <div>
-                                      <p>
-                                        <span
-                                          class="warn green"
-                                        >
-                                          Allowed to open: 
-                                        </span>
-                                        <span>
-                                          Door
-                                        </span>
-                                      </p>
+                                    <input
+                                      name="name"
+                                      placeholder="Employee name"
+                                      type="text"
+                                      value="Employee"
+                                    />
+                                  </div>
+                                  <div
+                                    aria-expanded="false"
+                                    class="ui selection dropdown"
+                                    role="listbox"
+                                    tabindex="0"
+                                  >
+                                    <div
+                                      aria-atomic="true"
+                                      aria-live="polite"
+                                      class="text"
+                                      role="alert"
+                                    >
+                                      Role
+                                    </div>
+                                    <i
+                                      aria-hidden="true"
+                                      class="dropdown icon"
+                                    />
+                                    <div
+                                      class="menu transition"
+                                    >
                                       <div
-                                        class="ui checked fitted toggle checkbox"
+                                        aria-checked="true"
+                                        aria-selected="true"
+                                        class="active selected item"
+                                        role="option"
+                                        style="pointer-events: all;"
                                       >
-                                        <input
-                                          checked=""
-                                          class="hidden"
-                                          readonly=""
-                                          tabindex="0"
-                                          type="checkbox"
-                                          value=""
-                                        />
-                                        <label />
+                                        <span
+                                          class="text"
+                                        >
+                                          Role
+                                        </span>
                                       </div>
                                     </div>
                                   </div>
@@ -1768,7 +1911,7 @@ exports[`renders without crashing when open with permissions 1`] = `
                                 aria-hidden="true"
                                 class="plus icon"
                               />
-                              Add new role
+                              Add new employee
                             </button>
                           </div>
                         </div>
@@ -1820,17 +1963,17 @@ exports[`renders without crashing when open with permissions 1`] = `
                     <div
                       class="header"
                     >
-                      Manage your roles
+                      Manage your employees
                     </div>
                     <div
                       class="content"
                     >
                       <p>
-                        Here you can manage your roles and their permissions, ensuring
-        only authorised people will able to open your roles with one click.
+                        Here you can manage your employees and their roles, ensuring
+        that no one will be getting into places they are not supposed to.
                       </p>
                       <p>
-                        PS: Roles with empty names will be ignored.
+                        PS: Employees with empty names will be ignored.
                       </p>
                       <div
                         class="ui middle aligned list item-list"
@@ -1842,51 +1985,57 @@ exports[`renders without crashing when open with permissions 1`] = `
                           <div
                             class="item-wrapper"
                           >
-                            <div>
+                            <div
+                              class="employee-list-item"
+                            >
                               <div
                                 class="item"
                                 role="listitem"
                               >
-                                <div
-                                  class="ui input"
-                                >
-                                  <input
-                                    name="name"
-                                    placeholder="Role name"
-                                    type="text"
-                                    value="Role"
-                                  />
-                                </div>
-                                <div
-                                  class="list roles-permission-door-list"
-                                >
+                                <div>
                                   <div
-                                    class="item"
-                                    role="listitem"
+                                    class="ui input"
                                   >
-                                    <div>
-                                      <p>
-                                        <span
-                                          class="warn green"
-                                        >
-                                          Allowed to open: 
-                                        </span>
-                                        <span>
-                                          Door
-                                        </span>
-                                      </p>
+                                    <input
+                                      name="name"
+                                      placeholder="Employee name"
+                                      type="text"
+                                      value="Employee"
+                                    />
+                                  </div>
+                                  <div
+                                    aria-expanded="false"
+                                    class="ui selection dropdown"
+                                    role="listbox"
+                                    tabindex="0"
+                                  >
+                                    <div
+                                      aria-atomic="true"
+                                      aria-live="polite"
+                                      class="text"
+                                      role="alert"
+                                    >
+                                      Role
+                                    </div>
+                                    <i
+                                      aria-hidden="true"
+                                      class="dropdown icon"
+                                    />
+                                    <div
+                                      class="menu transition"
+                                    >
                                       <div
-                                        class="ui checked fitted toggle checkbox"
+                                        aria-checked="true"
+                                        aria-selected="true"
+                                        class="active selected item"
+                                        role="option"
+                                        style="pointer-events: all;"
                                       >
-                                        <input
-                                          checked=""
-                                          class="hidden"
-                                          readonly=""
-                                          tabindex="0"
-                                          type="checkbox"
-                                          value=""
-                                        />
-                                        <label />
+                                        <span
+                                          class="text"
+                                        >
+                                          Role
+                                        </span>
                                       </div>
                                     </div>
                                   </div>
@@ -1920,7 +2069,7 @@ exports[`renders without crashing when open with permissions 1`] = `
                                 aria-hidden="true"
                                 class="plus icon"
                               />
-                              Add new role
+                              Add new employee
                             </button>
                           </div>
                         </div>
@@ -1981,25 +2130,23 @@ exports[`renders without crashing when open with permissions 1`] = `
 </_default>
 `;
 
-exports[`renders without crashing when open without permissions 1`] = `
+exports[`renders without crashing when open without role 1`] = `
 <_default
   close={[Function]}
   isOpen={true}
   items={
     Object {
       "mock": Object {
-        "name": "Role",
-        "permissions": Object {
-          "mockDoor": false,
-        },
+        "name": "Employee",
+        "role": null,
       },
     }
   }
   loading={false}
   nestedItems={
     Object {
-      "mockDoor": Object {
-        "name": "Door",
+      "mockRole": Object {
+        "name": "Role",
       },
     }
   }
@@ -2012,33 +2159,31 @@ exports[`renders without crashing when open without permissions 1`] = `
     itemStructure={
       Object {
         "name": "",
-        "permissions": Object {},
+        "role": "",
       }
     }
     items={
       Object {
         "mock": Object {
-          "name": "Role",
-          "permissions": Object {
-            "mockDoor": false,
-          },
+          "name": "Employee",
+          "role": null,
         },
       }
     }
     loading={false}
     modalData={
       Object {
-        "addText": "Add new role",
-        "description": "Here you can manage your roles and their permissions, ensuring
-        only authorised people will able to open your roles with one click.",
-        "info": "PS: Roles with empty names will be ignored.",
-        "title": "Manage your roles",
+        "addText": "Add new employee",
+        "description": "Here you can manage your employees and their roles, ensuring
+        that no one will be getting into places they are not supposed to.",
+        "info": "PS: Employees with empty names will be ignored.",
+        "title": "Manage your employees",
       }
     }
     nestedItems={
       Object {
-        "mockDoor": Object {
-          "name": "Door",
+        "mockRole": Object {
+          "name": "Role",
         },
       }
     }
@@ -2057,23 +2202,23 @@ exports[`renders without crashing when open without permissions 1`] = `
       loading={false}
       modalData={
         Object {
-          "addText": "Add new role",
-          "description": "Here you can manage your roles and their permissions, ensuring
-        only authorised people will able to open your roles with one click.",
-          "info": "PS: Roles with empty names will be ignored.",
-          "title": "Manage your roles",
+          "addText": "Add new employee",
+          "description": "Here you can manage your employees and their roles, ensuring
+        that no one will be getting into places they are not supposed to.",
+          "info": "PS: Employees with empty names will be ignored.",
+          "title": "Manage your employees",
         }
       }
       nestedItems={
         Object {
-          "mockDoor": Object {
-            "name": "Door",
+          "mockRole": Object {
+            "name": "Role",
           },
         }
       }
       nestedItemsKeys={
         Array [
-          "mockDoor",
+          "mockRole",
         ]
       }
       removeItem={[Function]}
@@ -2082,10 +2227,8 @@ exports[`renders without crashing when open without permissions 1`] = `
       virtualItems={
         Object {
           "mock": Object {
-            "name": "Role",
-            "permissions": Object {
-              "mockDoor": false,
-            },
+            "name": "Employee",
+            "role": null,
           },
         }
       }
@@ -2125,17 +2268,17 @@ exports[`renders without crashing when open without permissions 1`] = `
                   <div
                     class="header"
                   >
-                    Manage your roles
+                    Manage your employees
                   </div>
                   <div
                     class="content"
                   >
                     <p>
-                      Here you can manage your roles and their permissions, ensuring
-        only authorised people will able to open your roles with one click.
+                      Here you can manage your employees and their roles, ensuring
+        that no one will be getting into places they are not supposed to.
                     </p>
                     <p>
-                      PS: Roles with empty names will be ignored.
+                      PS: Employees with empty names will be ignored.
                     </p>
                     <div
                       class="ui middle aligned list item-list"
@@ -2147,51 +2290,57 @@ exports[`renders without crashing when open without permissions 1`] = `
                         <div
                           class="item-wrapper"
                         >
-                          <div>
+                          <div
+                            class="employee-list-item"
+                          >
                             <div
                               class="item"
                               role="listitem"
                             >
-                              <div
-                                class="ui input"
-                              >
-                                <input
-                                  name="name"
-                                  placeholder="Role name"
-                                  type="text"
-                                  value="Role"
-                                />
-                              </div>
-                              <div
-                                class="list roles-permission-door-list"
-                              >
+                              <div>
                                 <div
-                                  class="item"
-                                  role="listitem"
+                                  class="ui input"
                                 >
-                                  <div>
-                                    <p>
-                                      <span
-                                        class="warn green"
-                                      >
-                                        Allowed to open: 
-                                      </span>
-                                      <span>
-                                        Door
-                                      </span>
-                                    </p>
+                                  <input
+                                    name="name"
+                                    placeholder="Employee name"
+                                    type="text"
+                                    value="Employee"
+                                  />
+                                </div>
+                                <div
+                                  aria-expanded="false"
+                                  class="ui selection dropdown"
+                                  role="listbox"
+                                  tabindex="0"
+                                >
+                                  <div
+                                    aria-atomic="true"
+                                    aria-live="polite"
+                                    class="text"
+                                    role="alert"
+                                  >
+                                    Role
+                                  </div>
+                                  <i
+                                    aria-hidden="true"
+                                    class="dropdown icon"
+                                  />
+                                  <div
+                                    class="menu transition"
+                                  >
                                     <div
-                                      class="ui checked fitted toggle checkbox"
+                                      aria-checked="true"
+                                      aria-selected="true"
+                                      class="active selected item"
+                                      role="option"
+                                      style="pointer-events: all;"
                                     >
-                                      <input
-                                        checked=""
-                                        class="hidden"
-                                        readonly=""
-                                        tabindex="0"
-                                        type="checkbox"
-                                        value=""
-                                      />
-                                      <label />
+                                      <span
+                                        class="text"
+                                      >
+                                        Role
+                                      </span>
                                     </div>
                                   </div>
                                 </div>
@@ -2225,7 +2374,7 @@ exports[`renders without crashing when open without permissions 1`] = `
                               aria-hidden="true"
                               class="plus icon"
                             />
-                            Add new role
+                            Add new employee
                           </button>
                         </div>
                       </div>
@@ -2268,17 +2417,17 @@ exports[`renders without crashing when open without permissions 1`] = `
                   <div
                     class="header"
                   >
-                    Manage your roles
+                    Manage your employees
                   </div>
                   <div
                     class="content"
                   >
                     <p>
-                      Here you can manage your roles and their permissions, ensuring
-        only authorised people will able to open your roles with one click.
+                      Here you can manage your employees and their roles, ensuring
+        that no one will be getting into places they are not supposed to.
                     </p>
                     <p>
-                      PS: Roles with empty names will be ignored.
+                      PS: Employees with empty names will be ignored.
                     </p>
                     <div
                       class="ui middle aligned list item-list"
@@ -2290,50 +2439,57 @@ exports[`renders without crashing when open without permissions 1`] = `
                         <div
                           class="item-wrapper"
                         >
-                          <div>
+                          <div
+                            class="employee-list-item"
+                          >
                             <div
                               class="item"
                               role="listitem"
                             >
-                              <div
-                                class="ui input"
-                              >
-                                <input
-                                  name="name"
-                                  placeholder="Role name"
-                                  type="text"
-                                  value="Role"
-                                />
-                              </div>
-                              <div
-                                class="list roles-permission-door-list"
-                              >
+                              <div>
                                 <div
-                                  class="item"
-                                  role="listitem"
+                                  class="ui input"
                                 >
-                                  <div>
-                                    <p>
-                                      <span
-                                        class="warn red"
-                                      >
-                                        Not allowed to open: 
-                                      </span>
-                                      <span>
-                                        Door
-                                      </span>
-                                    </p>
+                                  <input
+                                    name="name"
+                                    placeholder="Employee name"
+                                    type="text"
+                                    value="Employee"
+                                  />
+                                </div>
+                                <div
+                                  aria-expanded="false"
+                                  class="ui selection dropdown"
+                                  role="listbox"
+                                  tabindex="0"
+                                >
+                                  <div
+                                    aria-atomic="true"
+                                    aria-live="polite"
+                                    class="default text"
+                                    role="alert"
+                                  >
+                                    Select a role
+                                  </div>
+                                  <i
+                                    aria-hidden="true"
+                                    class="dropdown icon"
+                                  />
+                                  <div
+                                    class="menu transition"
+                                  >
                                     <div
-                                      class="ui fitted toggle checkbox"
+                                      aria-checked="false"
+                                      aria-selected="true"
+                                      class="selected item"
+                                      role="option"
+                                      style="pointer-events: all;"
                                     >
-                                      <input
-                                        class="hidden"
-                                        readonly=""
-                                        tabindex="0"
-                                        type="checkbox"
-                                        value=""
-                                      />
-                                      <label />
+                                      <span
+                                        class="text"
+                                      >
+                                        Role
+                                      </span>
                                     </div>
                                   </div>
                                 </div>
@@ -2367,7 +2523,7 @@ exports[`renders without crashing when open without permissions 1`] = `
                               aria-hidden="true"
                               class="plus icon"
                             />
-                            Add new role
+                            Add new employee
                           </button>
                         </div>
                       </div>
@@ -2422,17 +2578,17 @@ exports[`renders without crashing when open without permissions 1`] = `
                     <div
                       class="header"
                     >
-                      Manage your roles
+                      Manage your employees
                     </div>
                     <div
                       class="content"
                     >
                       <p>
-                        Here you can manage your roles and their permissions, ensuring
-        only authorised people will able to open your roles with one click.
+                        Here you can manage your employees and their roles, ensuring
+        that no one will be getting into places they are not supposed to.
                       </p>
                       <p>
-                        PS: Roles with empty names will be ignored.
+                        PS: Employees with empty names will be ignored.
                       </p>
                       <div
                         class="ui middle aligned list item-list"
@@ -2444,50 +2600,57 @@ exports[`renders without crashing when open without permissions 1`] = `
                           <div
                             class="item-wrapper"
                           >
-                            <div>
+                            <div
+                              class="employee-list-item"
+                            >
                               <div
                                 class="item"
                                 role="listitem"
                               >
-                                <div
-                                  class="ui input"
-                                >
-                                  <input
-                                    name="name"
-                                    placeholder="Role name"
-                                    type="text"
-                                    value="Role"
-                                  />
-                                </div>
-                                <div
-                                  class="list roles-permission-door-list"
-                                >
+                                <div>
                                   <div
-                                    class="item"
-                                    role="listitem"
+                                    class="ui input"
                                   >
-                                    <div>
-                                      <p>
-                                        <span
-                                          class="warn red"
-                                        >
-                                          Not allowed to open: 
-                                        </span>
-                                        <span>
-                                          Door
-                                        </span>
-                                      </p>
+                                    <input
+                                      name="name"
+                                      placeholder="Employee name"
+                                      type="text"
+                                      value="Employee"
+                                    />
+                                  </div>
+                                  <div
+                                    aria-expanded="false"
+                                    class="ui selection dropdown"
+                                    role="listbox"
+                                    tabindex="0"
+                                  >
+                                    <div
+                                      aria-atomic="true"
+                                      aria-live="polite"
+                                      class="default text"
+                                      role="alert"
+                                    >
+                                      Select a role
+                                    </div>
+                                    <i
+                                      aria-hidden="true"
+                                      class="dropdown icon"
+                                    />
+                                    <div
+                                      class="menu transition"
+                                    >
                                       <div
-                                        class="ui fitted toggle checkbox"
+                                        aria-checked="false"
+                                        aria-selected="true"
+                                        class="selected item"
+                                        role="option"
+                                        style="pointer-events: all;"
                                       >
-                                        <input
-                                          class="hidden"
-                                          readonly=""
-                                          tabindex="0"
-                                          type="checkbox"
-                                          value=""
-                                        />
-                                        <label />
+                                        <span
+                                          class="text"
+                                        >
+                                          Role
+                                        </span>
                                       </div>
                                     </div>
                                   </div>
@@ -2521,7 +2684,7 @@ exports[`renders without crashing when open without permissions 1`] = `
                                 aria-hidden="true"
                                 class="plus icon"
                               />
-                              Add new role
+                              Add new employee
                             </button>
                           </div>
                         </div>
@@ -2570,17 +2733,17 @@ exports[`renders without crashing when open without permissions 1`] = `
                     <div
                       class="header"
                     >
-                      Manage your roles
+                      Manage your employees
                     </div>
                     <div
                       class="content"
                     >
                       <p>
-                        Here you can manage your roles and their permissions, ensuring
-        only authorised people will able to open your roles with one click.
+                        Here you can manage your employees and their roles, ensuring
+        that no one will be getting into places they are not supposed to.
                       </p>
                       <p>
-                        PS: Roles with empty names will be ignored.
+                        PS: Employees with empty names will be ignored.
                       </p>
                       <div
                         class="ui middle aligned list item-list"
@@ -2592,51 +2755,57 @@ exports[`renders without crashing when open without permissions 1`] = `
                           <div
                             class="item-wrapper"
                           >
-                            <div>
+                            <div
+                              class="employee-list-item"
+                            >
                               <div
                                 class="item"
                                 role="listitem"
                               >
-                                <div
-                                  class="ui input"
-                                >
-                                  <input
-                                    name="name"
-                                    placeholder="Role name"
-                                    type="text"
-                                    value="Role"
-                                  />
-                                </div>
-                                <div
-                                  class="list roles-permission-door-list"
-                                >
+                                <div>
                                   <div
-                                    class="item"
-                                    role="listitem"
+                                    class="ui input"
                                   >
-                                    <div>
-                                      <p>
-                                        <span
-                                          class="warn green"
-                                        >
-                                          Allowed to open: 
-                                        </span>
-                                        <span>
-                                          Door
-                                        </span>
-                                      </p>
+                                    <input
+                                      name="name"
+                                      placeholder="Employee name"
+                                      type="text"
+                                      value="Employee"
+                                    />
+                                  </div>
+                                  <div
+                                    aria-expanded="false"
+                                    class="ui selection dropdown"
+                                    role="listbox"
+                                    tabindex="0"
+                                  >
+                                    <div
+                                      aria-atomic="true"
+                                      aria-live="polite"
+                                      class="text"
+                                      role="alert"
+                                    >
+                                      Role
+                                    </div>
+                                    <i
+                                      aria-hidden="true"
+                                      class="dropdown icon"
+                                    />
+                                    <div
+                                      class="menu transition"
+                                    >
                                       <div
-                                        class="ui checked fitted toggle checkbox"
+                                        aria-checked="true"
+                                        aria-selected="true"
+                                        class="active selected item"
+                                        role="option"
+                                        style="pointer-events: all;"
                                       >
-                                        <input
-                                          checked=""
-                                          class="hidden"
-                                          readonly=""
-                                          tabindex="0"
-                                          type="checkbox"
-                                          value=""
-                                        />
-                                        <label />
+                                        <span
+                                          class="text"
+                                        >
+                                          Role
+                                        </span>
                                       </div>
                                     </div>
                                   </div>
@@ -2670,7 +2839,7 @@ exports[`renders without crashing when open without permissions 1`] = `
                                 aria-hidden="true"
                                 class="plus icon"
                               />
-                              Add new role
+                              Add new employee
                             </button>
                           </div>
                         </div>
@@ -2713,17 +2882,17 @@ exports[`renders without crashing when open without permissions 1`] = `
                     <div
                       class="header"
                     >
-                      Manage your roles
+                      Manage your employees
                     </div>
                     <div
                       class="content"
                     >
                       <p>
-                        Here you can manage your roles and their permissions, ensuring
-        only authorised people will able to open your roles with one click.
+                        Here you can manage your employees and their roles, ensuring
+        that no one will be getting into places they are not supposed to.
                       </p>
                       <p>
-                        PS: Roles with empty names will be ignored.
+                        PS: Employees with empty names will be ignored.
                       </p>
                       <div
                         class="ui middle aligned list item-list"
@@ -2735,50 +2904,57 @@ exports[`renders without crashing when open without permissions 1`] = `
                           <div
                             class="item-wrapper"
                           >
-                            <div>
+                            <div
+                              class="employee-list-item"
+                            >
                               <div
                                 class="item"
                                 role="listitem"
                               >
-                                <div
-                                  class="ui input"
-                                >
-                                  <input
-                                    name="name"
-                                    placeholder="Role name"
-                                    type="text"
-                                    value="Role"
-                                  />
-                                </div>
-                                <div
-                                  class="list roles-permission-door-list"
-                                >
+                                <div>
                                   <div
-                                    class="item"
-                                    role="listitem"
+                                    class="ui input"
                                   >
-                                    <div>
-                                      <p>
-                                        <span
-                                          class="warn red"
-                                        >
-                                          Not allowed to open: 
-                                        </span>
-                                        <span>
-                                          Door
-                                        </span>
-                                      </p>
+                                    <input
+                                      name="name"
+                                      placeholder="Employee name"
+                                      type="text"
+                                      value="Employee"
+                                    />
+                                  </div>
+                                  <div
+                                    aria-expanded="false"
+                                    class="ui selection dropdown"
+                                    role="listbox"
+                                    tabindex="0"
+                                  >
+                                    <div
+                                      aria-atomic="true"
+                                      aria-live="polite"
+                                      class="default text"
+                                      role="alert"
+                                    >
+                                      Select a role
+                                    </div>
+                                    <i
+                                      aria-hidden="true"
+                                      class="dropdown icon"
+                                    />
+                                    <div
+                                      class="menu transition"
+                                    >
                                       <div
-                                        class="ui fitted toggle checkbox"
+                                        aria-checked="false"
+                                        aria-selected="true"
+                                        class="selected item"
+                                        role="option"
+                                        style="pointer-events: all;"
                                       >
-                                        <input
-                                          class="hidden"
-                                          readonly=""
-                                          tabindex="0"
-                                          type="checkbox"
-                                          value=""
-                                        />
-                                        <label />
+                                        <span
+                                          class="text"
+                                        >
+                                          Role
+                                        </span>
                                       </div>
                                     </div>
                                   </div>
@@ -2812,7 +2988,7 @@ exports[`renders without crashing when open without permissions 1`] = `
                                 aria-hidden="true"
                                 class="plus icon"
                               />
-                              Add new role
+                              Add new employee
                             </button>
                           </div>
                         </div>
@@ -2865,17 +3041,17 @@ exports[`renders without crashing when open without permissions 1`] = `
                       <div
                         class="header"
                       >
-                        Manage your roles
+                        Manage your employees
                       </div>
                       <div
                         class="content"
                       >
                         <p>
-                          Here you can manage your roles and their permissions, ensuring
-        only authorised people will able to open your roles with one click.
+                          Here you can manage your employees and their roles, ensuring
+        that no one will be getting into places they are not supposed to.
                         </p>
                         <p>
-                          PS: Roles with empty names will be ignored.
+                          PS: Employees with empty names will be ignored.
                         </p>
                         <div
                           class="ui middle aligned list item-list"
@@ -2887,51 +3063,57 @@ exports[`renders without crashing when open without permissions 1`] = `
                             <div
                               class="item-wrapper"
                             >
-                              <div>
+                              <div
+                                class="employee-list-item"
+                              >
                                 <div
                                   class="item"
                                   role="listitem"
                                 >
-                                  <div
-                                    class="ui input"
-                                  >
-                                    <input
-                                      name="name"
-                                      placeholder="Role name"
-                                      type="text"
-                                      value="Role"
-                                    />
-                                  </div>
-                                  <div
-                                    class="list roles-permission-door-list"
-                                  >
+                                  <div>
                                     <div
-                                      class="item"
-                                      role="listitem"
+                                      class="ui input"
                                     >
-                                      <div>
-                                        <p>
-                                          <span
-                                            class="warn green"
-                                          >
-                                            Allowed to open: 
-                                          </span>
-                                          <span>
-                                            Door
-                                          </span>
-                                        </p>
+                                      <input
+                                        name="name"
+                                        placeholder="Employee name"
+                                        type="text"
+                                        value="Employee"
+                                      />
+                                    </div>
+                                    <div
+                                      aria-expanded="false"
+                                      class="ui selection dropdown"
+                                      role="listbox"
+                                      tabindex="0"
+                                    >
+                                      <div
+                                        aria-atomic="true"
+                                        aria-live="polite"
+                                        class="text"
+                                        role="alert"
+                                      >
+                                        Role
+                                      </div>
+                                      <i
+                                        aria-hidden="true"
+                                        class="dropdown icon"
+                                      />
+                                      <div
+                                        class="menu transition"
+                                      >
                                         <div
-                                          class="ui checked fitted toggle checkbox"
+                                          aria-checked="true"
+                                          aria-selected="true"
+                                          class="active selected item"
+                                          role="option"
+                                          style="pointer-events: all;"
                                         >
-                                          <input
-                                            checked=""
-                                            class="hidden"
-                                            readonly=""
-                                            tabindex="0"
-                                            type="checkbox"
-                                            value=""
-                                          />
-                                          <label />
+                                          <span
+                                            class="text"
+                                          >
+                                            Role
+                                          </span>
                                         </div>
                                       </div>
                                     </div>
@@ -2965,7 +3147,7 @@ exports[`renders without crashing when open without permissions 1`] = `
                                   aria-hidden="true"
                                   class="plus icon"
                                 />
-                                Add new role
+                                Add new employee
                               </button>
                             </div>
                           </div>
@@ -3008,17 +3190,17 @@ exports[`renders without crashing when open without permissions 1`] = `
                       <div
                         class="header"
                       >
-                        Manage your roles
+                        Manage your employees
                       </div>
                       <div
                         class="content"
                       >
                         <p>
-                          Here you can manage your roles and their permissions, ensuring
-        only authorised people will able to open your roles with one click.
+                          Here you can manage your employees and their roles, ensuring
+        that no one will be getting into places they are not supposed to.
                         </p>
                         <p>
-                          PS: Roles with empty names will be ignored.
+                          PS: Employees with empty names will be ignored.
                         </p>
                         <div
                           class="ui middle aligned list item-list"
@@ -3030,50 +3212,57 @@ exports[`renders without crashing when open without permissions 1`] = `
                             <div
                               class="item-wrapper"
                             >
-                              <div>
+                              <div
+                                class="employee-list-item"
+                              >
                                 <div
                                   class="item"
                                   role="listitem"
                                 >
-                                  <div
-                                    class="ui input"
-                                  >
-                                    <input
-                                      name="name"
-                                      placeholder="Role name"
-                                      type="text"
-                                      value="Role"
-                                    />
-                                  </div>
-                                  <div
-                                    class="list roles-permission-door-list"
-                                  >
+                                  <div>
                                     <div
-                                      class="item"
-                                      role="listitem"
+                                      class="ui input"
                                     >
-                                      <div>
-                                        <p>
-                                          <span
-                                            class="warn red"
-                                          >
-                                            Not allowed to open: 
-                                          </span>
-                                          <span>
-                                            Door
-                                          </span>
-                                        </p>
+                                      <input
+                                        name="name"
+                                        placeholder="Employee name"
+                                        type="text"
+                                        value="Employee"
+                                      />
+                                    </div>
+                                    <div
+                                      aria-expanded="false"
+                                      class="ui selection dropdown"
+                                      role="listbox"
+                                      tabindex="0"
+                                    >
+                                      <div
+                                        aria-atomic="true"
+                                        aria-live="polite"
+                                        class="default text"
+                                        role="alert"
+                                      >
+                                        Select a role
+                                      </div>
+                                      <i
+                                        aria-hidden="true"
+                                        class="dropdown icon"
+                                      />
+                                      <div
+                                        class="menu transition"
+                                      >
                                         <div
-                                          class="ui fitted toggle checkbox"
+                                          aria-checked="false"
+                                          aria-selected="true"
+                                          class="selected item"
+                                          role="option"
+                                          style="pointer-events: all;"
                                         >
-                                          <input
-                                            class="hidden"
-                                            readonly=""
-                                            tabindex="0"
-                                            type="checkbox"
-                                            value=""
-                                          />
-                                          <label />
+                                          <span
+                                            class="text"
+                                          >
+                                            Role
+                                          </span>
                                         </div>
                                       </div>
                                     </div>
@@ -3107,7 +3296,7 @@ exports[`renders without crashing when open without permissions 1`] = `
                                   aria-hidden="true"
                                   class="plus icon"
                                 />
-                                Add new role
+                                Add new employee
                               </button>
                             </div>
                           </div>
@@ -3161,17 +3350,17 @@ exports[`renders without crashing when open without permissions 1`] = `
                             <div
                               class="header"
                             >
-                              Manage your roles
+                              Manage your employees
                             </div>
                             <div
                               class="content"
                             >
                               <p>
-                                Here you can manage your roles and their permissions, ensuring
-        only authorised people will able to open your roles with one click.
+                                Here you can manage your employees and their roles, ensuring
+        that no one will be getting into places they are not supposed to.
                               </p>
                               <p>
-                                PS: Roles with empty names will be ignored.
+                                PS: Employees with empty names will be ignored.
                               </p>
                               <div
                                 class="ui middle aligned list item-list"
@@ -3183,50 +3372,57 @@ exports[`renders without crashing when open without permissions 1`] = `
                                   <div
                                     class="item-wrapper"
                                   >
-                                    <div>
+                                    <div
+                                      class="employee-list-item"
+                                    >
                                       <div
                                         class="item"
                                         role="listitem"
                                       >
-                                        <div
-                                          class="ui input"
-                                        >
-                                          <input
-                                            name="name"
-                                            placeholder="Role name"
-                                            type="text"
-                                            value="Role"
-                                          />
-                                        </div>
-                                        <div
-                                          class="list roles-permission-door-list"
-                                        >
+                                        <div>
                                           <div
-                                            class="item"
-                                            role="listitem"
+                                            class="ui input"
                                           >
-                                            <div>
-                                              <p>
-                                                <span
-                                                  class="warn red"
-                                                >
-                                                  Not allowed to open: 
-                                                </span>
-                                                <span>
-                                                  Door
-                                                </span>
-                                              </p>
+                                            <input
+                                              name="name"
+                                              placeholder="Employee name"
+                                              type="text"
+                                              value="Employee"
+                                            />
+                                          </div>
+                                          <div
+                                            aria-expanded="false"
+                                            class="ui selection dropdown"
+                                            role="listbox"
+                                            tabindex="0"
+                                          >
+                                            <div
+                                              aria-atomic="true"
+                                              aria-live="polite"
+                                              class="default text"
+                                              role="alert"
+                                            >
+                                              Select a role
+                                            </div>
+                                            <i
+                                              aria-hidden="true"
+                                              class="dropdown icon"
+                                            />
+                                            <div
+                                              class="menu transition"
+                                            >
                                               <div
-                                                class="ui fitted toggle checkbox"
+                                                aria-checked="false"
+                                                aria-selected="true"
+                                                class="selected item"
+                                                role="option"
+                                                style="pointer-events: all;"
                                               >
-                                                <input
-                                                  class="hidden"
-                                                  readonly=""
-                                                  tabindex="0"
-                                                  type="checkbox"
-                                                  value=""
-                                                />
-                                                <label />
+                                                <span
+                                                  class="text"
+                                                >
+                                                  Role
+                                                </span>
                                               </div>
                                             </div>
                                           </div>
@@ -3260,7 +3456,7 @@ exports[`renders without crashing when open without permissions 1`] = `
                                         aria-hidden="true"
                                         class="plus icon"
                                       />
-                                      Add new role
+                                      Add new employee
                                     </button>
                                   </div>
                                 </div>
@@ -3304,17 +3500,17 @@ exports[`renders without crashing when open without permissions 1`] = `
                               <div
                                 class="header"
                               >
-                                Manage your roles
+                                Manage your employees
                               </div>
                               <div
                                 class="content"
                               >
                                 <p>
-                                  Here you can manage your roles and their permissions, ensuring
-        only authorised people will able to open your roles with one click.
+                                  Here you can manage your employees and their roles, ensuring
+        that no one will be getting into places they are not supposed to.
                                 </p>
                                 <p>
-                                  PS: Roles with empty names will be ignored.
+                                  PS: Employees with empty names will be ignored.
                                 </p>
                                 <div
                                   class="ui middle aligned list item-list"
@@ -3326,50 +3522,57 @@ exports[`renders without crashing when open without permissions 1`] = `
                                     <div
                                       class="item-wrapper"
                                     >
-                                      <div>
+                                      <div
+                                        class="employee-list-item"
+                                      >
                                         <div
                                           class="item"
                                           role="listitem"
                                         >
-                                          <div
-                                            class="ui input"
-                                          >
-                                            <input
-                                              name="name"
-                                              placeholder="Role name"
-                                              type="text"
-                                              value="Role"
-                                            />
-                                          </div>
-                                          <div
-                                            class="list roles-permission-door-list"
-                                          >
+                                          <div>
                                             <div
-                                              class="item"
-                                              role="listitem"
+                                              class="ui input"
                                             >
-                                              <div>
-                                                <p>
-                                                  <span
-                                                    class="warn red"
-                                                  >
-                                                    Not allowed to open: 
-                                                  </span>
-                                                  <span>
-                                                    Door
-                                                  </span>
-                                                </p>
+                                              <input
+                                                name="name"
+                                                placeholder="Employee name"
+                                                type="text"
+                                                value="Employee"
+                                              />
+                                            </div>
+                                            <div
+                                              aria-expanded="false"
+                                              class="ui selection dropdown"
+                                              role="listbox"
+                                              tabindex="0"
+                                            >
+                                              <div
+                                                aria-atomic="true"
+                                                aria-live="polite"
+                                                class="default text"
+                                                role="alert"
+                                              >
+                                                Select a role
+                                              </div>
+                                              <i
+                                                aria-hidden="true"
+                                                class="dropdown icon"
+                                              />
+                                              <div
+                                                class="menu transition"
+                                              >
                                                 <div
-                                                  class="ui fitted toggle checkbox"
+                                                  aria-checked="false"
+                                                  aria-selected="true"
+                                                  class="selected item"
+                                                  role="option"
+                                                  style="pointer-events: all;"
                                                 >
-                                                  <input
-                                                    class="hidden"
-                                                    readonly=""
-                                                    tabindex="0"
-                                                    type="checkbox"
-                                                    value=""
-                                                  />
-                                                  <label />
+                                                  <span
+                                                    class="text"
+                                                  >
+                                                    Role
+                                                  </span>
                                                 </div>
                                               </div>
                                             </div>
@@ -3403,7 +3606,7 @@ exports[`renders without crashing when open without permissions 1`] = `
                                           aria-hidden="true"
                                           class="plus icon"
                                         />
-                                        Add new role
+                                        Add new employee
                                       </button>
                                     </div>
                                   </div>
@@ -3453,7 +3656,7 @@ exports[`renders without crashing when open without permissions 1`] = `
                             <div
                               className="header"
                             >
-                              Manage your roles
+                              Manage your employees
                             </div>
                           </ModalHeader>
                           <ModalContent>
@@ -3461,11 +3664,11 @@ exports[`renders without crashing when open without permissions 1`] = `
                               className="content"
                             >
                               <p>
-                                Here you can manage your roles and their permissions, ensuring
-        only authorised people will able to open your roles with one click.
+                                Here you can manage your employees and their roles, ensuring
+        that no one will be getting into places they are not supposed to.
                               </p>
                               <p>
-                                PS: Roles with empty names will be ignored.
+                                PS: Employees with empty names will be ignored.
                               </p>
                               <TransitionGroup
                                 animation="fade"
@@ -3505,159 +3708,268 @@ exports[`renders without crashing when open without permissions 1`] = `
                                         <div
                                           className="item-wrapper"
                                         >
-                                          <ManagementModalRoleItem
+                                          <ManagementModalEmployeeItem
                                             handleCheckboxToggle={[Function]}
                                             handleDropdownChange={[Function]}
                                             handleTextInputChange={[Function]}
                                             id="mock"
                                             item={
                                               Object {
-                                                "name": "Role",
-                                                "permissions": Object {
-                                                  "mockDoor": false,
-                                                },
+                                                "name": "Employee",
+                                                "role": null,
                                               }
                                             }
                                             nestedItems={
                                               Object {
-                                                "mockDoor": Object {
-                                                  "name": "Door",
+                                                "mockRole": Object {
+                                                  "name": "Role",
                                                 },
                                               }
                                             }
                                             nestedItemsKeys={
                                               Array [
-                                                "mockDoor",
+                                                "mockRole",
                                               ]
                                             }
                                           >
-                                            <div>
+                                            <div
+                                              className="employee-list-item"
+                                            >
                                               <ListItem>
                                                 <div
                                                   className="item"
                                                   onClick={[Function]}
                                                   role="listitem"
                                                 >
-                                                  <Input
-                                                    name="name"
-                                                    onChange={[Function]}
-                                                    placeholder="Role name"
-                                                    type="text"
-                                                    value="Role"
-                                                  >
-                                                    <div
-                                                      className="ui input"
+                                                  <div>
+                                                    <Input
+                                                      name="name"
+                                                      onChange={[Function]}
+                                                      placeholder="Employee name"
+                                                      type="text"
+                                                      value="Employee"
                                                     >
-                                                      <input
-                                                        name="name"
-                                                        onChange={[Function]}
-                                                        placeholder="Role name"
-                                                        type="text"
-                                                        value="Role"
-                                                      />
-                                                    </div>
-                                                  </Input>
-                                                  <ListList
-                                                    className="roles-permission-door-list"
-                                                  >
-                                                    <div
-                                                      className="list roles-permission-door-list"
-                                                    >
-                                                      <ListItem
-                                                        key="mockDoor"
-                                                        onClick={[Function]}
+                                                      <div
+                                                        className="ui input"
                                                       >
-                                                        <div
-                                                          className="item"
-                                                          onClick={[Function]}
-                                                          role="listitem"
-                                                        >
-                                                          <div>
-                                                            <p>
-                                                              <span
-                                                                className="warn red"
+                                                        <input
+                                                          name="name"
+                                                          onChange={[Function]}
+                                                          placeholder="Employee name"
+                                                          type="text"
+                                                          value="Employee"
+                                                        />
+                                                      </div>
+                                                    </Input>
+                                                    <Select
+                                                      onChange={[Function]}
+                                                      options={
+                                                        Array [
+                                                          Object {
+                                                            "key": "mockRole",
+                                                            "text": "Role",
+                                                            "value": "mockRole",
+                                                          },
+                                                        ]
+                                                      }
+                                                      placeholder="Select a role"
+                                                      selectOnBlur={false}
+                                                      text="Select a role"
+                                                      value={null}
+                                                    >
+                                                      <Dropdown
+                                                        additionLabel="Add "
+                                                        additionPosition="top"
+                                                        closeOnBlur={true}
+                                                        closeOnEscape={true}
+                                                        deburr={false}
+                                                        icon="dropdown"
+                                                        minCharacters={1}
+                                                        noResultsMessage="No results found."
+                                                        onChange={[Function]}
+                                                        openOnFocus={true}
+                                                        options={
+                                                          Array [
+                                                            Object {
+                                                              "key": "mockRole",
+                                                              "text": "Role",
+                                                              "value": "mockRole",
+                                                            },
+                                                          ]
+                                                        }
+                                                        placeholder="Select a role"
+                                                        renderLabel={[Function]}
+                                                        searchInput="text"
+                                                        selectOnBlur={false}
+                                                        selectOnNavigation={true}
+                                                        selection={true}
+                                                        text="Select a role"
+                                                        value={null}
+                                                        wrapSelection={true}
+                                                      >
+                                                        <Ref
+                                                          innerRef={
+                                                            Object {
+                                                              "current": <div
+                                                                aria-expanded="false"
+                                                                class="ui selection dropdown"
+                                                                role="listbox"
+                                                                tabindex="0"
                                                               >
-                                                                Not allowed to open: 
-                                                              </span>
-                                                              <span>
-                                                                Door
-                                                              </span>
-                                                            </p>
-                                                            <Checkbox
-                                                              checked={false}
-                                                              toggle={true}
-                                                              type="checkbox"
+                                                                <div
+                                                                  aria-atomic="true"
+                                                                  aria-live="polite"
+                                                                  class="default text"
+                                                                  role="alert"
+                                                                >
+                                                                  Select a role
+                                                                </div>
+                                                                <i
+                                                                  aria-hidden="true"
+                                                                  class="dropdown icon"
+                                                                />
+                                                                <div
+                                                                  class="menu transition"
+                                                                >
+                                                                  <div
+                                                                    aria-checked="false"
+                                                                    aria-selected="true"
+                                                                    class="selected item"
+                                                                    role="option"
+                                                                    style="pointer-events: all;"
+                                                                  >
+                                                                    <span
+                                                                      class="text"
+                                                                    >
+                                                                      Role
+                                                                    </span>
+                                                                  </div>
+                                                                </div>
+                                                              </div>,
+                                                            }
+                                                          }
+                                                        >
+                                                          <RefFindNode
+                                                            innerRef={
+                                                              Object {
+                                                                "current": <div
+                                                                  aria-expanded="false"
+                                                                  class="ui selection dropdown"
+                                                                  role="listbox"
+                                                                  tabindex="0"
+                                                                >
+                                                                  <div
+                                                                    aria-atomic="true"
+                                                                    aria-live="polite"
+                                                                    class="default text"
+                                                                    role="alert"
+                                                                  >
+                                                                    Select a role
+                                                                  </div>
+                                                                  <i
+                                                                    aria-hidden="true"
+                                                                    class="dropdown icon"
+                                                                  />
+                                                                  <div
+                                                                    class="menu transition"
+                                                                  >
+                                                                    <div
+                                                                      aria-checked="false"
+                                                                      aria-selected="true"
+                                                                      class="selected item"
+                                                                      role="option"
+                                                                      style="pointer-events: all;"
+                                                                    >
+                                                                      <span
+                                                                        class="text"
+                                                                      >
+                                                                        Role
+                                                                      </span>
+                                                                    </div>
+                                                                  </div>
+                                                                </div>,
+                                                              }
+                                                            }
+                                                          >
+                                                            <div
+                                                              aria-expanded={false}
+                                                              className="ui selection dropdown"
+                                                              onBlur={[Function]}
+                                                              onChange={[Function]}
+                                                              onClick={[Function]}
+                                                              onFocus={[Function]}
+                                                              onMouseDown={[Function]}
+                                                              role="listbox"
+                                                              tabIndex={0}
                                                             >
                                                               <div
-                                                                className="ui fitted toggle checkbox"
-                                                                onChange={[Function]}
-                                                                onClick={[Function]}
-                                                                onMouseDown={[Function]}
-                                                                onMouseUp={[Function]}
+                                                                aria-atomic={true}
+                                                                aria-live="polite"
+                                                                className="default text"
+                                                                role="alert"
                                                               >
-                                                                <Ref
-                                                                  innerRef={
-                                                                    Object {
-                                                                      "current": <input
-                                                                        class="hidden"
-                                                                        readonly=""
-                                                                        tabindex="0"
-                                                                        type="checkbox"
-                                                                        value=""
-                                                                      />,
-                                                                    }
-                                                                  }
-                                                                >
-                                                                  <RefFindNode
-                                                                    innerRef={
-                                                                      Object {
-                                                                        "current": <input
-                                                                          class="hidden"
-                                                                          readonly=""
-                                                                          tabindex="0"
-                                                                          type="checkbox"
-                                                                          value=""
-                                                                        />,
-                                                                      }
-                                                                    }
-                                                                  >
-                                                                    <input
-                                                                      checked={false}
-                                                                      className="hidden"
-                                                                      readOnly={true}
-                                                                      tabIndex={0}
-                                                                      type="checkbox"
-                                                                    />
-                                                                  </RefFindNode>
-                                                                </Ref>
-                                                                <Ref
-                                                                  innerRef={
-                                                                    Object {
-                                                                      "current": <label />,
-                                                                    }
-                                                                  }
-                                                                >
-                                                                  <RefFindNode
-                                                                    innerRef={
-                                                                      Object {
-                                                                        "current": <label />,
-                                                                      }
-                                                                    }
-                                                                  >
-                                                                    <label />
-                                                                  </RefFindNode>
-                                                                </Ref>
+                                                                Select a role
                                                               </div>
-                                                            </Checkbox>
-                                                          </div>
-                                                        </div>
-                                                      </ListItem>
-                                                    </div>
-                                                  </ListList>
+                                                              <Icon
+                                                                as="i"
+                                                                className=""
+                                                                name="dropdown"
+                                                                onClick={[Function]}
+                                                              >
+                                                                <i
+                                                                  aria-hidden="true"
+                                                                  className="dropdown icon"
+                                                                  onClick={[Function]}
+                                                                />
+                                                              </Icon>
+                                                              <DropdownMenu>
+                                                                <div
+                                                                  className="menu transition"
+                                                                >
+                                                                  <DropdownItem
+                                                                    active={false}
+                                                                    key="mockRole"
+                                                                    onClick={[Function]}
+                                                                    selected={true}
+                                                                    style={
+                                                                      Object {
+                                                                        "pointerEvents": "all",
+                                                                      }
+                                                                    }
+                                                                    text="Role"
+                                                                    value="mockRole"
+                                                                  >
+                                                                    <div
+                                                                      aria-checked={false}
+                                                                      aria-selected={true}
+                                                                      className="selected item"
+                                                                      onClick={[Function]}
+                                                                      role="option"
+                                                                      style={
+                                                                        Object {
+                                                                          "pointerEvents": "all",
+                                                                        }
+                                                                      }
+                                                                    >
+                                                                      <span
+                                                                        className="text"
+                                                                      >
+                                                                        Role
+                                                                      </span>
+                                                                    </div>
+                                                                  </DropdownItem>
+                                                                </div>
+                                                              </DropdownMenu>
+                                                            </div>
+                                                          </RefFindNode>
+                                                        </Ref>
+                                                      </Dropdown>
+                                                    </Select>
+                                                  </div>
                                                 </div>
                                               </ListItem>
                                             </div>
-                                          </ManagementModalRoleItem>
+                                          </ManagementModalEmployeeItem>
                                           <Button
                                             as="button"
                                             icon="remove"
@@ -3755,7 +4067,7 @@ exports[`renders without crashing when open without permissions 1`] = `
                                             >
                                               <Button
                                                 as="button"
-                                                content="Add new role"
+                                                content="Add new employee"
                                                 icon="plus"
                                                 onClick={[Function]}
                                               >
@@ -3769,7 +4081,7 @@ exports[`renders without crashing when open without permissions 1`] = `
                                                           aria-hidden="true"
                                                           class="plus icon"
                                                         />
-                                                        Add new role
+                                                        Add new employee
                                                       </button>,
                                                     }
                                                   }
@@ -3784,7 +4096,7 @@ exports[`renders without crashing when open without permissions 1`] = `
                                                             aria-hidden="true"
                                                             class="plus icon"
                                                           />
-                                                          Add new role
+                                                          Add new employee
                                                         </button>,
                                                       }
                                                     }
@@ -3803,7 +4115,7 @@ exports[`renders without crashing when open without permissions 1`] = `
                                                           onClick={[Function]}
                                                         />
                                                       </Icon>
-                                                      Add new role
+                                                      Add new employee
                                                     </button>
                                                   </RefFindNode>
                                                 </Ref>
@@ -3979,17 +4291,17 @@ exports[`renders without crashing when open without permissions 1`] = `
                     <div
                       class="header"
                     >
-                      Manage your roles
+                      Manage your employees
                     </div>
                     <div
                       class="content"
                     >
                       <p>
-                        Here you can manage your roles and their permissions, ensuring
-        only authorised people will able to open your roles with one click.
+                        Here you can manage your employees and their roles, ensuring
+        that no one will be getting into places they are not supposed to.
                       </p>
                       <p>
-                        PS: Roles with empty names will be ignored.
+                        PS: Employees with empty names will be ignored.
                       </p>
                       <div
                         class="ui middle aligned list item-list"
@@ -4001,50 +4313,57 @@ exports[`renders without crashing when open without permissions 1`] = `
                           <div
                             class="item-wrapper"
                           >
-                            <div>
+                            <div
+                              class="employee-list-item"
+                            >
                               <div
                                 class="item"
                                 role="listitem"
                               >
-                                <div
-                                  class="ui input"
-                                >
-                                  <input
-                                    name="name"
-                                    placeholder="Role name"
-                                    type="text"
-                                    value="Role"
-                                  />
-                                </div>
-                                <div
-                                  class="list roles-permission-door-list"
-                                >
+                                <div>
                                   <div
-                                    class="item"
-                                    role="listitem"
+                                    class="ui input"
                                   >
-                                    <div>
-                                      <p>
-                                        <span
-                                          class="warn red"
-                                        >
-                                          Not allowed to open: 
-                                        </span>
-                                        <span>
-                                          Door
-                                        </span>
-                                      </p>
+                                    <input
+                                      name="name"
+                                      placeholder="Employee name"
+                                      type="text"
+                                      value="Employee"
+                                    />
+                                  </div>
+                                  <div
+                                    aria-expanded="false"
+                                    class="ui selection dropdown"
+                                    role="listbox"
+                                    tabindex="0"
+                                  >
+                                    <div
+                                      aria-atomic="true"
+                                      aria-live="polite"
+                                      class="default text"
+                                      role="alert"
+                                    >
+                                      Select a role
+                                    </div>
+                                    <i
+                                      aria-hidden="true"
+                                      class="dropdown icon"
+                                    />
+                                    <div
+                                      class="menu transition"
+                                    >
                                       <div
-                                        class="ui fitted toggle checkbox"
+                                        aria-checked="false"
+                                        aria-selected="true"
+                                        class="selected item"
+                                        role="option"
+                                        style="pointer-events: all;"
                                       >
-                                        <input
-                                          class="hidden"
-                                          readonly=""
-                                          tabindex="0"
-                                          type="checkbox"
-                                          value=""
-                                        />
-                                        <label />
+                                        <span
+                                          class="text"
+                                        >
+                                          Role
+                                        </span>
                                       </div>
                                     </div>
                                   </div>
@@ -4078,7 +4397,7 @@ exports[`renders without crashing when open without permissions 1`] = `
                                 aria-hidden="true"
                                 class="plus icon"
                               />
-                              Add new role
+                              Add new employee
                             </button>
                           </div>
                         </div>
@@ -4130,17 +4449,17 @@ exports[`renders without crashing when open without permissions 1`] = `
                     <div
                       class="header"
                     >
-                      Manage your roles
+                      Manage your employees
                     </div>
                     <div
                       class="content"
                     >
                       <p>
-                        Here you can manage your roles and their permissions, ensuring
-        only authorised people will able to open your roles with one click.
+                        Here you can manage your employees and their roles, ensuring
+        that no one will be getting into places they are not supposed to.
                       </p>
                       <p>
-                        PS: Roles with empty names will be ignored.
+                        PS: Employees with empty names will be ignored.
                       </p>
                       <div
                         class="ui middle aligned list item-list"
@@ -4152,50 +4471,57 @@ exports[`renders without crashing when open without permissions 1`] = `
                           <div
                             class="item-wrapper"
                           >
-                            <div>
+                            <div
+                              class="employee-list-item"
+                            >
                               <div
                                 class="item"
                                 role="listitem"
                               >
-                                <div
-                                  class="ui input"
-                                >
-                                  <input
-                                    name="name"
-                                    placeholder="Role name"
-                                    type="text"
-                                    value="Role"
-                                  />
-                                </div>
-                                <div
-                                  class="list roles-permission-door-list"
-                                >
+                                <div>
                                   <div
-                                    class="item"
-                                    role="listitem"
+                                    class="ui input"
                                   >
-                                    <div>
-                                      <p>
-                                        <span
-                                          class="warn red"
-                                        >
-                                          Not allowed to open: 
-                                        </span>
-                                        <span>
-                                          Door
-                                        </span>
-                                      </p>
+                                    <input
+                                      name="name"
+                                      placeholder="Employee name"
+                                      type="text"
+                                      value="Employee"
+                                    />
+                                  </div>
+                                  <div
+                                    aria-expanded="false"
+                                    class="ui selection dropdown"
+                                    role="listbox"
+                                    tabindex="0"
+                                  >
+                                    <div
+                                      aria-atomic="true"
+                                      aria-live="polite"
+                                      class="default text"
+                                      role="alert"
+                                    >
+                                      Select a role
+                                    </div>
+                                    <i
+                                      aria-hidden="true"
+                                      class="dropdown icon"
+                                    />
+                                    <div
+                                      class="menu transition"
+                                    >
                                       <div
-                                        class="ui fitted toggle checkbox"
+                                        aria-checked="false"
+                                        aria-selected="true"
+                                        class="selected item"
+                                        role="option"
+                                        style="pointer-events: all;"
                                       >
-                                        <input
-                                          class="hidden"
-                                          readonly=""
-                                          tabindex="0"
-                                          type="checkbox"
-                                          value=""
-                                        />
-                                        <label />
+                                        <span
+                                          class="text"
+                                        >
+                                          Role
+                                        </span>
                                       </div>
                                     </div>
                                   </div>
@@ -4229,7 +4555,7 @@ exports[`renders without crashing when open without permissions 1`] = `
                                 aria-hidden="true"
                                 class="plus icon"
                               />
-                              Add new role
+                              Add new employee
                             </button>
                           </div>
                         </div>

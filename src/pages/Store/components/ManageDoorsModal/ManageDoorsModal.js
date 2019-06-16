@@ -1,70 +1,31 @@
 import React from 'react'
+import { List, Input } from 'semantic-ui-react'
 
-import {
-  Modal,
-  Button,
-  Transition,
-  List,
-  Input,
-  Dimmer,
-  Loader,
-} from 'semantic-ui-react'
+import { ManagementModalContainer } from '../'
 
-import './ManageDoorsModal.scss'
-export default ({
-  isOpen,
-  close,
-  loading,
-  virtualDoorList,
-  doorListKeys,
-  handleDoorNameChange,
-  removeDoor,
-  addNewDoor,
-  discardChanges,
-  saveChanges,
-}) => (
-  <Modal size='tiny' open={isOpen} onClose={close} className='manage-doors-modal'
-    closeOnDimmerClick={false} closeOnEscape={false}>
+export default (props) => (
+  <ManagementModalContainer
+    {...props}
 
-    <Modal.Header>Manage your doors</Modal.Header>
-    <Modal.Content>
-      <p>
-        Here you can manage your doors by creating new ones
-        and editing or deleting existing ones.
-      </p>
+    modalData={{
+      title: `Manage your doors`,
+      description: `Here you can manage your doors by creating new
+        ones and editing or deleting existing ones.`,
+      info: `PS: Doors with empty names will be ignored.`,
+      addText: 'Add new door',
+    }}
 
-      <p>PS: Doors with empty names will be ignored.</p>
+    itemStructure={{ name: '' }}
+    ItemComponent={ManagementModalDoorItem}
+  />
 
-      <Transition.Group as={List} duration={200} verticalAlign='middle' className='door-list'>
-        {
-          doorListKeys.map(doorID => (
-            <div className='door-wrapper' key={doorID}>
-              <List.Item>
-                <Input value={virtualDoorList[doorID].name} placeholder='Door name'
-                  onChange={handleDoorNameChange.bind(null, doorID)} />
-                <Button icon='remove' onClick={removeDoor.bind(null, doorID)} />
-              </List.Item>
-            </div>
-          ))
-        }
+)
 
-        <List.Item>
-          <List.Content floated='right'>
-            <Button icon='plus' content='Add a new door' onClick={addNewDoor} />
-          </List.Content>
-        </List.Item>
-      </Transition.Group>
-
-      <Dimmer active={loading} >
-        <Loader/>
-      </Dimmer>
-
-    </Modal.Content>
-
-    <Modal.Actions>
-      <Button content='Discard' onClick={discardChanges} />
-      <Button positive content='Save' onClick={saveChanges} />
-    </Modal.Actions>
-
-  </Modal>
+const ManagementModalDoorItem = ({ id, item, handleTextInputChange }) => (
+  <div>
+    <List.Item>
+      <Input value={item.name} placeholder='Door name' name='name'
+        onChange={handleTextInputChange.bind(null, id)} />
+    </List.Item>
+  </div>
 )

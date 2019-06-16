@@ -1,21 +1,3 @@
-@mixin absolute-fill($distance: 0px) {
-	position: absolute;
-	@include position-fill($distance);
-}
-
-@mixin position-fill($distance: 0px) {
-	top: $distance;
-	bottom: $distance;
-	left: $distance;
-	right: $distance;
-}
-
-@mixin box-shadow($size, $color) {
-	-moz-box-shadow: $size $color;
-	-webkit-box-shadow: $size $color;
-	box-shadow: $size $color;
-}
-
 @mixin transition($args...) {
 	-webkit-transition: $args;
 	-moz-transition: $args;
@@ -29,26 +11,4 @@
 	-o-text-overflow: $type;
 	-ms-text-overflow: $type;
 	overflow: hidden;
-}
-
-@mixin vertical-align($value) {
-  display: inline-block;
-  vertical-align: $value
-}
-
-@mixin box-sizing($value) {
-	-webkit-box-sizing: $value;
-	-moz-box-sizing: $value;
-	box-sizing: $value;
-}
-
-@keyframes fade-in-up {
-	0% {
-		 opacity: 0;
-		 transform: translateY(20px);
-	}
-	100% {
-		 opacity: 1;
-		 transform: translateY(0);
-	}
 }

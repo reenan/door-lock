@@ -2,11 +2,12 @@ import {
   REQUEST_MADE,
   UPDATE_STORE,
   REGISTER_STORE,
+  UNREGISTER_STORE,
 } from '../actions'
 
 const initialState = {
   store: {},
-  isFetching: false,  
+  isFetching: false,
 }
 
 function reducer (state = initialState, action) {
@@ -27,10 +28,16 @@ function reducer (state = initialState, action) {
 
     case UPDATE_STORE:
       state.store = action.store
+
       return {
         ...state,
         isFetching: false,
       }
+
+    case UNREGISTER_STORE:
+      state.store = action.store
+
+      return initialState
 
     default:
       return state

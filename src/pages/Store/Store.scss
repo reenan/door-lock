@@ -1,8 +1,23 @@
+@import '../../resources/mixins';
+
 .store {
   height: 100%;
 
+  span.unregister {
+    cursor: pointer;
+    opacity: 0.8;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
   .ui.container.wrap-store {
-    padding-top: 3em;
+    padding: 3em 1em;
+
+    > h1.ui.header.huge {
+      @include text-overflow(ellipsis);
+    }
   }
 
   .customize-buttons {

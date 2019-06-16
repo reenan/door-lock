@@ -7,40 +7,12 @@
   url("./icon-font/fa-solid-900.woff2") format("woff2"),
   url("./icon-font/fa-solid-900.svg") format("svg"),
 }
-/*
-@font-face {
-  font-family: "Custom Icons";
-  src:
-  url("./icon-font/fa-brands-400.ttf") format("truetype"),
-  url("./icon-font/fa-brands-400.eot") format("eot"),
-  url("./icon-font/fa-brands-400.woff") format("woff"),
-  url("./icon-font/fa-brands-400.woff2") format("woff2"),
-  url("./icon-font/fa-brands-400.svg") format("svg"),
-}
 
-@font-face {
-  font-family: "Custom Icons";
-  src:
-  url("./icon-font/fa-regular-400.ttf") format("truetype"),
-  url("./icon-font/fa-regular-400.eot") format("eot"),
-  url("./icon-font/fa-regular-400.woff") format("woff"),
-  url("./icon-font/fa-regular-400.woff2") format("woff2"),
-  url("./icon-font/fa-regular-400.svg") format("svg"),
-}
-
-*/
 .custom-icon {
   font-family: 'Custom Icons', 'Icons', sans-serif !important;
 
-  //&.lock:before { content: "\f023"; }
-  //&.lock-open:before { content: "\f3c1"; }
-  //&.angle-right:before { content: "\f105"; }
-  //&.check:before { content: "\f00c"; }
-  //&.close:before { content: "\f00d"; }
   &.circle:before { content: "\f111"; }
   &.check-circle:before { content: "\f058"; }
-  //&.plus:before { content: "\f067"; }
   &.door-closed:before { content: "\f52a"; }
   &.door-open:before { content: "\f52b"; }
-
 }

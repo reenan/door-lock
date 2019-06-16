@@ -1,0 +1,38 @@
+.ui.modal.management-modal {
+  .ui.list.item-list {
+    margin-bottom: 0px;
+
+    > div {
+
+      div.item-wrapper {
+        display: grid;
+        grid-template-columns: 11fr 1fr;
+        grid-gap: 15px;
+
+        & + div.item-wrapper {
+          margin-top: 15px;
+        }
+
+        .item {
+          > .ui.input {
+            width: 100%;
+          }
+        }
+
+        .ui.icon.button {
+          width: 38px;
+          height: 38px;
+          justify-self: end;
+        }
+      }
+
+      & + div {
+        margin-top: 10px;
+      }
+    }
+
+    > .item > .right.floated {
+      margin-top: 15px;
+    }
+  }
+}

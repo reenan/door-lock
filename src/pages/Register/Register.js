@@ -85,7 +85,8 @@ export default ({
 
     </Segment>
 
-    <Modal size='tiny' open={isOpenRegisterModal} onClose={closeRegisterModal}>
+    <Modal size='tiny' open={isOpenRegisterModal}
+      onClose={closeRegisterModal} className='register-modal'>
 
       <Modal.Header>Register your store</Modal.Header>
       <Modal.Content>

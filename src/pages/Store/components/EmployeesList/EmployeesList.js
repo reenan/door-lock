@@ -38,10 +38,10 @@ const Employee = ({ employeeID, selected, selectEmployee, employees, roles }) =>
     <p>
       <Icon className={`custom-icon ${selected ? 'check-circle' : 'circle'}`} />
       <span>{employees[employeeID].name}</span>
-      
+
       <span>
         ({
-          employees[employeeID].role ?
+          roles[employees[employeeID].role] ?
           roles[employees[employeeID].role].name : 'No role defined'
         })
       </span>

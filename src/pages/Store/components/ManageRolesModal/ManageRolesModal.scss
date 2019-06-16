@@ -1,54 +1,37 @@
 @import '../../../../resources/_mixins.scss';
 
-.manage-roles-modal {
+.management-modal {
+  .ui.list .roles-permission-door-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding-left: 0;
 
-  .ui.list.role-list {
-    margin-bottom: 0px;
+    > .item > div {
+      @include transition(background-color 300ms);
+      display: grid;
+      grid-template-columns: 9fr 1fr;
+      cursor: pointer;
+      border: 1px solid #fff;
+      padding: 15px;
+      border-radius: 5px;
+      background-color: rgba(black, 0.03);
 
-    div.role-wrapper {
-      > div {
-        display: grid;
-        grid-template-columns: 8fr 1fr;
-        grid-gap: 15px;
+      .ui.toggle.checkbox {
+        pointer-events: none;
       }
 
-      & + div.role-wrapper {
-        margin-top: 15px;
+      p, span {
+        @include text-overflow(ellipsis);
+        margin: 0 5px 0 0;
       }
 
-      .roles-permission-door-list {
-        display: grid;
-        grid-template-columns: 1fr;
-        padding-left: 0;
-
-        > .item {
-          @include transition(background-color 300ms);
-          display: grid;
-          grid-template-columns: 9fr 1fr;
-          cursor: pointer;
-          border: 1px solid #fff;
-          padding: 15px;
-          border-radius: 5px;
-          background-color: rgba(black, 0.03);
-
-          p, span {
-            @include text-overflow(ellipsis);
-            margin: 0 5px 0 0;
-          }
-
-          .warn {
-            margin-right: 5px;
-          }
-
-          &:hover {
-            background-color: rgba(black, 0.05);
-          }
-        }
+      .warn {
+        margin-right: 5px;
       }
-    }
 
-    > .item > .right.floated {
-      margin-top: 15px;
+      &:hover {
+        background-color: rgba(black, 0.05);
+      }
     }
   }
 }

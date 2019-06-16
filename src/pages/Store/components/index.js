@@ -1,13 +1,17 @@
 import EmployeesList from './EmployeesList/EmployeesList'
 import SelectedEmployeePermissions from './SelectedEmployeePermissions/SelectedEmployeePermissions'
-import ManageDoorsModalContainer from './ManageDoorsModal/ManageDoorsModalContainer'
-import ManageRolesModalContainer from './ManageRolesModal/ManageRolesModalContainer'
-import ManageEmployeesModalContainer from './ManageEmployeesModal/ManageEmployeesModalContainer'
+import ManageDoorsModal from './ManageDoorsModal/ManageDoorsModal'
+import ManageRolesModal from './ManageRolesModal/ManageRolesModal'
+import ManageEmployeesModal from './ManageEmployeesModal/ManageEmployeesModal'
+import ManagementModalContainer from './ManagementModal/ManagementModalContainer'
+import UnregisterModal from './UnregisterModal/UnregisterModal'
 
 export {
   EmployeesList,
   SelectedEmployeePermissions,
-  ManageDoorsModalContainer,
-  ManageRolesModalContainer,
-  ManageEmployeesModalContainer,
+  ManageDoorsModal,
+  ManageRolesModal,
+  ManageEmployeesModal,
+  ManagementModalContainer,
+  UnregisterModal,
 }
