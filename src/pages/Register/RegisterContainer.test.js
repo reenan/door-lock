@@ -16,30 +16,6 @@ afterEach(() => {
   jest.clearAllMocks()
 })
 
-it('renders without crashing', () => {
-  const component = shallow(
-    <RegisterContainer.WrappedComponent
-      dispatch={() => {}}
-      store={{}}
-    />
-  )
-
-  expect(component).toMatchSnapshot()
-})
-
-it('renders without crashing with store', () => {
-  const component = shallow(
-    <RegisterContainer.WrappedComponent
-      dispatch={() => {}}
-      store={{
-        name: 'Mock'
-      }}
-    />
-  )
-
-  expect(component).toMatchSnapshot()
-})
-
 it('should be able to open then close a modal', () => {
   const component = shallow(
     <RegisterContainer.WrappedComponent

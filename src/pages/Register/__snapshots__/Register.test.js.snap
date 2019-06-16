@@ -1,5 +1,621 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders without crashing 1`] = `ShallowWrapper {}`;
+exports[`renders without crashing 1`] = `
+<_default
+  closeRegisterModal={[Function]}
+  handleStoreNameChange={[Function]}
+  openRegisterModal={[Function]}
+  registerModalIsOpen={false}
+  storeName=""
+>
+  <div
+    className="register"
+  >
+    <Segment
+      inverted={true}
+      textAlign="center"
+      vertical={true}
+    >
+      <div
+        className="ui inverted vertical center aligned segment"
+      >
+        <Container
+          text={true}
+        >
+          <div
+            className="ui text container"
+          >
+            <Header
+              as="h1"
+              inverted={true}
+              size="huge"
+            >
+              <h1
+                className="ui huge inverted header"
+              >
+                Welcome to The Cloud Lock
+              </h1>
+            </Header>
+            <Header
+              as="h4"
+              className="call"
+              inverted={true}
+            >
+              <h4
+                className="ui inverted header call"
+              >
+                Protect your store's doors with assured security and open them with one click!
+              </h4>
+            </Header>
+            <HeaderSubheader>
+              <div
+                className="sub header"
+              >
+                Your store's security matters, that is why we are here to help you ensure that no one without permissions will be opening your doors.
+              </div>
+            </HeaderSubheader>
+          </div>
+        </Container>
+        <StepGroup
+          className="step-group"
+          stackable="tablet"
+        >
+          <div
+            className="ui tablet stackable steps step-group"
+          >
+            <Step>
+              <div
+                className="step"
+                onClick={[Function]}
+              >
+                <Icon
+                  as="i"
+                  name="star"
+                >
+                  <i
+                    aria-hidden="true"
+                    className="star icon"
+                    onClick={[Function]}
+                  />
+                </Icon>
+                <StepContent>
+                  <div
+                    className="content"
+                  >
+                    <StepTitle>
+                      <div
+                        className="title"
+                      >
+                        Register your store
+                      </div>
+                    </StepTitle>
+                    <StepDescription>
+                      <div
+                        className="description"
+                      >
+                        Simply enter your store's name and we handle the rest.
+                      </div>
+                    </StepDescription>
+                  </div>
+                </StepContent>
+              </div>
+            </Step>
+            <Step>
+              <div
+                className="step"
+                onClick={[Function]}
+              >
+                <Icon
+                  as="i"
+                  name="id badge"
+                >
+                  <i
+                    aria-hidden="true"
+                    className="id badge icon"
+                    onClick={[Function]}
+                  />
+                </Icon>
+                <StepContent>
+                  <div
+                    className="content"
+                  >
+                    <StepTitle>
+                      <div
+                        className="title"
+                      >
+                        Customize
+                      </div>
+                    </StepTitle>
+                    <StepDescription>
+                      <div
+                        className="description"
+                      >
+                        Tell us what are your doors, your employees, their roles and authorisations.
+                      </div>
+                    </StepDescription>
+                  </div>
+                </StepContent>
+              </div>
+            </Step>
+            <Step>
+              <div
+                className="step"
+                onClick={[Function]}
+              >
+                <Icon
+                  as="i"
+                  name="lock"
+                >
+                  <i
+                    aria-hidden="true"
+                    className="lock icon"
+                    onClick={[Function]}
+                  />
+                </Icon>
+                <StepContent>
+                  <div
+                    className="content"
+                  >
+                    <StepTitle>
+                      <div
+                        className="title"
+                      >
+                        That's it!
+                      </div>
+                    </StepTitle>
+                    <StepDescription>
+                      <div
+                        className="description"
+                      >
+                        Your store is secured and your employees can open doors with one click.
+                      </div>
+                    </StepDescription>
+                  </div>
+                </StepContent>
+              </div>
+            </Step>
+          </div>
+        </StepGroup>
+        <Container
+          text={true}
+        >
+          <div
+            className="ui text container"
+          >
+            <Header
+              as="h4"
+              className="call"
+              inverted={true}
+            >
+              <h4
+                className="ui inverted header call"
+              >
+                It looks like you've not registered your store yet, how about starting it now?
+              </h4>
+            </Header>
+            <Button
+              animated={true}
+              as="button"
+              onClick={[Function]}
+              size="huge"
+            >
+              <Ref
+                innerRef={
+                  Object {
+                    "current": <button
+                      class="ui huge animated button"
+                    >
+                      <div
+                        class="visible content"
+                      >
+                        Protect my store
+                      </div>
+                      <div
+                        class="hidden content"
+                      >
+                        <i
+                          aria-hidden="true"
+                          class="lock icon"
+                        />
+                      </div>
+                    </button>,
+                  }
+                }
+              >
+                <RefFindNode
+                  innerRef={
+                    Object {
+                      "current": <button
+                        class="ui huge animated button"
+                      >
+                        <div
+                          class="visible content"
+                        >
+                          Protect my store
+                        </div>
+                        <div
+                          class="hidden content"
+                        >
+                          <i
+                            aria-hidden="true"
+                            class="lock icon"
+                          />
+                        </div>
+                      </button>,
+                    }
+                  }
+                >
+                  <button
+                    className="ui huge animated button"
+                    onClick={[Function]}
+                  >
+                    <ButtonContent
+                      visible={true}
+                    >
+                      <div
+                        className="visible content"
+                      >
+                        Protect my store
+                      </div>
+                    </ButtonContent>
+                    <ButtonContent
+                      hidden={true}
+                    >
+                      <div
+                        className="hidden content"
+                      >
+                        <Icon
+                          as="i"
+                          name="lock"
+                        >
+                          <i
+                            aria-hidden="true"
+                            className="lock icon"
+                            onClick={[Function]}
+                          />
+                        </Icon>
+                      </div>
+                    </ButtonContent>
+                  </button>
+                </RefFindNode>
+              </Ref>
+            </Button>
+          </div>
+        </Container>
+      </div>
+    </Segment>
+    <Modal
+      centered={true}
+      className="register-modal"
+      closeOnDimmerClick={true}
+      closeOnDocumentClick={false}
+      dimmer={true}
+      eventPool="Modal"
+      onClose={[Function]}
+      size="tiny"
+    >
+      <Portal
+        closeOnDocumentClick={false}
+        closeOnEscape={true}
+        eventPool="Modal"
+        mountNode={<body />}
+        onClose={[Function]}
+        onMount={[Function]}
+        onOpen={[Function]}
+        onUnmount={[Function]}
+        openOnTriggerClick={true}
+      />
+    </Modal>
+  </div>
+</_default>
+`;
 
-exports[`renders without crashing, modal open 1`] = `ShallowWrapper {}`;
+exports[`renders without crashing, modal open 1`] = `
+<_default
+  closeRegisterModal={[Function]}
+  handleStoreNameChange={[Function]}
+  openRegisterModal={[Function]}
+  registerModalIsOpen={true}
+  storeName="Mock"
+>
+  <div
+    className="register"
+  >
+    <Segment
+      inverted={true}
+      textAlign="center"
+      vertical={true}
+    >
+      <div
+        className="ui inverted vertical center aligned segment"
+      >
+        <Container
+          text={true}
+        >
+          <div
+            className="ui text container"
+          >
+            <Header
+              as="h1"
+              inverted={true}
+              size="huge"
+            >
+              <h1
+                className="ui huge inverted header"
+              >
+                Welcome to The Cloud Lock
+              </h1>
+            </Header>
+            <Header
+              as="h4"
+              className="call"
+              inverted={true}
+            >
+              <h4
+                className="ui inverted header call"
+              >
+                Protect your store's doors with assured security and open them with one click!
+              </h4>
+            </Header>
+            <HeaderSubheader>
+              <div
+                className="sub header"
+              >
+                Your store's security matters, that is why we are here to help you ensure that no one without permissions will be opening your doors.
+              </div>
+            </HeaderSubheader>
+          </div>
+        </Container>
+        <StepGroup
+          className="step-group"
+          stackable="tablet"
+        >
+          <div
+            className="ui tablet stackable steps step-group"
+          >
+            <Step>
+              <div
+                className="step"
+                onClick={[Function]}
+              >
+                <Icon
+                  as="i"
+                  name="star"
+                >
+                  <i
+                    aria-hidden="true"
+                    className="star icon"
+                    onClick={[Function]}
+                  />
+                </Icon>
+                <StepContent>
+                  <div
+                    className="content"
+                  >
+                    <StepTitle>
+                      <div
+                        className="title"
+                      >
+                        Register your store
+                      </div>
+                    </StepTitle>
+                    <StepDescription>
+                      <div
+                        className="description"
+                      >
+                        Simply enter your store's name and we handle the rest.
+                      </div>
+                    </StepDescription>
+                  </div>
+                </StepContent>
+              </div>
+            </Step>
+            <Step>
+              <div
+                className="step"
+                onClick={[Function]}
+              >
+                <Icon
+                  as="i"
+                  name="id badge"
+                >
+                  <i
+                    aria-hidden="true"
+                    className="id badge icon"
+                    onClick={[Function]}
+                  />
+                </Icon>
+                <StepContent>
+                  <div
+                    className="content"
+                  >
+                    <StepTitle>
+                      <div
+                        className="title"
+                      >
+                        Customize
+                      </div>
+                    </StepTitle>
+                    <StepDescription>
+                      <div
+                        className="description"
+                      >
+                        Tell us what are your doors, your employees, their roles and authorisations.
+                      </div>
+                    </StepDescription>
+                  </div>
+                </StepContent>
+              </div>
+            </Step>
+            <Step>
+              <div
+                className="step"
+                onClick={[Function]}
+              >
+                <Icon
+                  as="i"
+                  name="lock"
+                >
+                  <i
+                    aria-hidden="true"
+                    className="lock icon"
+                    onClick={[Function]}
+                  />
+                </Icon>
+                <StepContent>
+                  <div
+                    className="content"
+                  >
+                    <StepTitle>
+                      <div
+                        className="title"
+                      >
+                        That's it!
+                      </div>
+                    </StepTitle>
+                    <StepDescription>
+                      <div
+                        className="description"
+                      >
+                        Your store is secured and your employees can open doors with one click.
+                      </div>
+                    </StepDescription>
+                  </div>
+                </StepContent>
+              </div>
+            </Step>
+          </div>
+        </StepGroup>
+        <Container
+          text={true}
+        >
+          <div
+            className="ui text container"
+          >
+            <Header
+              as="h4"
+              className="call"
+              inverted={true}
+            >
+              <h4
+                className="ui inverted header call"
+              >
+                It looks like you've not registered your store yet, how about starting it now?
+              </h4>
+            </Header>
+            <Button
+              animated={true}
+              as="button"
+              onClick={[Function]}
+              size="huge"
+            >
+              <Ref
+                innerRef={
+                  Object {
+                    "current": <button
+                      class="ui huge animated button"
+                    >
+                      <div
+                        class="visible content"
+                      >
+                        Protect my store
+                      </div>
+                      <div
+                        class="hidden content"
+                      >
+                        <i
+                          aria-hidden="true"
+                          class="lock icon"
+                        />
+                      </div>
+                    </button>,
+                  }
+                }
+              >
+                <RefFindNode
+                  innerRef={
+                    Object {
+                      "current": <button
+                        class="ui huge animated button"
+                      >
+                        <div
+                          class="visible content"
+                        >
+                          Protect my store
+                        </div>
+                        <div
+                          class="hidden content"
+                        >
+                          <i
+                            aria-hidden="true"
+                            class="lock icon"
+                          />
+                        </div>
+                      </button>,
+                    }
+                  }
+                >
+                  <button
+                    className="ui huge animated button"
+                    onClick={[Function]}
+                  >
+                    <ButtonContent
+                      visible={true}
+                    >
+                      <div
+                        className="visible content"
+                      >
+                        Protect my store
+                      </div>
+                    </ButtonContent>
+                    <ButtonContent
+                      hidden={true}
+                    >
+                      <div
+                        className="hidden content"
+                      >
+                        <Icon
+                          as="i"
+                          name="lock"
+                        >
+                          <i
+                            aria-hidden="true"
+                            className="lock icon"
+                            onClick={[Function]}
+                          />
+                        </Icon>
+                      </div>
+                    </ButtonContent>
+                  </button>
+                </RefFindNode>
+              </Ref>
+            </Button>
+          </div>
+        </Container>
+      </div>
+    </Segment>
+    <Modal
+      centered={true}
+      className="register-modal"
+      closeOnDimmerClick={true}
+      closeOnDocumentClick={false}
+      dimmer={true}
+      eventPool="Modal"
+      onClose={[Function]}
+      size="tiny"
+    >
+      <Portal
+        closeOnDocumentClick={false}
+        closeOnEscape={true}
+        eventPool="Modal"
+        mountNode={<body />}
+        onClose={[Function]}
+        onMount={[Function]}
+        onOpen={[Function]}
+        onUnmount={[Function]}
+        openOnTriggerClick={true}
+      />
+    </Modal>
+  </div>
+</_default>
+`;

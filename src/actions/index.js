@@ -23,7 +23,7 @@ export function registerStore(storeName) {
       if (response.status === 201) {
 
         // Mount store using mocked data
-        const store = { name: storeName, roles: ROLES, employees: EMPLOYEES, doors: DOORS, firstTime: true }
+        const store = { name: storeName, roles: ROLES, employees: EMPLOYEES, doors: DOORS }
 
         // Notify that we received return from the API
         dispatch(persistRegisterStore(store))

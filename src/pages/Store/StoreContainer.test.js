@@ -16,31 +16,6 @@ afterEach(() => {
   jest.clearAllMocks()
 })
 
-it('renders without crashing', () => {
-  const component = shallow(
-    <StoreContainer.WrappedComponent
-      dispatch={() => {}}
-      store={{}}
-    />
-  )
-
-  expect(component).toMatchSnapshot()
-})
-
-
-it('renders without crashing with store', () => {
-  const component = shallow(
-    <StoreContainer.WrappedComponent
-      dispatch={() => {}}
-      store={{
-        name: 'Mock'
-      }}
-    />
-  )
-
-  expect(component).toMatchSnapshot()
-})
-
 it('should be able to select an employee', () => {
   const component = shallow(
     <StoreContainer.WrappedComponent

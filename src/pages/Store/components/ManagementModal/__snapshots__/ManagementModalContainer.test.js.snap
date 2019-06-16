@@ -1,3 +1,1099 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders without crashing 1`] = `ShallowWrapper {}`;
+exports[`renders without crashing 1`] = `
+<ManagementModalContainer
+  ItemComponent={[Function]}
+  close={[Function]}
+  isOpen={false}
+  itemStructure={
+    Object {
+      "name": "",
+    }
+  }
+  items={Object {}}
+  loading={false}
+  modalData={
+    Object {
+      "addText": "Add new test",
+      "description": "Write Tests",
+      "info": "Its important.",
+      "title": "Mock",
+    }
+  }
+  nestedItems={Object {}}
+  save={[Function]}
+  useDivider={true}
+>
+  <_default
+    ItemComponent={[Function]}
+    addNewItem={[Function]}
+    close={[Function]}
+    discardChanges={[Function]}
+    handleCheckboxToggle={[Function]}
+    handleDropdownChange={[Function]}
+    handleTextInputChange={[Function]}
+    isOpen={false}
+    loading={false}
+    modalData={
+      Object {
+        "addText": "Add new test",
+        "description": "Write Tests",
+        "info": "Its important.",
+        "title": "Mock",
+      }
+    }
+    nestedItems={Object {}}
+    nestedItemsKeys={Array []}
+    removeItem={[Function]}
+    saveChanges={[Function]}
+    useDivider={true}
+    virtualItems={Object {}}
+    virtualItemsKeys={Array []}
+  >
+    <Modal
+      centered={true}
+      className="management-modal"
+      closeOnDimmerClick={false}
+      closeOnDocumentClick={false}
+      closeOnEscape={false}
+      dimmer={true}
+      eventPool="Modal"
+      onClose={[Function]}
+      open={false}
+      size="small"
+    >
+      <Portal
+        closeOnDocumentClick={false}
+        closeOnEscape={false}
+        eventPool="Modal"
+        mountNode={<body />}
+        onClose={[Function]}
+        onMount={[Function]}
+        onOpen={[Function]}
+        onUnmount={[Function]}
+        open={false}
+        openOnTriggerClick={true}
+      />
+    </Modal>
+  </_default>
+</ManagementModalContainer>
+`;
+
+exports[`renders without crashing when open 1`] = `
+<ManagementModalContainer
+  ItemComponent={[Function]}
+  close={[Function]}
+  isOpen={true}
+  itemStructure={
+    Object {
+      "name": "",
+    }
+  }
+  items={Object {}}
+  loading={false}
+  modalData={
+    Object {
+      "addText": "Add new test",
+      "description": "Write Tests",
+      "info": "Its important.",
+      "title": "Mock",
+    }
+  }
+  nestedItems={Object {}}
+  save={[Function]}
+  useDivider={true}
+>
+  <_default
+    ItemComponent={[Function]}
+    addNewItem={[Function]}
+    close={[Function]}
+    discardChanges={[Function]}
+    handleCheckboxToggle={[Function]}
+    handleDropdownChange={[Function]}
+    handleTextInputChange={[Function]}
+    isOpen={true}
+    loading={false}
+    modalData={
+      Object {
+        "addText": "Add new test",
+        "description": "Write Tests",
+        "info": "Its important.",
+        "title": "Mock",
+      }
+    }
+    nestedItems={Object {}}
+    nestedItemsKeys={Array []}
+    removeItem={[Function]}
+    saveChanges={[Function]}
+    useDivider={true}
+    virtualItems={Object {}}
+    virtualItemsKeys={Array []}
+  >
+    <Modal
+      centered={true}
+      className="management-modal"
+      closeOnDimmerClick={false}
+      closeOnDocumentClick={false}
+      closeOnEscape={false}
+      dimmer={true}
+      eventPool="Modal"
+      onClose={[Function]}
+      open={true}
+      size="small"
+    >
+      <Portal
+        closeOnDocumentClick={false}
+        closeOnEscape={false}
+        eventPool="Modal"
+        mountNode={
+          <body
+            class="dimmable dimmed"
+          >
+            <div
+              class="ui page modals dimmer transition visible active"
+              style="display: flex;"
+            >
+              <div
+                class="ui small modal transition visible active management-modal"
+              >
+                <div
+                  class="header"
+                >
+                  Mock
+                </div>
+                <div
+                  class="content"
+                >
+                  <p>
+                    Write Tests
+                  </p>
+                  <p>
+                    Its important.
+                  </p>
+                  <div
+                    class="ui middle aligned list item-list"
+                    role="list"
+                  >
+                    <div
+                      class="item fade visible transition"
+                      role="listitem"
+                    >
+                      <div
+                        class="right floated content"
+                      >
+                        <button
+                          class="ui button"
+                        >
+                          <i
+                            aria-hidden="true"
+                            class="plus icon"
+                          />
+                          Add new test
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="ui dimmer"
+                  >
+                    <div
+                      class="content"
+                    >
+                      <div
+                        class="ui loader"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="actions"
+                >
+                  <button
+                    class="ui button"
+                  >
+                    Discard
+                  </button>
+                  <button
+                    class="ui positive button"
+                  >
+                    Save
+                  </button>
+                </div>
+              </div>
+            </div>
+          </body>
+        }
+        onClose={[Function]}
+        onMount={[Function]}
+        onOpen={[Function]}
+        onUnmount={[Function]}
+        open={true}
+        openOnTriggerClick={true}
+      >
+        <PortalInner
+          innerRef={
+            Object {
+              "current": <div
+                class="ui page modals dimmer transition visible active"
+                style="display: flex;"
+              >
+                <div
+                  class="ui small modal transition visible active management-modal"
+                >
+                  <div
+                    class="header"
+                  >
+                    Mock
+                  </div>
+                  <div
+                    class="content"
+                  >
+                    <p>
+                      Write Tests
+                    </p>
+                    <p>
+                      Its important.
+                    </p>
+                    <div
+                      class="ui middle aligned list item-list"
+                      role="list"
+                    >
+                      <div
+                        class="item fade visible transition"
+                        role="listitem"
+                      >
+                        <div
+                          class="right floated content"
+                        >
+                          <button
+                            class="ui button"
+                          >
+                            <i
+                              aria-hidden="true"
+                              class="plus icon"
+                            />
+                            Add new test
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="ui dimmer"
+                    >
+                      <div
+                        class="content"
+                      >
+                        <div
+                          class="ui loader"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="actions"
+                  >
+                    <button
+                      class="ui button"
+                    >
+                      Discard
+                    </button>
+                    <button
+                      class="ui positive button"
+                    >
+                      Save
+                    </button>
+                  </div>
+                </div>
+              </div>,
+            }
+          }
+          mountNode={
+            <body
+              class="dimmable dimmed"
+            >
+              <div
+                class="ui page modals dimmer transition visible active"
+                style="display: flex;"
+              >
+                <div
+                  class="ui small modal transition visible active management-modal"
+                >
+                  <div
+                    class="header"
+                  >
+                    Mock
+                  </div>
+                  <div
+                    class="content"
+                  >
+                    <p>
+                      Write Tests
+                    </p>
+                    <p>
+                      Its important.
+                    </p>
+                    <div
+                      class="ui middle aligned list item-list"
+                      role="list"
+                    >
+                      <div
+                        class="item fade visible transition"
+                        role="listitem"
+                      >
+                        <div
+                          class="right floated content"
+                        >
+                          <button
+                            class="ui button"
+                          >
+                            <i
+                              aria-hidden="true"
+                              class="plus icon"
+                            />
+                            Add new test
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="ui dimmer"
+                    >
+                      <div
+                        class="content"
+                      >
+                        <div
+                          class="ui loader"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="actions"
+                  >
+                    <button
+                      class="ui button"
+                    >
+                      Discard
+                    </button>
+                    <button
+                      class="ui positive button"
+                    >
+                      Save
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </body>
+          }
+          onMount={[Function]}
+          onUnmount={[Function]}
+        >
+          <Portal
+            containerInfo={
+              <body
+                class="dimmable dimmed"
+              >
+                <div
+                  class="ui page modals dimmer transition visible active"
+                  style="display: flex;"
+                >
+                  <div
+                    class="ui small modal transition visible active management-modal"
+                  >
+                    <div
+                      class="header"
+                    >
+                      Mock
+                    </div>
+                    <div
+                      class="content"
+                    >
+                      <p>
+                        Write Tests
+                      </p>
+                      <p>
+                        Its important.
+                      </p>
+                      <div
+                        class="ui middle aligned list item-list"
+                        role="list"
+                      >
+                        <div
+                          class="item fade visible transition"
+                          role="listitem"
+                        >
+                          <div
+                            class="right floated content"
+                          >
+                            <button
+                              class="ui button"
+                            >
+                              <i
+                                aria-hidden="true"
+                                class="plus icon"
+                              />
+                              Add new test
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="ui dimmer"
+                      >
+                        <div
+                          class="content"
+                        >
+                          <div
+                            class="ui loader"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="actions"
+                    >
+                      <button
+                        class="ui button"
+                      >
+                        Discard
+                      </button>
+                      <button
+                        class="ui positive button"
+                      >
+                        Save
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </body>
+            }
+          >
+            <Ref
+              innerRef={[Function]}
+            >
+              <RefFindNode
+                innerRef={[Function]}
+              >
+                <div
+                  className="ui page modals dimmer transition visible active"
+                >
+                  <Ref
+                    innerRef={
+                      Object {
+                        "current": <div
+                          class="ui small modal transition visible active management-modal"
+                        >
+                          <div
+                            class="header"
+                          >
+                            Mock
+                          </div>
+                          <div
+                            class="content"
+                          >
+                            <p>
+                              Write Tests
+                            </p>
+                            <p>
+                              Its important.
+                            </p>
+                            <div
+                              class="ui middle aligned list item-list"
+                              role="list"
+                            >
+                              <div
+                                class="item fade visible transition"
+                                role="listitem"
+                              >
+                                <div
+                                  class="right floated content"
+                                >
+                                  <button
+                                    class="ui button"
+                                  >
+                                    <i
+                                      aria-hidden="true"
+                                      class="plus icon"
+                                    />
+                                    Add new test
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                            <div
+                              class="ui dimmer"
+                            >
+                              <div
+                                class="content"
+                              >
+                                <div
+                                  class="ui loader"
+                                />
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            class="actions"
+                          >
+                            <button
+                              class="ui button"
+                            >
+                              Discard
+                            </button>
+                            <button
+                              class="ui positive button"
+                            >
+                              Save
+                            </button>
+                          </div>
+                        </div>,
+                      }
+                    }
+                  >
+                    <RefFindNode
+                      innerRef={
+                        Object {
+                          "current": <div
+                            class="ui small modal transition visible active management-modal"
+                          >
+                            <div
+                              class="header"
+                            >
+                              Mock
+                            </div>
+                            <div
+                              class="content"
+                            >
+                              <p>
+                                Write Tests
+                              </p>
+                              <p>
+                                Its important.
+                              </p>
+                              <div
+                                class="ui middle aligned list item-list"
+                                role="list"
+                              >
+                                <div
+                                  class="item fade visible transition"
+                                  role="listitem"
+                                >
+                                  <div
+                                    class="right floated content"
+                                  >
+                                    <button
+                                      class="ui button"
+                                    >
+                                      <i
+                                        aria-hidden="true"
+                                        class="plus icon"
+                                      />
+                                      Add new test
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                              <div
+                                class="ui dimmer"
+                              >
+                                <div
+                                  class="content"
+                                >
+                                  <div
+                                    class="ui loader"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                            <div
+                              class="actions"
+                            >
+                              <button
+                                class="ui button"
+                              >
+                                Discard
+                              </button>
+                              <button
+                                class="ui positive button"
+                              >
+                                Save
+                              </button>
+                            </div>
+                          </div>,
+                        }
+                      }
+                    >
+                      <div
+                        className="ui small modal transition visible active management-modal"
+                        style={
+                          Object {
+                            "marginTop": null,
+                          }
+                        }
+                      >
+                        <MountNode
+                          className="dimmable dimmed"
+                        />
+                        <ModalHeader>
+                          <div
+                            className="header"
+                          >
+                            Mock
+                          </div>
+                        </ModalHeader>
+                        <ModalContent>
+                          <div
+                            className="content"
+                          >
+                            <p>
+                              Write Tests
+                            </p>
+                            <p>
+                              Its important.
+                            </p>
+                            <TransitionGroup
+                              animation="fade"
+                              as={[Function]}
+                              className="item-list"
+                              duration={200}
+                              verticalAlign="middle"
+                            >
+                              <List
+                                className="item-list"
+                                verticalAlign="middle"
+                              >
+                                <div
+                                  className="ui middle aligned list item-list"
+                                  role="list"
+                                >
+                                  <Transition
+                                    animation="fade"
+                                    duration={200}
+                                    key=".1"
+                                    mountOnShow={true}
+                                    onHide={[Function]}
+                                    reactKey=".1"
+                                    transitionOnMount={false}
+                                    unmountOnHide={false}
+                                    visible={true}
+                                  >
+                                    <ListItem
+                                      className="fade visible transition"
+                                      key=".1"
+                                      style={
+                                        Object {
+                                          "animationDuration": undefined,
+                                        }
+                                      }
+                                    >
+                                      <div
+                                        className="item fade visible transition"
+                                        onClick={[Function]}
+                                        role="listitem"
+                                        style={
+                                          Object {
+                                            "animationDuration": undefined,
+                                          }
+                                        }
+                                      >
+                                        <ListContent
+                                          floated="right"
+                                        >
+                                          <div
+                                            className="right floated content"
+                                          >
+                                            <Button
+                                              as="button"
+                                              content="Add new test"
+                                              icon="plus"
+                                              onClick={[Function]}
+                                            >
+                                              <Ref
+                                                innerRef={
+                                                  Object {
+                                                    "current": <button
+                                                      class="ui button"
+                                                    >
+                                                      <i
+                                                        aria-hidden="true"
+                                                        class="plus icon"
+                                                      />
+                                                      Add new test
+                                                    </button>,
+                                                  }
+                                                }
+                                              >
+                                                <RefFindNode
+                                                  innerRef={
+                                                    Object {
+                                                      "current": <button
+                                                        class="ui button"
+                                                      >
+                                                        <i
+                                                          aria-hidden="true"
+                                                          class="plus icon"
+                                                        />
+                                                        Add new test
+                                                      </button>,
+                                                    }
+                                                  }
+                                                >
+                                                  <button
+                                                    className="ui button"
+                                                    onClick={[Function]}
+                                                  >
+                                                    <Icon
+                                                      as="i"
+                                                      name="plus"
+                                                    >
+                                                      <i
+                                                        aria-hidden="true"
+                                                        className="plus icon"
+                                                        onClick={[Function]}
+                                                      />
+                                                    </Icon>
+                                                    Add new test
+                                                  </button>
+                                                </RefFindNode>
+                                              </Ref>
+                                            </Button>
+                                          </div>
+                                        </ListContent>
+                                      </div>
+                                    </ListItem>
+                                  </Transition>
+                                </div>
+                              </List>
+                            </TransitionGroup>
+                            <Dimmer
+                              active={false}
+                            >
+                              <DimmerInner
+                                active={false}
+                              >
+                                <Ref
+                                  innerRef={
+                                    Object {
+                                      "current": <div
+                                        class="ui dimmer"
+                                      >
+                                        <div
+                                          class="content"
+                                        >
+                                          <div
+                                            class="ui loader"
+                                          />
+                                        </div>
+                                      </div>,
+                                    }
+                                  }
+                                >
+                                  <RefFindNode
+                                    innerRef={
+                                      Object {
+                                        "current": <div
+                                          class="ui dimmer"
+                                        >
+                                          <div
+                                            class="content"
+                                          >
+                                            <div
+                                              class="ui loader"
+                                            />
+                                          </div>
+                                        </div>,
+                                      }
+                                    }
+                                  >
+                                    <div
+                                      className="ui dimmer"
+                                      onClick={[Function]}
+                                    >
+                                      <div
+                                        className="content"
+                                      >
+                                        <Loader>
+                                          <div
+                                            className="ui loader"
+                                          />
+                                        </Loader>
+                                      </div>
+                                    </div>
+                                  </RefFindNode>
+                                </Ref>
+                              </DimmerInner>
+                            </Dimmer>
+                          </div>
+                        </ModalContent>
+                        <ModalActions>
+                          <div
+                            className="actions"
+                          >
+                            <Button
+                              as="button"
+                              content="Discard"
+                              onClick={[Function]}
+                            >
+                              <Ref
+                                innerRef={
+                                  Object {
+                                    "current": <button
+                                      class="ui button"
+                                    >
+                                      Discard
+                                    </button>,
+                                  }
+                                }
+                              >
+                                <RefFindNode
+                                  innerRef={
+                                    Object {
+                                      "current": <button
+                                        class="ui button"
+                                      >
+                                        Discard
+                                      </button>,
+                                    }
+                                  }
+                                >
+                                  <button
+                                    className="ui button"
+                                    onClick={[Function]}
+                                  >
+                                    Discard
+                                  </button>
+                                </RefFindNode>
+                              </Ref>
+                            </Button>
+                            <Button
+                              as="button"
+                              content="Save"
+                              onClick={[Function]}
+                              positive={true}
+                            >
+                              <Ref
+                                innerRef={
+                                  Object {
+                                    "current": <button
+                                      class="ui positive button"
+                                    >
+                                      Save
+                                    </button>,
+                                  }
+                                }
+                              >
+                                <RefFindNode
+                                  innerRef={
+                                    Object {
+                                      "current": <button
+                                        class="ui positive button"
+                                      >
+                                        Save
+                                      </button>,
+                                    }
+                                  }
+                                >
+                                  <button
+                                    className="ui positive button"
+                                    onClick={[Function]}
+                                  >
+                                    Save
+                                  </button>
+                                </RefFindNode>
+                              </Ref>
+                            </Button>
+                          </div>
+                        </ModalActions>
+                      </div>
+                    </RefFindNode>
+                  </Ref>
+                </div>
+              </RefFindNode>
+            </Ref>
+          </Portal>
+        </PortalInner>
+        <EventStack
+          name="mouseleave"
+          on={[Function]}
+          pool="Modal"
+          target={
+            Object {
+              "current": <div
+                class="ui page modals dimmer transition visible active"
+                style="display: flex;"
+              >
+                <div
+                  class="ui small modal transition visible active management-modal"
+                >
+                  <div
+                    class="header"
+                  >
+                    Mock
+                  </div>
+                  <div
+                    class="content"
+                  >
+                    <p>
+                      Write Tests
+                    </p>
+                    <p>
+                      Its important.
+                    </p>
+                    <div
+                      class="ui middle aligned list item-list"
+                      role="list"
+                    >
+                      <div
+                        class="item fade visible transition"
+                        role="listitem"
+                      >
+                        <div
+                          class="right floated content"
+                        >
+                          <button
+                            class="ui button"
+                          >
+                            <i
+                              aria-hidden="true"
+                              class="plus icon"
+                            />
+                            Add new test
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="ui dimmer"
+                    >
+                      <div
+                        class="content"
+                      >
+                        <div
+                          class="ui loader"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="actions"
+                  >
+                    <button
+                      class="ui button"
+                    >
+                      Discard
+                    </button>
+                    <button
+                      class="ui positive button"
+                    >
+                      Save
+                    </button>
+                  </div>
+                </div>
+              </div>,
+            }
+          }
+        />
+        <EventStack
+          name="mouseenter"
+          on={[Function]}
+          pool="Modal"
+          target={
+            Object {
+              "current": <div
+                class="ui page modals dimmer transition visible active"
+                style="display: flex;"
+              >
+                <div
+                  class="ui small modal transition visible active management-modal"
+                >
+                  <div
+                    class="header"
+                  >
+                    Mock
+                  </div>
+                  <div
+                    class="content"
+                  >
+                    <p>
+                      Write Tests
+                    </p>
+                    <p>
+                      Its important.
+                    </p>
+                    <div
+                      class="ui middle aligned list item-list"
+                      role="list"
+                    >
+                      <div
+                        class="item fade visible transition"
+                        role="listitem"
+                      >
+                        <div
+                          class="right floated content"
+                        >
+                          <button
+                            class="ui button"
+                          >
+                            <i
+                              aria-hidden="true"
+                              class="plus icon"
+                            />
+                            Add new test
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="ui dimmer"
+                    >
+                      <div
+                        class="content"
+                      >
+                        <div
+                          class="ui loader"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="actions"
+                  >
+                    <button
+                      class="ui button"
+                    >
+                      Discard
+                    </button>
+                    <button
+                      class="ui positive button"
+                    >
+                      Save
+                    </button>
+                  </div>
+                </div>
+              </div>,
+            }
+          }
+        />
+        <EventStack
+          name="mousedown"
+          on={[Function]}
+          pool="Modal"
+          target="document"
+        />
+        <EventStack
+          name="click"
+          on={[Function]}
+          pool="Modal"
+          target="document"
+        />
+        <EventStack
+          name="keydown"
+          on={[Function]}
+          pool="Modal"
+          target="document"
+        />
+      </Portal>
+    </Modal>
+  </_default>
+</ManagementModalContainer>
+`;

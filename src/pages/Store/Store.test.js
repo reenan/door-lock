@@ -1,10 +1,11 @@
 import React from 'react'
 import Store from './Store'
 
-import { shallow } from 'enzyme'
+import EnzymeToJson from 'enzyme-to-json'
+import { mount } from 'enzyme'
 
 it('renders without crashing', () => {
-  const component = shallow(
+  const component = mount(
     <Store
       name=''
       employees={{}}
@@ -14,24 +15,45 @@ it('renders without crashing', () => {
       selectedEmployee={null}
       selectEmployee={() => {}}
 
-      unregisterModalProps={{}}
-      doorModalProps={{}}
-      roleModalProps={{}}
-      employeeModalProps={{}}
+      unregisterModalProps={{
+        isOpen: false,
+        unregister: () => {},
+        open: () => {},
+        close: () => {},
+      }}
+      doorModalProps={{
+        isOpen: false,
+        save: () => {},
+        open: () => {},
+        close: () => {},
+      }}
+      roleModalProps={{
+        isOpen: false,
+        save: () => {},
+        open: () => {},
+        close: () => {},
+      }}
+      employeeModalProps={{
+        isOpen: false,
+        save: () => {},
+        open: () => {},
+        close: () => {},
+      }}
     />
   )
 
-  expect(component).toMatchSnapshot()
+  expect(EnzymeToJson(component)).toMatchSnapshot()
 })
 
 it('renders without crashing with employees', () => {
-  const component = shallow(
+   const component = mount(
     <Store
       name=''
       employees={{
-        mock: {
-          name: 'Mocked'
-        }
+         mock: {
+           name: 'Mocked',
+           role: null,
+         }
       }}
       roles={{}}
       doors={{}}
@@ -39,12 +61,32 @@ it('renders without crashing with employees', () => {
       selectedEmployee={null}
       selectEmployee={() => {}}
 
-      unregisterModalProps={{}}
-      doorModalProps={{}}
-      roleModalProps={{}}
-      employeeModalProps={{}}
+      unregisterModalProps={{
+        isOpen: false,
+        unregister: () => {},
+        open: () => {},
+        close: () => {},
+      }}
+      doorModalProps={{
+        isOpen: false,
+        save: () => {},
+        open: () => {},
+        close: () => {},
+      }}
+      roleModalProps={{
+        isOpen: false,
+        save: () => {},
+        open: () => {},
+        close: () => {},
+      }}
+      employeeModalProps={{
+        isOpen: false,
+        save: () => {},
+        open: () => {},
+        close: () => {},
+      }}
     />
   )
 
-  expect(component).toMatchSnapshot()
+  expect(EnzymeToJson(component)).toMatchSnapshot()
 })

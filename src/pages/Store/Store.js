@@ -48,7 +48,7 @@ export default ({
           </Header>
 
           <Header as='h3' inverted size='medium' className='no-space-top'>
-            Welcome to your secure doors environment
+            Welcome to your secure doors environment.
           </Header>
 
           <Header inverted size='tiny'>

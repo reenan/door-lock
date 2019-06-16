@@ -2,6 +2,9 @@ import React from 'react'
 import ManagementModalContainer from './ManagementModalContainer'
 import { shallow } from 'enzyme'
 
+import EnzymeToJson from 'enzyme-to-json'
+import { mount } from 'enzyme'
+
 const MockComponent = () => (
   <div>
     Hello Test
@@ -9,7 +12,7 @@ const MockComponent = () => (
 )
 
 it('renders without crashing', () => {
-  const component = shallow(
+  const component = mount(
     <ManagementModalContainer isOpen={false} items={{}} nestedItems={{}}
       loading={false} save={() => {}} close={() => {}} itemStructure={{ name: '' }}
       useDivider ItemComponent={MockComponent}
@@ -22,7 +25,24 @@ it('renders without crashing', () => {
     />
   )
 
-  expect(component).toMatchSnapshot()
+  expect(EnzymeToJson(component)).toMatchSnapshot()
+})
+
+it('renders without crashing when open', () => {
+  const component = mount(
+    <ManagementModalContainer isOpen={true} items={{}} nestedItems={{}}
+      loading={false} save={() => {}} close={() => {}} itemStructure={{ name: '' }}
+      useDivider ItemComponent={MockComponent}
+      modalData={{
+        title: `Mock`,
+        description: `Write Tests`,
+        info: `Its important.`,
+        addText: 'Add new test',
+      }}
+    />
+  )
+
+  expect(EnzymeToJson(component)).toMatchSnapshot()
 })
 
 it('should be able to add new item and remove it', () => {

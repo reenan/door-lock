@@ -1,5 +1,1326 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders without crashing 1`] = `ShallowWrapper {}`;
+exports[`renders without crashing 1`] = `
+<_default
+  doorModalProps={
+    Object {
+      "close": [Function],
+      "isOpen": false,
+      "open": [Function],
+      "save": [Function],
+    }
+  }
+  doors={Object {}}
+  employeeModalProps={
+    Object {
+      "close": [Function],
+      "isOpen": false,
+      "open": [Function],
+      "save": [Function],
+    }
+  }
+  employees={Object {}}
+  loading={false}
+  name=""
+  roleModalProps={
+    Object {
+      "close": [Function],
+      "isOpen": false,
+      "open": [Function],
+      "save": [Function],
+    }
+  }
+  roles={Object {}}
+  selectEmployee={[Function]}
+  selectedEmployee={null}
+  unregisterModalProps={
+    Object {
+      "close": [Function],
+      "isOpen": false,
+      "open": [Function],
+      "unregister": [Function],
+    }
+  }
+>
+  <div
+    className="store"
+  >
+    <Segment
+      inverted={true}
+      vertical={true}
+    >
+      <div
+        className="ui inverted vertical segment"
+      >
+        <Container
+          className="wrap-store"
+        >
+          <div
+            className="ui container wrap-store"
+          >
+            <Header
+              as="h1"
+              inverted={true}
+              size="huge"
+            >
+              <h1
+                className="ui huge inverted header"
+              >
+                Hello, 
+              </h1>
+            </Header>
+            <Header
+              as="h3"
+              className="no-space-top"
+              inverted={true}
+              size="medium"
+            >
+              <h3
+                className="ui medium inverted header no-space-top"
+              >
+                Welcome to your secure doors environment.
+              </h3>
+            </Header>
+            <Header
+              inverted={true}
+              size="tiny"
+            >
+              <div
+                className="ui tiny inverted header"
+              >
+                Customize your store using the buttons below:
+              </div>
+            </Header>
+            <div
+              className="customize-buttons"
+            >
+              <Button
+                as="button"
+                icon={true}
+                labelPosition="left"
+                onClick={[Function]}
+                size="large"
+              >
+                <Ref
+                  innerRef={
+                    Object {
+                      "current": <button
+                        class="ui large icon left labeled button"
+                      >
+                        <i
+                          aria-hidden="true"
+                          class="icon custom-icon door-closed"
+                        />
+                        Doors
+                      </button>,
+                    }
+                  }
+                >
+                  <RefFindNode
+                    innerRef={
+                      Object {
+                        "current": <button
+                          class="ui large icon left labeled button"
+                        >
+                          <i
+                            aria-hidden="true"
+                            class="icon custom-icon door-closed"
+                          />
+                          Doors
+                        </button>,
+                      }
+                    }
+                  >
+                    <button
+                      className="ui large icon left labeled button"
+                      onClick={[Function]}
+                    >
+                      <Icon
+                        as="i"
+                        className="custom-icon door-closed"
+                      >
+                        <i
+                          aria-hidden="true"
+                          className="icon custom-icon door-closed"
+                          onClick={[Function]}
+                        />
+                      </Icon>
+                      Doors
+                    </button>
+                  </RefFindNode>
+                </Ref>
+              </Button>
+              <Button
+                as="button"
+                content="Roles"
+                icon="lock"
+                labelPosition="left"
+                onClick={[Function]}
+                size="large"
+              >
+                <Ref
+                  innerRef={
+                    Object {
+                      "current": <button
+                        class="ui large icon left labeled button"
+                      >
+                        <i
+                          aria-hidden="true"
+                          class="lock icon"
+                        />
+                        Roles
+                      </button>,
+                    }
+                  }
+                >
+                  <RefFindNode
+                    innerRef={
+                      Object {
+                        "current": <button
+                          class="ui large icon left labeled button"
+                        >
+                          <i
+                            aria-hidden="true"
+                            class="lock icon"
+                          />
+                          Roles
+                        </button>,
+                      }
+                    }
+                  >
+                    <button
+                      className="ui large icon left labeled button"
+                      onClick={[Function]}
+                    >
+                      <Icon
+                        as="i"
+                        name="lock"
+                      >
+                        <i
+                          aria-hidden="true"
+                          className="lock icon"
+                          onClick={[Function]}
+                        />
+                      </Icon>
+                      Roles
+                    </button>
+                  </RefFindNode>
+                </Ref>
+              </Button>
+              <Button
+                as="button"
+                content="Employees"
+                icon="users"
+                labelPosition="left"
+                onClick={[Function]}
+                size="large"
+              >
+                <Ref
+                  innerRef={
+                    Object {
+                      "current": <button
+                        class="ui large icon left labeled button"
+                      >
+                        <i
+                          aria-hidden="true"
+                          class="users icon"
+                        />
+                        Employees
+                      </button>,
+                    }
+                  }
+                >
+                  <RefFindNode
+                    innerRef={
+                      Object {
+                        "current": <button
+                          class="ui large icon left labeled button"
+                        >
+                          <i
+                            aria-hidden="true"
+                            class="users icon"
+                          />
+                          Employees
+                        </button>,
+                      }
+                    }
+                  >
+                    <button
+                      className="ui large icon left labeled button"
+                      onClick={[Function]}
+                    >
+                      <Icon
+                        as="i"
+                        name="users"
+                      >
+                        <i
+                          aria-hidden="true"
+                          className="users icon"
+                          onClick={[Function]}
+                        />
+                      </Icon>
+                      Employees
+                    </button>
+                  </RefFindNode>
+                </Ref>
+              </Button>
+            </div>
+            <Header
+              inverted={true}
+              size="tiny"
+            >
+              <div
+                className="ui tiny inverted header"
+              >
+                If you want, you can unregister your store by
+                <span
+                  className="unregister warn red"
+                  onClick={[Function]}
+                >
+                   clicking here
+                </span>
+                .
+              </div>
+            </Header>
+            <_default
+              close={[Function]}
+              isOpen={false}
+              loading={false}
+              unregister={[Function]}
+            >
+              <Modal
+                centered={true}
+                closeOnDimmerClick={true}
+                closeOnDocumentClick={false}
+                dimmer={true}
+                eventPool="Modal"
+                onClose={[Function]}
+                open={false}
+                size="small"
+              >
+                <Portal
+                  closeOnDocumentClick={false}
+                  closeOnEscape={true}
+                  eventPool="Modal"
+                  mountNode={<body />}
+                  onClose={[Function]}
+                  onMount={[Function]}
+                  onOpen={[Function]}
+                  onUnmount={[Function]}
+                  open={false}
+                  openOnTriggerClick={true}
+                />
+              </Modal>
+            </_default>
+            <_default
+              close={[Function]}
+              isOpen={false}
+              items={Object {}}
+              loading={false}
+              save={[Function]}
+            >
+              <ManagementModalContainer
+                ItemComponent={[Function]}
+                close={[Function]}
+                isOpen={false}
+                itemStructure={
+                  Object {
+                    "name": "",
+                  }
+                }
+                items={Object {}}
+                loading={false}
+                modalData={
+                  Object {
+                    "addText": "Add new door",
+                    "description": "Here you can manage your doors by creating new
+        ones and editing or deleting existing ones.",
+                    "info": "PS: Doors with empty names will be ignored.",
+                    "title": "Manage your doors",
+                  }
+                }
+                nestedItems={Object {}}
+                save={[Function]}
+                useDivider={false}
+              >
+                <_default
+                  ItemComponent={[Function]}
+                  addNewItem={[Function]}
+                  close={[Function]}
+                  discardChanges={[Function]}
+                  handleCheckboxToggle={[Function]}
+                  handleDropdownChange={[Function]}
+                  handleTextInputChange={[Function]}
+                  isOpen={false}
+                  loading={false}
+                  modalData={
+                    Object {
+                      "addText": "Add new door",
+                      "description": "Here you can manage your doors by creating new
+        ones and editing or deleting existing ones.",
+                      "info": "PS: Doors with empty names will be ignored.",
+                      "title": "Manage your doors",
+                    }
+                  }
+                  nestedItems={Object {}}
+                  nestedItemsKeys={Array []}
+                  removeItem={[Function]}
+                  saveChanges={[Function]}
+                  useDivider={false}
+                  virtualItems={Object {}}
+                  virtualItemsKeys={Array []}
+                >
+                  <Modal
+                    centered={true}
+                    className="management-modal"
+                    closeOnDimmerClick={false}
+                    closeOnDocumentClick={false}
+                    closeOnEscape={false}
+                    dimmer={true}
+                    eventPool="Modal"
+                    onClose={[Function]}
+                    open={false}
+                    size="small"
+                  >
+                    <Portal
+                      closeOnDocumentClick={false}
+                      closeOnEscape={false}
+                      eventPool="Modal"
+                      mountNode={<body />}
+                      onClose={[Function]}
+                      onMount={[Function]}
+                      onOpen={[Function]}
+                      onUnmount={[Function]}
+                      open={false}
+                      openOnTriggerClick={true}
+                    />
+                  </Modal>
+                </_default>
+              </ManagementModalContainer>
+            </_default>
+            <_default
+              close={[Function]}
+              isOpen={false}
+              items={Object {}}
+              loading={false}
+              nestedItems={Object {}}
+              save={[Function]}
+            >
+              <ManagementModalContainer
+                ItemComponent={[Function]}
+                close={[Function]}
+                isOpen={false}
+                itemStructure={
+                  Object {
+                    "name": "",
+                    "permissions": Object {},
+                  }
+                }
+                items={Object {}}
+                loading={false}
+                modalData={
+                  Object {
+                    "addText": "Add new role",
+                    "description": "Here you can manage your roles and their permissions, ensuring
+        only authorised people will able to open your roles with one click.",
+                    "info": "PS: Roles with empty names will be ignored.",
+                    "title": "Manage your roles",
+                  }
+                }
+                nestedItems={Object {}}
+                save={[Function]}
+                useDivider={true}
+              >
+                <_default
+                  ItemComponent={[Function]}
+                  addNewItem={[Function]}
+                  close={[Function]}
+                  discardChanges={[Function]}
+                  handleCheckboxToggle={[Function]}
+                  handleDropdownChange={[Function]}
+                  handleTextInputChange={[Function]}
+                  isOpen={false}
+                  loading={false}
+                  modalData={
+                    Object {
+                      "addText": "Add new role",
+                      "description": "Here you can manage your roles and their permissions, ensuring
+        only authorised people will able to open your roles with one click.",
+                      "info": "PS: Roles with empty names will be ignored.",
+                      "title": "Manage your roles",
+                    }
+                  }
+                  nestedItems={Object {}}
+                  nestedItemsKeys={Array []}
+                  removeItem={[Function]}
+                  saveChanges={[Function]}
+                  useDivider={true}
+                  virtualItems={Object {}}
+                  virtualItemsKeys={Array []}
+                >
+                  <Modal
+                    centered={true}
+                    className="management-modal"
+                    closeOnDimmerClick={false}
+                    closeOnDocumentClick={false}
+                    closeOnEscape={false}
+                    dimmer={true}
+                    eventPool="Modal"
+                    onClose={[Function]}
+                    open={false}
+                    size="small"
+                  >
+                    <Portal
+                      closeOnDocumentClick={false}
+                      closeOnEscape={false}
+                      eventPool="Modal"
+                      mountNode={<body />}
+                      onClose={[Function]}
+                      onMount={[Function]}
+                      onOpen={[Function]}
+                      onUnmount={[Function]}
+                      open={false}
+                      openOnTriggerClick={true}
+                    />
+                  </Modal>
+                </_default>
+              </ManagementModalContainer>
+            </_default>
+            <_default
+              close={[Function]}
+              isOpen={false}
+              items={Object {}}
+              loading={false}
+              nestedItems={Object {}}
+              save={[Function]}
+            >
+              <ManagementModalContainer
+                ItemComponent={[Function]}
+                close={[Function]}
+                isOpen={false}
+                itemStructure={
+                  Object {
+                    "name": "",
+                    "role": "",
+                  }
+                }
+                items={Object {}}
+                loading={false}
+                modalData={
+                  Object {
+                    "addText": "Add new employee",
+                    "description": "Here you can manage your employees and their roles, ensuring
+        that no one will be getting into places they are not supposed to.",
+                    "info": "PS: Employees with empty names will be ignored.",
+                    "title": "Manage your employees",
+                  }
+                }
+                nestedItems={Object {}}
+                save={[Function]}
+                useDivider={true}
+              >
+                <_default
+                  ItemComponent={[Function]}
+                  addNewItem={[Function]}
+                  close={[Function]}
+                  discardChanges={[Function]}
+                  handleCheckboxToggle={[Function]}
+                  handleDropdownChange={[Function]}
+                  handleTextInputChange={[Function]}
+                  isOpen={false}
+                  loading={false}
+                  modalData={
+                    Object {
+                      "addText": "Add new employee",
+                      "description": "Here you can manage your employees and their roles, ensuring
+        that no one will be getting into places they are not supposed to.",
+                      "info": "PS: Employees with empty names will be ignored.",
+                      "title": "Manage your employees",
+                    }
+                  }
+                  nestedItems={Object {}}
+                  nestedItemsKeys={Array []}
+                  removeItem={[Function]}
+                  saveChanges={[Function]}
+                  useDivider={true}
+                  virtualItems={Object {}}
+                  virtualItemsKeys={Array []}
+                >
+                  <Modal
+                    centered={true}
+                    className="management-modal"
+                    closeOnDimmerClick={false}
+                    closeOnDocumentClick={false}
+                    closeOnEscape={false}
+                    dimmer={true}
+                    eventPool="Modal"
+                    onClose={[Function]}
+                    open={false}
+                    size="small"
+                  >
+                    <Portal
+                      closeOnDocumentClick={false}
+                      closeOnEscape={false}
+                      eventPool="Modal"
+                      mountNode={<body />}
+                      onClose={[Function]}
+                      onMount={[Function]}
+                      onOpen={[Function]}
+                      onUnmount={[Function]}
+                      open={false}
+                      openOnTriggerClick={true}
+                    />
+                  </Modal>
+                </_default>
+              </ManagementModalContainer>
+            </_default>
+            <Divider
+              section={true}
+            >
+              <div
+                className="ui section divider"
+              />
+            </Divider>
+            <Message
+              warning={true}
+            >
+              <div
+                className="ui warning message"
+              >
+                <MessageHeader>
+                  <div
+                    className="header"
+                  >
+                    Please, register at least one employee before continuing.
+                  </div>
+                </MessageHeader>
+              </div>
+            </Message>
+          </div>
+        </Container>
+      </div>
+    </Segment>
+  </div>
+</_default>
+`;
 
-exports[`renders without crashing with employees 1`] = `ShallowWrapper {}`;
+exports[`renders without crashing with employees 1`] = `
+<_default
+  doorModalProps={
+    Object {
+      "close": [Function],
+      "isOpen": false,
+      "open": [Function],
+      "save": [Function],
+    }
+  }
+  doors={Object {}}
+  employeeModalProps={
+    Object {
+      "close": [Function],
+      "isOpen": false,
+      "open": [Function],
+      "save": [Function],
+    }
+  }
+  employees={
+    Object {
+      "mock": Object {
+        "name": "Mocked",
+        "role": null,
+      },
+    }
+  }
+  loading={false}
+  name=""
+  roleModalProps={
+    Object {
+      "close": [Function],
+      "isOpen": false,
+      "open": [Function],
+      "save": [Function],
+    }
+  }
+  roles={Object {}}
+  selectEmployee={[Function]}
+  selectedEmployee={null}
+  unregisterModalProps={
+    Object {
+      "close": [Function],
+      "isOpen": false,
+      "open": [Function],
+      "unregister": [Function],
+    }
+  }
+>
+  <div
+    className="store"
+  >
+    <Segment
+      inverted={true}
+      vertical={true}
+    >
+      <div
+        className="ui inverted vertical segment"
+      >
+        <Container
+          className="wrap-store"
+        >
+          <div
+            className="ui container wrap-store"
+          >
+            <Header
+              as="h1"
+              inverted={true}
+              size="huge"
+            >
+              <h1
+                className="ui huge inverted header"
+              >
+                Hello, 
+              </h1>
+            </Header>
+            <Header
+              as="h3"
+              className="no-space-top"
+              inverted={true}
+              size="medium"
+            >
+              <h3
+                className="ui medium inverted header no-space-top"
+              >
+                Welcome to your secure doors environment.
+              </h3>
+            </Header>
+            <Header
+              inverted={true}
+              size="tiny"
+            >
+              <div
+                className="ui tiny inverted header"
+              >
+                Customize your store using the buttons below:
+              </div>
+            </Header>
+            <div
+              className="customize-buttons"
+            >
+              <Button
+                as="button"
+                icon={true}
+                labelPosition="left"
+                onClick={[Function]}
+                size="large"
+              >
+                <Ref
+                  innerRef={
+                    Object {
+                      "current": <button
+                        class="ui large icon left labeled button"
+                      >
+                        <i
+                          aria-hidden="true"
+                          class="icon custom-icon door-closed"
+                        />
+                        Doors
+                      </button>,
+                    }
+                  }
+                >
+                  <RefFindNode
+                    innerRef={
+                      Object {
+                        "current": <button
+                          class="ui large icon left labeled button"
+                        >
+                          <i
+                            aria-hidden="true"
+                            class="icon custom-icon door-closed"
+                          />
+                          Doors
+                        </button>,
+                      }
+                    }
+                  >
+                    <button
+                      className="ui large icon left labeled button"
+                      onClick={[Function]}
+                    >
+                      <Icon
+                        as="i"
+                        className="custom-icon door-closed"
+                      >
+                        <i
+                          aria-hidden="true"
+                          className="icon custom-icon door-closed"
+                          onClick={[Function]}
+                        />
+                      </Icon>
+                      Doors
+                    </button>
+                  </RefFindNode>
+                </Ref>
+              </Button>
+              <Button
+                as="button"
+                content="Roles"
+                icon="lock"
+                labelPosition="left"
+                onClick={[Function]}
+                size="large"
+              >
+                <Ref
+                  innerRef={
+                    Object {
+                      "current": <button
+                        class="ui large icon left labeled button"
+                      >
+                        <i
+                          aria-hidden="true"
+                          class="lock icon"
+                        />
+                        Roles
+                      </button>,
+                    }
+                  }
+                >
+                  <RefFindNode
+                    innerRef={
+                      Object {
+                        "current": <button
+                          class="ui large icon left labeled button"
+                        >
+                          <i
+                            aria-hidden="true"
+                            class="lock icon"
+                          />
+                          Roles
+                        </button>,
+                      }
+                    }
+                  >
+                    <button
+                      className="ui large icon left labeled button"
+                      onClick={[Function]}
+                    >
+                      <Icon
+                        as="i"
+                        name="lock"
+                      >
+                        <i
+                          aria-hidden="true"
+                          className="lock icon"
+                          onClick={[Function]}
+                        />
+                      </Icon>
+                      Roles
+                    </button>
+                  </RefFindNode>
+                </Ref>
+              </Button>
+              <Button
+                as="button"
+                content="Employees"
+                icon="users"
+                labelPosition="left"
+                onClick={[Function]}
+                size="large"
+              >
+                <Ref
+                  innerRef={
+                    Object {
+                      "current": <button
+                        class="ui large icon left labeled button"
+                      >
+                        <i
+                          aria-hidden="true"
+                          class="users icon"
+                        />
+                        Employees
+                      </button>,
+                    }
+                  }
+                >
+                  <RefFindNode
+                    innerRef={
+                      Object {
+                        "current": <button
+                          class="ui large icon left labeled button"
+                        >
+                          <i
+                            aria-hidden="true"
+                            class="users icon"
+                          />
+                          Employees
+                        </button>,
+                      }
+                    }
+                  >
+                    <button
+                      className="ui large icon left labeled button"
+                      onClick={[Function]}
+                    >
+                      <Icon
+                        as="i"
+                        name="users"
+                      >
+                        <i
+                          aria-hidden="true"
+                          className="users icon"
+                          onClick={[Function]}
+                        />
+                      </Icon>
+                      Employees
+                    </button>
+                  </RefFindNode>
+                </Ref>
+              </Button>
+            </div>
+            <Header
+              inverted={true}
+              size="tiny"
+            >
+              <div
+                className="ui tiny inverted header"
+              >
+                If you want, you can unregister your store by
+                <span
+                  className="unregister warn red"
+                  onClick={[Function]}
+                >
+                   clicking here
+                </span>
+                .
+              </div>
+            </Header>
+            <_default
+              close={[Function]}
+              isOpen={false}
+              loading={false}
+              unregister={[Function]}
+            >
+              <Modal
+                centered={true}
+                closeOnDimmerClick={true}
+                closeOnDocumentClick={false}
+                dimmer={true}
+                eventPool="Modal"
+                onClose={[Function]}
+                open={false}
+                size="small"
+              >
+                <Portal
+                  closeOnDocumentClick={false}
+                  closeOnEscape={true}
+                  eventPool="Modal"
+                  mountNode={<body />}
+                  onClose={[Function]}
+                  onMount={[Function]}
+                  onOpen={[Function]}
+                  onUnmount={[Function]}
+                  open={false}
+                  openOnTriggerClick={true}
+                />
+              </Modal>
+            </_default>
+            <_default
+              close={[Function]}
+              isOpen={false}
+              items={Object {}}
+              loading={false}
+              save={[Function]}
+            >
+              <ManagementModalContainer
+                ItemComponent={[Function]}
+                close={[Function]}
+                isOpen={false}
+                itemStructure={
+                  Object {
+                    "name": "",
+                  }
+                }
+                items={Object {}}
+                loading={false}
+                modalData={
+                  Object {
+                    "addText": "Add new door",
+                    "description": "Here you can manage your doors by creating new
+        ones and editing or deleting existing ones.",
+                    "info": "PS: Doors with empty names will be ignored.",
+                    "title": "Manage your doors",
+                  }
+                }
+                nestedItems={Object {}}
+                save={[Function]}
+                useDivider={false}
+              >
+                <_default
+                  ItemComponent={[Function]}
+                  addNewItem={[Function]}
+                  close={[Function]}
+                  discardChanges={[Function]}
+                  handleCheckboxToggle={[Function]}
+                  handleDropdownChange={[Function]}
+                  handleTextInputChange={[Function]}
+                  isOpen={false}
+                  loading={false}
+                  modalData={
+                    Object {
+                      "addText": "Add new door",
+                      "description": "Here you can manage your doors by creating new
+        ones and editing or deleting existing ones.",
+                      "info": "PS: Doors with empty names will be ignored.",
+                      "title": "Manage your doors",
+                    }
+                  }
+                  nestedItems={Object {}}
+                  nestedItemsKeys={Array []}
+                  removeItem={[Function]}
+                  saveChanges={[Function]}
+                  useDivider={false}
+                  virtualItems={Object {}}
+                  virtualItemsKeys={Array []}
+                >
+                  <Modal
+                    centered={true}
+                    className="management-modal"
+                    closeOnDimmerClick={false}
+                    closeOnDocumentClick={false}
+                    closeOnEscape={false}
+                    dimmer={true}
+                    eventPool="Modal"
+                    onClose={[Function]}
+                    open={false}
+                    size="small"
+                  >
+                    <Portal
+                      closeOnDocumentClick={false}
+                      closeOnEscape={false}
+                      eventPool="Modal"
+                      mountNode={<body />}
+                      onClose={[Function]}
+                      onMount={[Function]}
+                      onOpen={[Function]}
+                      onUnmount={[Function]}
+                      open={false}
+                      openOnTriggerClick={true}
+                    />
+                  </Modal>
+                </_default>
+              </ManagementModalContainer>
+            </_default>
+            <_default
+              close={[Function]}
+              isOpen={false}
+              items={Object {}}
+              loading={false}
+              nestedItems={Object {}}
+              save={[Function]}
+            >
+              <ManagementModalContainer
+                ItemComponent={[Function]}
+                close={[Function]}
+                isOpen={false}
+                itemStructure={
+                  Object {
+                    "name": "",
+                    "permissions": Object {},
+                  }
+                }
+                items={Object {}}
+                loading={false}
+                modalData={
+                  Object {
+                    "addText": "Add new role",
+                    "description": "Here you can manage your roles and their permissions, ensuring
+        only authorised people will able to open your roles with one click.",
+                    "info": "PS: Roles with empty names will be ignored.",
+                    "title": "Manage your roles",
+                  }
+                }
+                nestedItems={Object {}}
+                save={[Function]}
+                useDivider={true}
+              >
+                <_default
+                  ItemComponent={[Function]}
+                  addNewItem={[Function]}
+                  close={[Function]}
+                  discardChanges={[Function]}
+                  handleCheckboxToggle={[Function]}
+                  handleDropdownChange={[Function]}
+                  handleTextInputChange={[Function]}
+                  isOpen={false}
+                  loading={false}
+                  modalData={
+                    Object {
+                      "addText": "Add new role",
+                      "description": "Here you can manage your roles and their permissions, ensuring
+        only authorised people will able to open your roles with one click.",
+                      "info": "PS: Roles with empty names will be ignored.",
+                      "title": "Manage your roles",
+                    }
+                  }
+                  nestedItems={Object {}}
+                  nestedItemsKeys={Array []}
+                  removeItem={[Function]}
+                  saveChanges={[Function]}
+                  useDivider={true}
+                  virtualItems={Object {}}
+                  virtualItemsKeys={Array []}
+                >
+                  <Modal
+                    centered={true}
+                    className="management-modal"
+                    closeOnDimmerClick={false}
+                    closeOnDocumentClick={false}
+                    closeOnEscape={false}
+                    dimmer={true}
+                    eventPool="Modal"
+                    onClose={[Function]}
+                    open={false}
+                    size="small"
+                  >
+                    <Portal
+                      closeOnDocumentClick={false}
+                      closeOnEscape={false}
+                      eventPool="Modal"
+                      mountNode={<body />}
+                      onClose={[Function]}
+                      onMount={[Function]}
+                      onOpen={[Function]}
+                      onUnmount={[Function]}
+                      open={false}
+                      openOnTriggerClick={true}
+                    />
+                  </Modal>
+                </_default>
+              </ManagementModalContainer>
+            </_default>
+            <_default
+              close={[Function]}
+              isOpen={false}
+              items={
+                Object {
+                  "mock": Object {
+                    "name": "Mocked",
+                    "role": null,
+                  },
+                }
+              }
+              loading={false}
+              nestedItems={Object {}}
+              save={[Function]}
+            >
+              <ManagementModalContainer
+                ItemComponent={[Function]}
+                close={[Function]}
+                isOpen={false}
+                itemStructure={
+                  Object {
+                    "name": "",
+                    "role": "",
+                  }
+                }
+                items={
+                  Object {
+                    "mock": Object {
+                      "name": "Mocked",
+                      "role": null,
+                    },
+                  }
+                }
+                loading={false}
+                modalData={
+                  Object {
+                    "addText": "Add new employee",
+                    "description": "Here you can manage your employees and their roles, ensuring
+        that no one will be getting into places they are not supposed to.",
+                    "info": "PS: Employees with empty names will be ignored.",
+                    "title": "Manage your employees",
+                  }
+                }
+                nestedItems={Object {}}
+                save={[Function]}
+                useDivider={true}
+              >
+                <_default
+                  ItemComponent={[Function]}
+                  addNewItem={[Function]}
+                  close={[Function]}
+                  discardChanges={[Function]}
+                  handleCheckboxToggle={[Function]}
+                  handleDropdownChange={[Function]}
+                  handleTextInputChange={[Function]}
+                  isOpen={false}
+                  loading={false}
+                  modalData={
+                    Object {
+                      "addText": "Add new employee",
+                      "description": "Here you can manage your employees and their roles, ensuring
+        that no one will be getting into places they are not supposed to.",
+                      "info": "PS: Employees with empty names will be ignored.",
+                      "title": "Manage your employees",
+                    }
+                  }
+                  nestedItems={Object {}}
+                  nestedItemsKeys={Array []}
+                  removeItem={[Function]}
+                  saveChanges={[Function]}
+                  useDivider={true}
+                  virtualItems={
+                    Object {
+                      "mock": Object {
+                        "name": "Mocked",
+                        "role": null,
+                      },
+                    }
+                  }
+                  virtualItemsKeys={
+                    Array [
+                      "mock",
+                    ]
+                  }
+                >
+                  <Modal
+                    centered={true}
+                    className="management-modal"
+                    closeOnDimmerClick={false}
+                    closeOnDocumentClick={false}
+                    closeOnEscape={false}
+                    dimmer={true}
+                    eventPool="Modal"
+                    onClose={[Function]}
+                    open={false}
+                    size="small"
+                  >
+                    <Portal
+                      closeOnDocumentClick={false}
+                      closeOnEscape={false}
+                      eventPool="Modal"
+                      mountNode={<body />}
+                      onClose={[Function]}
+                      onMount={[Function]}
+                      onOpen={[Function]}
+                      onUnmount={[Function]}
+                      open={false}
+                      openOnTriggerClick={true}
+                    />
+                  </Modal>
+                </_default>
+              </ManagementModalContainer>
+            </_default>
+            <Divider
+              section={true}
+            >
+              <div
+                className="ui section divider"
+              />
+            </Divider>
+            <div>
+              <Header
+                inverted={true}
+                size="medium"
+              >
+                <div
+                  className="ui medium inverted header"
+                >
+                  Select which employee you would like to use to try on the doors
+                </div>
+              </Header>
+              <EmployeesList
+                employees={
+                  Object {
+                    "mock": Object {
+                      "name": "Mocked",
+                      "role": null,
+                    },
+                  }
+                }
+                employeesKeys={
+                  Array [
+                    "mock",
+                  ]
+                }
+                roles={Object {}}
+                selectEmployee={[Function]}
+                selectedEmployee={null}
+              >
+                <div
+                  className="employees"
+                >
+                  <Employee
+                    employeeID="mock"
+                    employees={
+                      Object {
+                        "mock": Object {
+                          "name": "Mocked",
+                          "role": null,
+                        },
+                      }
+                    }
+                    key="mock"
+                    roles={Object {}}
+                    selectEmployee={[Function]}
+                    selected={false}
+                  >
+                    <div
+                      className=""
+                      key="mock"
+                      onClick={[Function]}
+                    >
+                      <p>
+                        <Icon
+                          as="i"
+                          className="custom-icon circle"
+                        >
+                          <i
+                            aria-hidden="true"
+                            className="icon custom-icon circle"
+                            onClick={[Function]}
+                          />
+                        </Icon>
+                        <span>
+                          Mocked
+                        </span>
+                        <span>
+                          (
+                          No role defined
+                          )
+                        </span>
+                      </p>
+                    </div>
+                  </Employee>
+                </div>
+              </EmployeesList>
+              <SelectedEmployeePermissions
+                doors={Object {}}
+                doorsKeys={Array []}
+                roles={Object {}}
+              >
+                <div>
+                  <Message
+                    warning={true}
+                  >
+                    <div
+                      className="ui warning message"
+                    >
+                      <MessageHeader>
+                        <div
+                          className="header"
+                        >
+                          Please, register at least one door before continuing.
+                        </div>
+                      </MessageHeader>
+                    </div>
+                  </Message>
+                </div>
+              </SelectedEmployeePermissions>
+            </div>
+          </div>
+        </Container>
+      </div>
+    </Segment>
+  </div>
+</_default>
+`;
