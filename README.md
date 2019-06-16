@@ -56,7 +56,7 @@ $ npm run test [-- --coverage --watchAll]
 $ npm run build
 ```
 
-PS: This application is not compatible with IE
+##### PS: This application is not compatible with IE
 
 ----
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
