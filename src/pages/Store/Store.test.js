@@ -46,7 +46,7 @@ it('renders without crashing', () => {
 })
 
 it('renders without crashing with employees', () => {
-   const component = mount(
+  const component = mount(
     <Store
       name=''
       employees={{
