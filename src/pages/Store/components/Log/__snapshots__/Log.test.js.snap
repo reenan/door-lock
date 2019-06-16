@@ -87,9 +87,9 @@ exports[`renders without crashing with request and deleted data 1`] = `
               /
               1994
                
-              2
+              02
               :
-              0
+              00
             </span>
             , 
             <span
@@ -194,9 +194,9 @@ exports[`renders without crashing with request and saved data 1`] = `
               /
               1994
                
-              2
+              02
               :
-              0
+              00
             </span>
             , 
             <span

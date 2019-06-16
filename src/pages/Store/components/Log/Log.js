@@ -10,11 +10,11 @@ class Log extends Component {
   getFormattedDate = (date) => {
     date = new Date(date)
 
-    const day = date.getUTCDate()
-    const month = date.getUTCMonth()
-    const year = date.getUTCFullYear()
-    const hour = date.getUTCHours()
-    const minute = date.getUTCMinutes()
+    const day = String(date.getUTCDate()).padStart(2, 0)
+    const month = String(date.getUTCMonth()).padStart(2, 0)
+    const year = String(date.getUTCFullYear()).padStart(2, 0)
+    const hour = String(date.getUTCHours()).padStart(2, 0)
+    const minute = String(date.getUTCMinutes()).padStart(2, 0)
 
     return <span>{day}/{month}/{year} {hour}:{minute}</span>
   }
