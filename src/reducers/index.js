@@ -3,11 +3,14 @@ import {
   UPDATE_STORE,
   REGISTER_STORE,
   UNREGISTER_STORE,
+  OPEN_DOOR_RESULT,
 } from '../actions'
+
 
 const initialState = {
   store: {},
-  isFetching: false,
+  openDoorRequests: {},
+  loading: false,
 }
 
 function reducer (state = initialState, action) {
@@ -16,14 +19,14 @@ function reducer (state = initialState, action) {
     case REQUEST_MADE:
       return {
         ...state,
-        isFetching: true,
+        loading: true,
       }
 
     case REGISTER_STORE:
       return {
         ...state,
         store: action.store,
-        isFetching: false,
+        loading: false,
       }
 
     case UPDATE_STORE:
@@ -31,13 +34,23 @@ function reducer (state = initialState, action) {
 
       return {
         ...state,
-        isFetching: false,
+        loading: false,
       }
 
     case UNREGISTER_STORE:
       state.store = action.store
 
       return initialState
+
+    case OPEN_DOOR_RESULT:
+      const openDoorRequests = Object.assign({}, state.openDoorRequests)
+      openDoorRequests[action.requestID] = action.request
+
+      return {
+        ...state,
+        openDoorRequests,
+        loading: false,
+      }
 
     default:
       return state

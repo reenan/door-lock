@@ -284,7 +284,7 @@ exports[`renders without crashing when open with permissions 1`] = `
                                       <span
                                         class="warn green"
                                       >
-                                        Allowed to open: 
+                                        Allowed: 
                                       </span>
                                       <span>
                                         Door
@@ -439,7 +439,7 @@ exports[`renders without crashing when open with permissions 1`] = `
                                         <span
                                           class="warn green"
                                         >
-                                          Allowed to open: 
+                                          Allowed: 
                                         </span>
                                         <span>
                                           Door
@@ -588,7 +588,7 @@ exports[`renders without crashing when open with permissions 1`] = `
                                         <span
                                           class="warn green"
                                         >
-                                          Allowed to open: 
+                                          Allowed: 
                                         </span>
                                         <span>
                                           Door
@@ -741,7 +741,7 @@ exports[`renders without crashing when open with permissions 1`] = `
                                           <span
                                             class="warn green"
                                           >
-                                            Allowed to open: 
+                                            Allowed: 
                                           </span>
                                           <span>
                                             Door
@@ -895,7 +895,7 @@ exports[`renders without crashing when open with permissions 1`] = `
                                                 <span
                                                   class="warn green"
                                                 >
-                                                  Allowed to open: 
+                                                  Allowed: 
                                                 </span>
                                                 <span>
                                                   Door
@@ -1039,7 +1039,7 @@ exports[`renders without crashing when open with permissions 1`] = `
                                                   <span
                                                     class="warn green"
                                                   >
-                                                    Allowed to open: 
+                                                    Allowed: 
                                                   </span>
                                                   <span>
                                                     Door
@@ -1264,7 +1264,7 @@ exports[`renders without crashing when open with permissions 1`] = `
                                                               <span
                                                                 className="warn green"
                                                               >
-                                                                Allowed to open: 
+                                                                Allowed: 
                                                               </span>
                                                               <span>
                                                                 Door
@@ -1717,7 +1717,7 @@ exports[`renders without crashing when open with permissions 1`] = `
                                         <span
                                           class="warn green"
                                         >
-                                          Allowed to open: 
+                                          Allowed: 
                                         </span>
                                         <span>
                                           Door
@@ -1869,7 +1869,7 @@ exports[`renders without crashing when open with permissions 1`] = `
                                         <span
                                           class="warn green"
                                         >
-                                          Allowed to open: 
+                                          Allowed: 
                                         </span>
                                         <span>
                                           Door
@@ -2174,7 +2174,7 @@ exports[`renders without crashing when open without permissions 1`] = `
                                       <span
                                         class="warn green"
                                       >
-                                        Allowed to open: 
+                                        Allowed: 
                                       </span>
                                       <span>
                                         Door
@@ -2317,7 +2317,7 @@ exports[`renders without crashing when open without permissions 1`] = `
                                       <span
                                         class="warn red"
                                       >
-                                        Not allowed to open: 
+                                        Not allowed: 
                                       </span>
                                       <span>
                                         Door
@@ -2471,7 +2471,7 @@ exports[`renders without crashing when open without permissions 1`] = `
                                         <span
                                           class="warn red"
                                         >
-                                          Not allowed to open: 
+                                          Not allowed: 
                                         </span>
                                         <span>
                                           Door
@@ -2619,7 +2619,7 @@ exports[`renders without crashing when open without permissions 1`] = `
                                         <span
                                           class="warn green"
                                         >
-                                          Allowed to open: 
+                                          Allowed: 
                                         </span>
                                         <span>
                                           Door
@@ -2762,7 +2762,7 @@ exports[`renders without crashing when open without permissions 1`] = `
                                         <span
                                           class="warn red"
                                         >
-                                          Not allowed to open: 
+                                          Not allowed: 
                                         </span>
                                         <span>
                                           Door
@@ -2914,7 +2914,7 @@ exports[`renders without crashing when open without permissions 1`] = `
                                           <span
                                             class="warn green"
                                           >
-                                            Allowed to open: 
+                                            Allowed: 
                                           </span>
                                           <span>
                                             Door
@@ -3057,7 +3057,7 @@ exports[`renders without crashing when open without permissions 1`] = `
                                           <span
                                             class="warn red"
                                           >
-                                            Not allowed to open: 
+                                            Not allowed: 
                                           </span>
                                           <span>
                                             Door
@@ -3210,7 +3210,7 @@ exports[`renders without crashing when open without permissions 1`] = `
                                                 <span
                                                   class="warn red"
                                                 >
-                                                  Not allowed to open: 
+                                                  Not allowed: 
                                                 </span>
                                                 <span>
                                                   Door
@@ -3353,7 +3353,7 @@ exports[`renders without crashing when open without permissions 1`] = `
                                                   <span
                                                     class="warn red"
                                                   >
-                                                    Not allowed to open: 
+                                                    Not allowed: 
                                                   </span>
                                                   <span>
                                                     Door
@@ -3577,7 +3577,7 @@ exports[`renders without crashing when open without permissions 1`] = `
                                                               <span
                                                                 className="warn red"
                                                               >
-                                                                Not allowed to open: 
+                                                                Not allowed: 
                                                               </span>
                                                               <span>
                                                                 Door
@@ -4028,7 +4028,7 @@ exports[`renders without crashing when open without permissions 1`] = `
                                         <span
                                           class="warn red"
                                         >
-                                          Not allowed to open: 
+                                          Not allowed: 
                                         </span>
                                         <span>
                                           Door
@@ -4179,7 +4179,7 @@ exports[`renders without crashing when open without permissions 1`] = `
                                         <span
                                           class="warn red"
                                         >
-                                          Not allowed to open: 
+                                          Not allowed: 
                                         </span>
                                         <span>
                                           Door

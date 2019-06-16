@@ -5,7 +5,7 @@
     div.item-wrapper {
       > div.employee-list-item > div > div{
         display: grid;
-        grid-template-columns: 6fr 4fr;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
         grid-gap: 15px;
         align-items: center;
 

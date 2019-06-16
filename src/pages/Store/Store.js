@@ -1,12 +1,12 @@
 import React from 'react'
 
 import {
-  EmployeesList,
-  SelectedEmployeePermissions,
   ManageDoorsModal,
   ManageRolesModal,
   ManageEmployeesModal,
   UnregisterModal,
+  EmployeesList,
+  DoorsList,
 } from './components'
 
 import {
@@ -36,7 +36,6 @@ export default ({
   employeeModalProps,
 }) => {
   const employeesKeys = Object.keys(employees)
-  const doorsKeys = Object.keys(doors)
 
   return (
     <div className='store'>
@@ -70,23 +69,26 @@ export default ({
 
           <Header inverted size='tiny'>
             If you want, you can unregister your store by
-            <span onClick={unregisterModalProps.open} className='unregister warn red'> clicking here</span>.
+            <span onClick={unregisterModalProps.open}
+              className='unregister warn red'> clicking here</span>.
           </Header>
 
-          <UnregisterModal isOpen={unregisterModalProps.isOpen} close={unregisterModalProps.close}
-            unregister={unregisterModalProps.unregister} loading={loading}
+          <UnregisterModal isOpen={unregisterModalProps.isOpen}
+            close={unregisterModalProps.close} loading={loading}
+            unregister={unregisterModalProps.unregister}
           />
 
           <ManageDoorsModal isOpen={doorModalProps.isOpen} items={doors}
-            loading={loading} save={doorModalProps.save} close={doorModalProps.close} />
+            loading={loading} save={doorModalProps.save}
+            close={doorModalProps.close} />
 
           <ManageRolesModal isOpen={roleModalProps.isOpen} items={roles}
             loading={loading} save={roleModalProps.save} close={roleModalProps.close}
             nestedItems={doors} />
 
           <ManageEmployeesModal isOpen={employeeModalProps.isOpen} items={employees}
-            loading={loading} save={employeeModalProps.save} close={employeeModalProps.close}
-            nestedItems={roles} />
+            loading={loading} save={employeeModalProps.save}
+            close={employeeModalProps.close} nestedItems={roles} />
 
           <Divider section />
 
@@ -98,13 +100,17 @@ export default ({
                 </Header>
 
                 <EmployeesList employees={employees} employeesKeys={employeesKeys}
-                  selectedEmployee={selectedEmployee} selectEmployee={selectEmployee} roles={roles} />
+                  selectedEmployee={selectedEmployee} selectEmployee={selectEmployee}
+                  roles={roles} />
 
-                <SelectedEmployeePermissions selectedEmployee={employees[selectedEmployee]}
-                  roles={roles} doors={doors} doorsKeys={doorsKeys} />
+                <DoorsList roles={roles} doors={doors} employees={employees}
+                  selectedEmployee={selectedEmployee} />
+
               </div> :
               <Message warning>
-                <Message.Header>Please, register at least one employee before continuing.</Message.Header>
+                <Message.Header>
+                  Please, register at least one employee before continuing.
+                </Message.Header>
               </Message>
           }
 

@@ -10,7 +10,7 @@ import reducer from '../reducers'
 const persistConfig = {
   key: 'root',
   storage,
-  whitelist: ['store']
+  whitelist: ['store', 'openDoorRequests']
 }
 
 // Create reducer with persist config

@@ -46,13 +46,13 @@ class RegisterContainer extends Component {
 
   render() {
     const { isOpenRegisterModal, storeName } = this.state
-    const { store, isFetching } = this.props
+    const { store, loading } = this.props
 
     return (
       store.name ?
         <Redirect to='/store' /> :
         <Register
-          loading={isFetching}
+          loading={loading}
           isOpenRegisterModal={isOpenRegisterModal}
           storeName={storeName}
           openRegisterModal={this.openRegisterModal}
@@ -69,9 +69,9 @@ RegisterContainer.propTypes = {
   store: PropTypes.object.isRequired
 }
 
-const stateToProps = ({ store, isFetching }) => ({
+const stateToProps = ({ store, loading }) => ({
   store,
-  isFetching,
+  loading,
 })
 
 export default connect(stateToProps)(RegisterContainer)

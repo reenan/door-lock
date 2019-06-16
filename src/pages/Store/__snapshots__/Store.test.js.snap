@@ -1293,10 +1293,18 @@ exports[`renders without crashing with employees 1`] = `
                   </Employee>
                 </div>
               </EmployeesList>
-              <SelectedEmployeePermissions
+              <DoorsList
                 doors={Object {}}
-                doorsKeys={Array []}
+                employees={
+                  Object {
+                    "mock": Object {
+                      "name": "Mocked",
+                      "role": null,
+                    },
+                  }
+                }
                 roles={Object {}}
+                selectedEmployee={null}
               >
                 <div>
                   <Message
@@ -1315,7 +1323,7 @@ exports[`renders without crashing with employees 1`] = `
                     </div>
                   </Message>
                 </div>
-              </SelectedEmployeePermissions>
+              </DoorsList>
             </div>
           </div>
         </Container>

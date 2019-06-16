@@ -1,0 +1,167 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders without crashing 1`] = `
+<div>
+  <div
+    className="ui warning message"
+  >
+    <div
+      className="header"
+    >
+      Please, register at least one door before continuing.
+    </div>
+  </div>
+</div>
+`;
+
+exports[`renders without crashing with no employee selected 1`] = `
+<div>
+  <div>
+    <p>
+      Please, select an employee to continue.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`renders without crashing with values 1`] = `
+<div>
+  <div>
+    <p>
+      You have selected Mock Employee (undefined),
+                      and these are his/hers permissions:
+    </p>
+    <div>
+      <p>
+        You can click on the doors to open them.
+      </p>
+      <div
+        className="doors"
+      >
+        <div
+          className="door"
+          onClick={[Function]}
+        >
+          <p>
+            <span
+              className="warn red"
+            >
+              Not allowed to open: 
+            </span>
+            <span>
+              Mock Door
+            </span>
+          </p>
+          <div
+            className="icons"
+          >
+            <i
+              aria-hidden="true"
+              className="massive icon custom-icon door-closed"
+              onClick={[Function]}
+            />
+            <i
+              aria-hidden="true"
+              className="massive icon custom-icon door-open"
+              onClick={[Function]}
+            />
+            <i
+              aria-hidden="true"
+              className="unlock large icon"
+              onClick={[Function]}
+            />
+            <i
+              aria-hidden="true"
+              className="lock large icon"
+              onClick={[Function]}
+            />
+          </div>
+          <div
+            className="ui dimmer"
+            onClick={[Function]}
+          >
+            <div
+              className="content"
+            >
+              <div
+                className="ui loader"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`renders without crashing with values and permission 1`] = `
+<div>
+  <div>
+    <p>
+      You have selected mock (Mock Role),
+                      and these are his/hers permissions:
+    </p>
+    <div>
+      <p>
+        You can click on the doors to open them.
+      </p>
+      <div
+        className="doors"
+      >
+        <div
+          className="door"
+          onClick={[Function]}
+        >
+          <p>
+            <span
+              className="warn green"
+            >
+              Allowed to open: 
+            </span>
+            <span>
+              Mock Door
+            </span>
+          </p>
+          <div
+            className="icons"
+          >
+            <i
+              aria-hidden="true"
+              className="massive icon custom-icon door-closed"
+              onClick={[Function]}
+            />
+            <i
+              aria-hidden="true"
+              className="massive icon custom-icon door-open"
+              onClick={[Function]}
+            />
+            <i
+              aria-hidden="true"
+              className="unlock large icon"
+              onClick={[Function]}
+            />
+            <i
+              aria-hidden="true"
+              className="lock large icon"
+              onClick={[Function]}
+            />
+          </div>
+          <div
+            className="ui dimmer"
+            onClick={[Function]}
+          >
+            <div
+              className="content"
+            >
+              <div
+                className="ui loader"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

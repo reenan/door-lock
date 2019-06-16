@@ -108,7 +108,7 @@ class StoreContainer extends Component {
       isOpenUnregistrationModal,
     } = this.state
 
-    const { store, isFetching } = this.props
+    const { store, loading } = this.props
     const { name, doors, employees, roles } = store
 
     const doorModalProps = {
@@ -147,7 +147,7 @@ class StoreContainer extends Component {
           employees={employees}
           roles={roles}
           doors={doors}
-          loading={isFetching}
+          loading={loading}
           selectedEmployee={selectedEmployee}
           selectEmployee={this.selectEmployee}
 
@@ -165,9 +165,10 @@ StoreContainer.propTypes = {
   store: PropTypes.object.isRequired,
 }
 
-const stateToProps = ({ store, isFetching }) => ({
+const stateToProps = ({ store, loading, openDoorRequests }) => ({
   store,
-  isFetching,
+  loading,
+  openDoorRequests,
 })
 
 export default connect(stateToProps)(StoreContainer)

@@ -47,8 +47,8 @@ const ManagementModalRoleItem = ({
                 <p>
                   {
                     item.permissions[doorID] ?
-                    <span className='warn green'>Allowed to open: </span> :
-                    <span className='warn red'>Not allowed to open: </span>
+                    <span className='warn green'>Allowed: </span> :
+                    <span className='warn red'>Not allowed: </span>
                   }
                   <span>{doors[doorID].name}</span>
                 </p>
