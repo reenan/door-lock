@@ -2,4 +2,4 @@
 
 exports[`renders without crashing 1`] = `ShallowWrapper {}`;
 
-exports[`renders without crashing with store 1`] = `ShallowWrapper {}`;
+exports[`renders without crashing with employees 1`] = `ShallowWrapper {}`;
