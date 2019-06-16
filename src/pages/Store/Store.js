@@ -7,6 +7,7 @@ import {
   UnregisterModal,
   EmployeesList,
   DoorsList,
+  Log,
 } from './components'
 
 import {
@@ -27,6 +28,7 @@ export default ({
   roles,
   doors,
   loading,
+  openDoorRequests,
   selectedEmployee,
   selectEmployee,
 
@@ -113,6 +115,11 @@ export default ({
                 </Message.Header>
               </Message>
           }
+
+          <Divider section />
+
+          <Log requests={openDoorRequests} doors={doors} roles={roles}
+            employees={employees} requestsKeys={Object.keys(openDoorRequests)} />
 
         </Container>
       </Segment>

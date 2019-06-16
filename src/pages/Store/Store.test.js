@@ -14,6 +14,7 @@ it('renders without crashing', () => {
       loading={false}
       selectedEmployee={null}
       selectEmployee={() => {}}
+      openDoorRequests={{}}
 
       unregisterModalProps={{
         isOpen: false,
@@ -60,6 +61,7 @@ it('renders without crashing with employees', () => {
       loading={false}
       selectedEmployee={null}
       selectEmployee={() => {}}
+      openDoorRequests={{}}
 
       unregisterModalProps={{
         isOpen: false,

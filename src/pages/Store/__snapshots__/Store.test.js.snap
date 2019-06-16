@@ -22,6 +22,7 @@ exports[`renders without crashing 1`] = `
   employees={Object {}}
   loading={false}
   name=""
+  openDoorRequests={Object {}}
   roleModalProps={
     Object {
       "close": [Function],
@@ -596,6 +597,45 @@ exports[`renders without crashing 1`] = `
                 </MessageHeader>
               </div>
             </Message>
+            <Divider
+              section={true}
+            >
+              <div
+                className="ui section divider"
+              />
+            </Divider>
+            <Log
+              doors={Object {}}
+              employees={Object {}}
+              requests={Object {}}
+              requestsKeys={Array []}
+              roles={Object {}}
+            >
+              <div>
+                <Header
+                  inverted={true}
+                  size="small"
+                >
+                  <div
+                    className="ui small inverted header"
+                  >
+                    Here you can check all requests that were made to open your doors.
+                  </div>
+                </Header>
+                <Segment
+                  className="logs-container"
+                  tertiary={true}
+                >
+                  <div
+                    className="ui tertiary segment logs-container"
+                  >
+                    <p>
+                      Looks like no request was made yet. Go and try one!
+                    </p>
+                  </div>
+                </Segment>
+              </div>
+            </Log>
           </div>
         </Container>
       </div>
@@ -633,6 +673,7 @@ exports[`renders without crashing with employees 1`] = `
   }
   loading={false}
   name=""
+  openDoorRequests={Object {}}
   roleModalProps={
     Object {
       "close": [Function],
@@ -1325,6 +1366,52 @@ exports[`renders without crashing with employees 1`] = `
                 </div>
               </DoorsList>
             </div>
+            <Divider
+              section={true}
+            >
+              <div
+                className="ui section divider"
+              />
+            </Divider>
+            <Log
+              doors={Object {}}
+              employees={
+                Object {
+                  "mock": Object {
+                    "name": "Mocked",
+                    "role": null,
+                  },
+                }
+              }
+              requests={Object {}}
+              requestsKeys={Array []}
+              roles={Object {}}
+            >
+              <div>
+                <Header
+                  inverted={true}
+                  size="small"
+                >
+                  <div
+                    className="ui small inverted header"
+                  >
+                    Here you can check all requests that were made to open your doors.
+                  </div>
+                </Header>
+                <Segment
+                  className="logs-container"
+                  tertiary={true}
+                >
+                  <div
+                    className="ui tertiary segment logs-container"
+                  >
+                    <p>
+                      Looks like no request was made yet. Go and try one!
+                    </p>
+                  </div>
+                </Segment>
+              </div>
+            </Log>
           </div>
         </Container>
       </div>

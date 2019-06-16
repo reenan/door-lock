@@ -1,0 +1,38 @@
+.logs-container {
+  max-height: 500px;
+  overflow-y: scroll;
+
+  > div {
+    margin: 1em 0;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    p {
+      span {
+
+        &.deleted {
+          color: gray;
+          font-style: italic;
+        }
+
+        &:not(.deleted) {
+          font-weight: bold;
+        }
+
+        &.red {
+          color: #d65757;
+        }
+
+        &.green {
+          color: #1c8145;
+        }
+      }
+    }
+  }
+}

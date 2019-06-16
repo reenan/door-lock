@@ -108,7 +108,7 @@ class StoreContainer extends Component {
       isOpenUnregistrationModal,
     } = this.state
 
-    const { store, loading } = this.props
+    const { store, loading, openDoorRequests } = this.props
     const { name, doors, employees, roles } = store
 
     const doorModalProps = {
@@ -148,6 +148,7 @@ class StoreContainer extends Component {
           roles={roles}
           doors={doors}
           loading={loading}
+          openDoorRequests={openDoorRequests}
           selectedEmployee={selectedEmployee}
           selectEmployee={this.selectEmployee}
 

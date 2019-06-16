@@ -5,6 +5,7 @@ import UnregisterModal from './UnregisterModal/UnregisterModal'
 import EmployeesList from './EmployeesList/EmployeesList'
 import ManagementModalContainer from './ManagementModal/ManagementModalContainer'
 import DoorsList from './DoorsList/DoorsList'
+import Log from './Log/Log'
 
 export {
   ManageDoorsModal,
@@ -14,4 +15,5 @@ export {
   EmployeesList,
   ManagementModalContainer,
   DoorsList,
+  Log,
 }

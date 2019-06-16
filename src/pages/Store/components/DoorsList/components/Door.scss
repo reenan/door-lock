@@ -1,6 +1,6 @@
 @import '../../../../../resources/mixins';
 
-.door {
+.doors > .door {
   @include transition(border-color 400ms, opacity 400ms, background-color 400ms);
   cursor: pointer;
   text-align: center;

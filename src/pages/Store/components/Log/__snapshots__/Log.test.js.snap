@@ -1,0 +1,230 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders without crashing 1`] = `
+<Log
+  doors={Object {}}
+  employees={Object {}}
+  requests={Object {}}
+  requestsKeys={Array []}
+  roles={Object {}}
+>
+  <div>
+    <Header
+      inverted={true}
+      size="small"
+    >
+      <div
+        className="ui small inverted header"
+      >
+        Here you can check all requests that were made to open your doors.
+      </div>
+    </Header>
+    <Segment
+      className="logs-container"
+      tertiary={true}
+    >
+      <div
+        className="ui tertiary segment logs-container"
+      >
+        <p>
+          Looks like no request was made yet. Go and try one!
+        </p>
+      </div>
+    </Segment>
+  </div>
+</Log>
+`;
+
+exports[`renders without crashing with request and deleted data 1`] = `
+<Log
+  doors={Object {}}
+  employees={Object {}}
+  requests={
+    Object {
+      "mock": Object {
+        "allowed": false,
+        "date": 1994-11-12T02:00:00.000Z,
+        "door": "mockDoor",
+        "employee": "mockEmployee",
+        "role": "mockRole",
+      },
+    }
+  }
+  requestsKeys={
+    Array [
+      "mock",
+    ]
+  }
+  roles={Object {}}
+>
+  <div>
+    <Header
+      inverted={true}
+      size="small"
+    >
+      <div
+        className="ui small inverted header"
+      >
+        Here you can check all requests that were made to open your doors.
+      </div>
+    </Header>
+    <Segment
+      className="logs-container"
+      tertiary={true}
+    >
+      <div
+        className="ui tertiary segment logs-container"
+      >
+        <div
+          key="mock"
+        >
+          <p>
+            On 
+            <span>
+              12
+              /
+              10
+              /
+              1994
+               
+              2
+              :
+              0
+            </span>
+            , 
+            <span
+              className="deleted"
+              key="0"
+            >
+              Deleted Employee
+            </span>
+            <span
+              className="deleted"
+              key="1"
+            >
+               (Deleted Role)
+            </span>
+             requested to open 
+            <span
+              className="deleted"
+            >
+              Deleted Door
+            </span>
+             and his/hers request was 
+            <span
+              className="red"
+            >
+              not accepted
+            </span>
+          </p>
+        </div>
+      </div>
+    </Segment>
+  </div>
+</Log>
+`;
+
+exports[`renders without crashing with request and saved data 1`] = `
+<Log
+  doors={
+    Object {
+      "mockDoor": Object {
+        "name": "Mock Door",
+      },
+    }
+  }
+  employees={
+    Object {
+      "mockEmployee": Object {
+        "name": "Mock Employee",
+      },
+    }
+  }
+  requests={
+    Object {
+      "mock": Object {
+        "allowed": true,
+        "date": 1994-11-12T02:00:00.000Z,
+        "door": "mockDoor",
+        "employee": "mockEmployee",
+        "role": "mockRole",
+      },
+    }
+  }
+  requestsKeys={
+    Array [
+      "mock",
+    ]
+  }
+  roles={
+    Object {
+      "mockRole": Object {
+        "name": "Mock Role",
+      },
+    }
+  }
+>
+  <div>
+    <Header
+      inverted={true}
+      size="small"
+    >
+      <div
+        className="ui small inverted header"
+      >
+        Here you can check all requests that were made to open your doors.
+      </div>
+    </Header>
+    <Segment
+      className="logs-container"
+      tertiary={true}
+    >
+      <div
+        className="ui tertiary segment logs-container"
+      >
+        <div
+          key="mock"
+        >
+          <p>
+            On 
+            <span>
+              12
+              /
+              10
+              /
+              1994
+               
+              2
+              :
+              0
+            </span>
+            , 
+            <span
+              key="0"
+            >
+              Mock Employee
+            </span>
+            <span
+              key="1"
+            >
+               (
+              Mock Role
+              )
+            </span>
+             requested to open 
+            <span>
+              Mock Door
+            </span>
+             and his/hers request was 
+            <span
+              className="green"
+            >
+              accepted
+            </span>
+          </p>
+        </div>
+      </div>
+    </Segment>
+  </div>
+</Log>
+`;
