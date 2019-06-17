@@ -64,3 +64,5 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 This project's interface was built using [Semantic UI React](https://react.semantic-ui.com/).
 
 This project's ajax requests are dummy requests fired against [ReqRes](https://reqres.in).
+
+This project's demo is hosted by [Surge](https://surge.sh/).
