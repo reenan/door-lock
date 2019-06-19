@@ -48,6 +48,7 @@ $ npm start
 #### Testing
 ```
 $ npm run test [-- --coverage --watchAll]
+$ npm run test:e2e
 ```
 ##### ([why watchAll?](https://github.com/facebook/create-react-app/issues/6888))
 
