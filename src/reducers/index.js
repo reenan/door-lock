@@ -38,8 +38,6 @@ function reducer (state = initialState, action) {
       }
 
     case UNREGISTER_STORE:
-      state.store = action.store
-
       return initialState
 
     case OPEN_DOOR_RESULT:
