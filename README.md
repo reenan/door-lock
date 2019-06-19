@@ -16,14 +16,14 @@ Each `Role` stores which `Doors` employees that have this role can open and whic
 Being that, `Employee`, `Role` and `Door` structs are:
 
 ```
-EmployeeID: {
+Employee: {
   name: String,
-  role: String (Role ID)
+  role: Role ID
 }
 ```
 
 ```
-RoleID: {
+Role: {
   name: String,
   permissions: {
     DoorID: Boolean
@@ -32,7 +32,7 @@ RoleID: {
 ```
 
 ```
-DoorID: {
+Door: {
   name: String
 }
 ```
