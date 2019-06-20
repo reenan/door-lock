@@ -17,10 +17,6 @@
 
     p {
       @include text-overflow(ellipsis);
-
-      > span + span {
-        margin-left: 5px;
-      }
     }
 
     &:hover, &.selected {

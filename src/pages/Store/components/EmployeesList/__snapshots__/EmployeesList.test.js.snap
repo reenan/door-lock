@@ -22,6 +22,7 @@ exports[`renders without crashing with employees 1`] = `
       />
       <span>
         Mock
+         
       </span>
       <span>
         (
@@ -49,6 +50,7 @@ exports[`renders without crashing with employees and selected employee 1`] = `
       />
       <span>
         Mock
+         
       </span>
       <span>
         (

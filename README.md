@@ -50,6 +50,8 @@ $ npm start
 $ npm run test [-- --coverage --watchAll]
 $ npm run test:e2e
 ```
+##### PS: The application needs to be running on port 3000 for e2e tests.
+
 ##### ([why watchAll?](https://github.com/facebook/create-react-app/issues/6888))
 
 #### Building

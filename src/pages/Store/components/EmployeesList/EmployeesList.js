@@ -37,7 +37,7 @@ const Employee = ({ employeeID, selected, selectEmployee, employees, roles }) =>
     onClick={selectEmployee.bind(null, employeeID)}>
     <p>
       <Icon className={`custom-icon ${selected ? 'check-circle' : 'circle'}`} />
-      <span>{employees[employeeID].name}</span>
+      <span>{employees[employeeID].name} </span>
 
       <span>
         ({
